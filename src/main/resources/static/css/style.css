@@ -1,0 +1,19 @@
+body{
+    background-color: #161616;
+}
+
+h1{
+    font-size : 7rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+#contenu1{
+    background-image: url("../img/bg-masthead.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1200px;
+    color : #fff;
+    position: center;
+}
