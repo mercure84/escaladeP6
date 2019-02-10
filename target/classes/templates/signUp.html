@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<main class="my-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">S'enregistrer</div>
+                    <div class="card-body">
+                        <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+
+
+                            <div class="form-group row">
+                                <label for="nom" class="col-md-4 col-form-label text-md-right">Nom</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="nom" class="form-control" name="nom">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="prenom" class="col-md-4 col-form-label text-md-right">Prénom</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="prenom" class="form-control" name="prenom">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Adresse e-mail</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="email" class="form-control" name="email">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="pseudo" class="col-md-4 col-form-label text-md-right">Pseudo</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="pseudo" class="form-control" name="pseudo">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="telephone" class="col-md-4 col-form-label text-md-right">Téléphone</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="telephone" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="ville" class="col-md-4 col-form-label text-md-right">Ville</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="ville" class="form-control" name="ville">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="codePostal" class="col-md-4 col-form-label text-md-right">Code Postal</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="codePostal" class="form-control" name="codePostal">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="dateNaissance" class="col-md-4 col-form-label text-md-right">Date de naissance</label>
+                                <div class="col-md-6">
+                                    <input type="date" id="dateNaissance" class="form-control" name="dateNaissance">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Enregistrer
+                                </button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</main>
+
+</html>
