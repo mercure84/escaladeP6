@@ -16,32 +16,11 @@
 <body>
 
 <!-- HEADER -->
-<header></header>
+
 
 <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#accueil">Accueil</a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div th:include="navbar.html"/>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#signUp">S'inscrire <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#signIn">Se connecter</a>
-                </li>
-
-
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Saisir du texte" type="search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-            </form>
-        </div>
-    </nav>
 
 <!-- premier bandeau -->
 <div class="d-flex p-2 bd-highlight" id="accueil">

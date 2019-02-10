@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="fr">
+<div th:include="bootstrapcdn.html"/>
+<head>
+   <meta charset="utf-8">
+    <title>Escalade P6 - OpenClassRooms - Parcours DA Java - Projet 6</title>
+</head>
+
+<body id="homeBody">
+<!-- nav bar -->
+<div th:include="navbar.html"/>
+
+
+<!-- corps de la page Home -->
+
+<div class="d-flex p-2 bd-highlight" id="bandeau1">
+    <div class="container">
+        <div class="row">
+            <div>
+                <h2 th:text="'Bienvenu ' + ${pseudoMembre} + ' !'">Bienvenue</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="img-fluid" src="img/chat.jpg">
+            </div>
+            <div class="col-lg-8">
+                <p th:text="'Il y a ' + ${nbTopoTotal} + ' Topos en ligne. ' + ${nbTopoEmpruntes} + ' sont en cours d\'utilisation par les membres.' "/>
+                <p th:text="'Le dernier Topo publié est ' + ${nomDernierTopoPublie}"/>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
