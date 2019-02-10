@@ -10,8 +10,8 @@ h1{
 }
 
 
-#contenu1{
-    background-image: url("../img/bg-masthead.jpg");
+#accueil{
+    background-image: url("../img/img1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -21,7 +21,7 @@ h1{
 
 #signUp{
 
-    background-image: url("../img/bg-signup.jpg");
+    background-image: url("../img/img2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -31,12 +31,12 @@ h1{
 
 .my-form{
     padding-top: 100px;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 #signIn{
 
-    background-image: url("../img/demo-image-02.jpg");
+    background-image: url("../img/img3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
