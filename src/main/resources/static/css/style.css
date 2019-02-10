@@ -33,3 +33,13 @@ h1{
     padding-top: 100px;
     opacity: 0.5;
 }
+
+#signIn{
+
+    background-image: url("../img/demo-image-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: center;
+
+}
