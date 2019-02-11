@@ -1,5 +1,5 @@
 body{
-    background-color: #161616;
+
 
 }
 
@@ -8,7 +8,6 @@ h1{
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
 
 #accueil{
     background-image: url("../img/img1.jpg");
@@ -49,6 +48,15 @@ h1{
     height: 100vh;
     margin-top: 5%;
 
-    background-color: darkgrey;
+}
+#bandeau0{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 5rem !important;
+    margin-bottom: 2%;
+
 }
 
+.centrer{
+    text-align: center;
+}

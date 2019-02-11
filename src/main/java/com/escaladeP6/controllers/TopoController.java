@@ -6,21 +6,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class TopoController {
 
-    @GetMapping("/home")
-    public String home(Model model){
+    @GetMapping("/topoHome")
+    public String topoHome(Model model){
         int nbTopoTotal = 84;
         int nbTopoEmpruntés = 20;
-        String nomDernierTopoPublie = "L'arbre à chats";
+        String nomDernierTopoPublie = "Acropora des chatons";
         String pseudoMembre = "Mjuju92130";
-
         model.addAttribute("nbTopoTotal", nbTopoTotal);
         model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntés);
         model.addAttribute("nomDernierTopoPublie", nomDernierTopoPublie);
         model.addAttribute("pseudoMembre", pseudoMembre);
+        return "topoHome";
 
-        return "home";
+    }
+    @GetMapping("/topoPublier")
+    public String topoPublier (Model model){
+          return "topoPublier";
+
 
     }
 
