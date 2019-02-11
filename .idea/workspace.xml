@@ -6,14 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="">
+    <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="début de la page de publication des topos 2">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/CloudFoundry_Deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/CloudFoundry_Deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -40,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoHome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="17" column="28" lean-forward="true" selection-start-line="15" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="289">
+              <caret line="17" column="28" selection-start-line="15" selection-end-line="19" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -58,17 +55,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+            <state relative-caret-position="277">
+              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/escaladeP6.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="34">
+                <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoPublier.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+            <state relative-caret-position="595">
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -76,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/TopoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="119">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,7 +143,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/bootstrapcdn.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/jscdn.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
@@ -130,9 +152,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/signIn.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/signUp.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/navbar.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/navbar.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -172,6 +196,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,12 +290,27 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="escaladeP6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escaladeP6" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escaladeP6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escaladeP6" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="escaladeP6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="escaladeP6" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,7 +321,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549924635052" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549926423963" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -313,7 +354,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="CloudFoundry Deployment.CloudFoundry Deployment">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="escaladeP6" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.escaladeP6.Application" />
@@ -410,7 +451,8 @@
       <updated>1549660243532</updated>
       <workItem from="1549660249040" duration="16090000" />
       <workItem from="1549813629188" duration="22395000" />
-      <workItem from="1549891448859" duration="17036000" />
+      <workItem from="1549891448859" duration="18831000" />
+      <workItem from="1549926627647" duration="1185000" />
     </task>
     <task id="LOCAL-00001" summary="construction de la page d'accueil mais à simplifier d'urgence">
       <created>1549812384426</created>
@@ -468,11 +510,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549921805647</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="début de la page de publication des topos">
+      <created>1549924678371</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1549924678371</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55521000" />
+    <option name="totallyTimeSpent" value="58501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -487,8 +536,8 @@
     <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7714286" visible="true" weight="0.25121555" />
-      <window_info id="Structure" order="1" sideWeight="0.22857143" side_tool="true" visible="true" weight="0.25121555" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7695906" visible="true" weight="0.2552674" />
+      <window_info id="Structure" order="1" sideWeight="0.23040935" side_tool="true" visible="true" weight="0.2552674" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -497,16 +546,16 @@
       <window_info id="Web" order="7" sideWeight="0.50116825" side_tool="true" weight="0.2471637" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.67666125" visible="true" weight="0.2032967" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.671799" weight="0.6381476" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49756888" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49756888" weight="0.1789639" />
-      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49513775" weight="0.3288854" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.493517" visible="true" weight="0.3288854" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49756888" weight="0.3288854" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.493517" weight="0.32810047" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.48622367" weight="0.32810047" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.32333875" side_tool="true" visible="true" weight="0.2032967" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50648296" side_tool="true" visible="true" weight="0.3288854" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32969603" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -575,7 +624,8 @@
     <MESSAGE value="deuxième page home" />
     <MESSAGE value="refactoring de la page d'accueil et du formulaire de connection" />
     <MESSAGE value="construction de la page topoHome, simplification du design qui n'est pas la priorité du moment" />
-    <option name="LAST_COMMIT_MESSAGE" value="construction de la page topoHome, simplification du design qui n'est pas la priorité du moment" />
+    <MESSAGE value="début de la page de publication des topos" />
+    <option name="LAST_COMMIT_MESSAGE" value="début de la page de publication des topos" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/target/classes/templates/greeting.html">
@@ -639,9 +689,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/totem1.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/bg-masthead.jpg" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/bg-signup.jpg" />
-    <entry file="file://$PROJECT_DIR$/escaladeP6.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://D:/Téléchargements/ML_P6_creez-un-site-communautaire-autour-de-l-escalade_2019-01-27T035127/Escalade/Escalade/Escalade/src/main/java/com/ocprojekt/app/escalade/controler/AccueilController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -669,22 +716,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/img2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/img1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jscdn">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jscdn" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/bootstrapcdn.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -726,13 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signUp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
@@ -747,20 +778,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/TopoController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="15" selection-end-line="19" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -771,17 +799,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoHome.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoPublier.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="28" lean-forward="true" selection-start-line="15" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="595">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoPublier.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/TopoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        <state relative-caret-position="119">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/escaladeP6.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
