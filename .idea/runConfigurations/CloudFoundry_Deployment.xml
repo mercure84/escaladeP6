@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CloudFoundry Deployment" type="cloudfoundry-deploy" factoryName="CloudFoundry Deployment" editBeforeRun="true" server-name="CloudFoundry">
+    <method v="2" />
+  </configuration>
+</component>
