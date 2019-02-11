@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="/home">Accueil</a>
-    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href="/">Accueil</a>
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -11,13 +9,27 @@
                 <a class="nav-link" href="#signUp">S'inscrire <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#signIn">Se connecter</a>
+                <a class="nav-link" href="/">Se connecter</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Messagerie</a>
             </li>
 
+            <!-- dropdown Topos -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Topos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Liste des Topos</a>
+                    <a class="dropdown-item" href="#">Liste des emprunts</a>
+                    <a class="dropdown-item" href="#">Proposer un Topo</a>
+                </div>
+            </li>
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Saisir du texte" type="search">
+            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Rechercher sur le site" type="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
         </form>
     </div>

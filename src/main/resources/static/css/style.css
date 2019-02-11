@@ -15,7 +15,7 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    color : #fff;
+    color : #ffffff;
     position: center;
 }
 
@@ -31,7 +31,8 @@ h1{
 
 .my-form{
     padding-top: 200px;
-    opacity: 0.7;
+    opacity: 0.9;
+    color : #161616 !important;
 }
 
 #signIn{
