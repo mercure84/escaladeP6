@@ -34,42 +34,42 @@
                                         <div class="form-group row">
                                             <label for="nom" class="col-md-4 col-form-label text-md-right">Nom</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="nom" class="form-control" name="nom">
+                                                <input type="text" id="nom" class="form-control" th:field="*{nom}">
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="prenom" class="col-md-4 col-form-label text-md-right">Prénom</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="prenom" class="form-control" name="prenom">
+                                                <input type="text" id="prenom" class="form-control" th:field="*{prenom}">
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="email" class="col-md-4 col-form-label text-md-right">Adresse e-mail</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="email" class="form-control" name="email">
+                                                <input type="text" id="email" class="form-control" th:field="*{email}">
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="pseudo" class="col-md-4 col-form-label text-md-right">Pseudo</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="pseudo" class="form-control" name="pseudo">
+                                                <input type="text" id="pseudo" class="form-control" th:field="*{pseudo}">
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="password" class="col-md-4 col-form-label text-md-right">Mot de Passe</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="password" class="form-control" name="password">
+                                                <input type="text" id="password" class="form-control" th:field="*{password}">
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="telephone" class="col-md-4 col-form-label text-md-right">Téléphone</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="telephone" class="form-control">
+                                                <input type="text" id="telephone" class="form-control" th:field="*{telMobile}">
                                             </div>
                                         </div>
 
@@ -77,17 +77,17 @@
                                         <div class="form-group row">
                                             <label for="codePostal" class="col-md-4 col-form-label text-md-right">Code Postal</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="codePostal" class="form-control" name="codePostal">
+                                                <input type="text" id="codePostal" class="form-control" th:field="*{codePostal}">
                                             </div>
                                         </div>
-
+<!-- CHAMPS DATE DE NAISSANCE
                                         <div class="form-group row">
                                             <label for="dateNaissance" class="col-md-4 col-form-label text-md-right">Date de naissance</label>
                                             <div class="col-md-6">
-                                                <input type="date" id="dateNaissance" class="form-control" name="dateNaissance">
+                                                <input type="date" id="dateNaissance" class="form-control" th:field="*{dateNaissance}">
                                             </div>
                                         </div>
-
+-->
                                         <div class="col-md-6 offset-md-4">
                                             <button type="submit" class="btn btn-secondary">
                                                 Enregistrer
@@ -96,17 +96,18 @@
                                                 Reset
                                             </button>
                                         </div>
-                                </div>
+
                                 </form>
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div></div>
+
+
+                 </main>
             </div>
 
-            </main>
-
-            </div>
+        </div>
 
         </div></div></div>
 

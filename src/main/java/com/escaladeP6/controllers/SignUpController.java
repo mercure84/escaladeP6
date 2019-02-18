@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class SignUpController {
@@ -15,6 +16,7 @@ public class SignUpController {
         return "signUp";
     }
 
+    @PostMapping("/signUp")
     public String senregistrerSubmit(@ModelAttribute Membre membre){
 
         System.out.println("les données du formulaires :");
