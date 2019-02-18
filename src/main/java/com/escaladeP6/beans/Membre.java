@@ -1,8 +1,18 @@
 package com.escaladeP6.beans;
 
+import javax.persistence.*;
 import java.util.Date;
 
+
+@Entity
+@Table(name="membre")
+
 public class Membre {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
     private String nom;
     private String prenom;
     private String pseudo;
