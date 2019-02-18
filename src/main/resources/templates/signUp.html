@@ -34,35 +34,35 @@
                                         <div class="form-group row">
                                             <label for="nom" class="col-md-4 col-form-label text-md-right">Nom</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="nom" class="form-control" th:field="*{nom}">
+                                                <input type="text" id="nom" class="form-control" th:field="*{nom}" required>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="prenom" class="col-md-4 col-form-label text-md-right">Prénom</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="prenom" class="form-control" th:field="*{prenom}">
+                                                <input type="text" id="prenom" class="form-control" th:field="*{prenom}" required>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="email" class="col-md-4 col-form-label text-md-right">Adresse e-mail</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="email" class="form-control" th:field="*{email}">
+                                                <input type="email" id="email" class="form-control" th:field="*{email}" required>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
-                                            <label for="pseudo" class="col-md-4 col-form-label text-md-right">Pseudo</label>
+                                            <label for="pseudo" class="col-md-4 col-form-label text-md-right" required>Pseudo</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="pseudo" class="form-control" th:field="*{pseudo}">
+                                                <input type="text" id="pseudo" class="form-control" th:field="*{pseudo}" required>
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label for="password" class="col-md-4 col-form-label text-md-right">Mot de Passe</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="password" class="form-control" th:field="*{password}">
+                                                <input type="password" id="password" class="form-control" th:field="*{password}"required>
                                             </div>
                                         </div>
 

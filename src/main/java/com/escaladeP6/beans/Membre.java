@@ -3,14 +3,16 @@ package com.escaladeP6.beans;
 import javax.persistence.*;
 import java.util.Date;
 
+import static javax.persistence.GenerationType.TABLE;
+
 
 @Entity
 @Table(name="membre")
-
 public class Membre {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
 
     @Column(name="nom")
@@ -32,7 +34,7 @@ public class Membre {
     private String email;
 
     @Column(name="tel_mobile")
-    private int telMobile;
+    private long telMobile;
 
     @Column(name="date_inscription")
     private Date dateInscription;
@@ -46,7 +48,7 @@ public class Membre {
     @Column(name="ville")
     private String ville;
 
-    @Column(name="valide")
+    @Column(name="a_valider")
     private boolean valide;
 
 
@@ -99,11 +101,11 @@ public class Membre {
         this.email = email;
     }
 
-    public int getTelMobile() {
+    public long getTelMobile() {
         return telMobile;
     }
 
-    public void setTelMobile(int telMobile) {
+    public void setTelMobile(long telMobile) {
         this.telMobile = telMobile;
     }
 
@@ -168,7 +170,12 @@ public class Membre {
         this.valide = valide;
     }
 
-    public Membre(String nom, String prenom, String pseudo, String password) {
+    public Membre(String nom, String prenom, String pseudo, String password, String email) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.pseudo = pseudo;
+        this.password = password;
+        this.email = email;
     }
 
     @Override
