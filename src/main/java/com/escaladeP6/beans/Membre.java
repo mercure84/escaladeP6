@@ -10,21 +10,46 @@ import java.util.Date;
 public class Membre {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue
+    private int id;
 
+    @Column(name="nom")
     private String nom;
+
+    @Column(name="prenom")
     private String prenom;
+
+    @Column(name="pseudo")
     private String pseudo;
+
+    @Column(name="password")
     private String password;
+
+    @Column(name="date_naissance")
     private Date dateNaissance;
+
+    @Column(name="email")
     private String email;
+
+    @Column(name="tel_mobile")
     private int telMobile;
+
+    @Column(name="date_inscription")
     private Date dateInscription;
+
+    @Column(name="role")
     private String role;
+
+    @Column(name="code_postal")
     private int codePostal;
+
+    @Column(name="ville")
     private String ville;
+
+    @Column(name="valide")
     private boolean valide;
+
+
 
     public String getNom() {
         return nom;
@@ -123,7 +148,47 @@ public class Membre {
     }
 
 
+    //constructeurs
+    public Membre(){
 
+    }
+
+    public Membre(String nom, String prenom, String pseudo, String password, Date dateNaissance, String email, int telMobile, Date dateInscription, String role, int codePostal, String ville, boolean valide) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.pseudo = pseudo;
+        this.password = password;
+        this.dateNaissance = dateNaissance;
+        this.email = email;
+        this.telMobile = telMobile;
+        this.dateInscription = dateInscription;
+        this.role = role;
+        this.codePostal = codePostal;
+        this.ville = ville;
+        this.valide = valide;
+    }
+
+    public Membre(String nom, String prenom, String pseudo, String password) {
+    }
+
+    @Override
+    public String toString() {
+        return "Membre{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", pseudo='" + pseudo + '\'' +
+                ", password='" + password + '\'' +
+                ", dateNaissance=" + dateNaissance +
+                ", email='" + email + '\'' +
+                ", telMobile=" + telMobile +
+                ", dateInscription=" + dateInscription +
+                ", role='" + role + '\'' +
+                ", codePostal=" + codePostal +
+                ", ville='" + ville + '\'' +
+                ", valide=" + valide +
+                '}';
+    }
 }
 
 
