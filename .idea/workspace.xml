@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Membre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Membre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,16 +69,6 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ELEPHANTSQL" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="nbvrsfor: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="membre: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
@@ -89,7 +77,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Membre.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -117,6 +105,15 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" selection-start-line="25" selection-end-line="28" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -174,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Greeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/MembreDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/navbar.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -186,6 +182,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/SignUpController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/signUp.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Membre.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/navbar.html" />
       </list>
     </option>
   </component>
@@ -327,7 +324,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550529888114" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550530102422" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -461,7 +458,7 @@
       <workItem from="1549891448859" duration="18831000" />
       <workItem from="1549926627647" duration="1480000" />
       <workItem from="1549994370567" duration="4054000" />
-      <workItem from="1550483291431" duration="28805000" />
+      <workItem from="1550483291431" duration="29022000" />
     </task>
     <task id="LOCAL-00001" summary="construction de la page d'accueil mais à simplifier d'urgence">
       <created>1549812384426</created>
@@ -582,11 +579,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550526605481</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="formulaire d'ajout d'un membre (version simple !) implémenté dans la BDD">
+      <created>1550529977532</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1550529977532</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91655000" />
+    <option name="totallyTimeSpent" value="91872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -700,7 +704,8 @@
     <MESSAGE value="formulaire d'enregistrement OK, sans la date de naissance (pb de format de date à corriger plus tard)" />
     <MESSAGE value="en cours d'implémenter la persistance du bean &quot;Membre&quot; - application.properties créé pour la config de la bdd mais ce fichier est ignoré de Git" />
     <MESSAGE value="spring data toujours pas opérationel..." />
-    <option name="LAST_COMMIT_MESSAGE" value="spring data toujours pas opérationel..." />
+    <MESSAGE value="formulaire d'ajout d'un membre (version simple !) implémenté dans la BDD" />
+    <option name="LAST_COMMIT_MESSAGE" value="formulaire d'ajout d'un membre (version simple !) implémenté dans la BDD" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/scss/_about.scss" />
@@ -837,13 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="78" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -998,13 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3bb5c767-6d1b-4c11-aeb4-4edb6e9b8c9b/database/nbvrsfor/schema/public/table/membre">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Membre.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1014,6 +1005,20 @@
             <element signature="e#1770#1771#0" expanded="true" />
             <element signature="e#1802#1803#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3bb5c767-6d1b-4c11-aeb4-4edb6e9b8c9b/database/nbvrsfor/schema/public/table/membre">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" selection-start-line="25" selection-end-line="28" selection-end-column="19" />
         </state>
       </provider>
     </entry>
