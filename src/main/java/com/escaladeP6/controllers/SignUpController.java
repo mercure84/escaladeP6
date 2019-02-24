@@ -27,6 +27,7 @@ public class SignUpController {
         repository.save(new Membre(membre.getNom(), membre.getPrenom(), membre.getPseudo(), membre.getPassword(), membre.getEmail()));
         return "index";
 
+
     }
 
 

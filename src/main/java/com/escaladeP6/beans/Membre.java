@@ -3,7 +3,7 @@ package com.escaladeP6.beans;
 import javax.persistence.*;
 import java.util.Date;
 
-import static javax.persistence.GenerationType.TABLE;
+
 
 
 @Entity
