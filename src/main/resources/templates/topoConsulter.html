@@ -22,7 +22,7 @@
     <tr><th>Nom</th>
         <th>Description</th>
         <th>Difficulté</th>
-        <th>Situation</th>
+        <th>Département</th>
         <th>Disponibilité</th>
         <th>Propriétaire</th>
         <th>Fichier</th>
@@ -33,7 +33,7 @@
     <td th:text="${ligne.getNom()}">Nom</td>
     <td th:text="${ligne.getDescription()}">Description</td>
     <td th:text="${ligne.getDifficulte()}">Difficulte</td>
-    <td th:text="Vide">Situation</td>
+    <td th:text="${ligne.get}">Situation</td>
     <td th:text="${ligne.isDisponible()}">Disponibilite</td>
     <td th:text="${ligne.getMembreId()}">Propriétaire</td>
     <td th:text="Fichier">Fichier</td>

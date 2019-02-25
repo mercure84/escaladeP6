@@ -2,14 +2,13 @@ package com.escaladeP6.controllers;
 
 
 import com.escaladeP6.DAO.TopoRepository;
-import com.escaladeP6.beans.Topo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 
 @Controller

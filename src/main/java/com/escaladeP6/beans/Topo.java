@@ -24,6 +24,9 @@ public class Topo {
     @Column(name="description")
     private String description;
 
+    @Column(name="departement")
+    private int departement;
+
     @Column(name="disponible")
     private boolean disponible;
 
@@ -101,8 +104,9 @@ public class Topo {
         return membreId;
     }
 
-    public void setMembreId(int membreId) {
-        this.membreId = membreId;
+    public int getDepartement() {return departement;}
+
+    public void setDepartement(int departement) {this.departement = departement;
     }
 
 
@@ -111,13 +115,14 @@ public class Topo {
     public Topo() {
     }
 
-    public Topo(String nom, String description, String difficulte, boolean disponible, boolean valide, int membreId) {
+    public Topo(String nom, String description, int departement, String difficulte, boolean disponible, boolean valide, int membreId) {
         this.nom = nom;
         this.description = description;
         this.difficulte = difficulte;
         this.disponible = disponible;
         this.valide = valide;
         this.membreId = membreId;
+        this.departement = departement;
 
     }
 

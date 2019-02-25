@@ -45,7 +45,7 @@
                                 <select class="form-control col-md-6" id="departement">
                                     <option selected>Choisir</option>
                                     <tr th:each="dept : ${listeDept}">
-                                        <option th:value="${dept}" th:text="${dept}">Dpt</option></tr>
+                                        <option th:value="${dept}" th:text="${dept}" th:field="*{departement}" required>Dpt</option></tr>
 
                                 </select>
                             </div>
