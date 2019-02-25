@@ -19,16 +19,18 @@ public class ConsulterTopoController {
     TopoRepository repository;
 
 
-//requête de la BDD pour lister tous les topos
-//@RequestMapping("/topoConsulter")
-    public @ResponseBody Iterable<Topo> getAllTopos(){
-        //System.out.println(repository.findAll());
-        return repository.findAll();
-    }
+////requête de la BDD pour lister tous les topos
+////@RequestMapping("/topoConsulter")
+//    public @ResponseBody Iterable<Topo> getAllTopos(){
+//        //System.out.println(repository.findAll());
+//        return repository.findAll();
+//    }
 
 @RequestMapping("/topoConsulter")
 public String topos (Model model){
-        model.addAttribute("topos", getAllTopos());
+
+
+        model.addAttribute("topos", repository.findAll());
         return "topoConsulter";
 }
 

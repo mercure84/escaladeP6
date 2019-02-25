@@ -29,8 +29,14 @@
 
     </tr></thead>
 
-<tr th:each="topos : ${topos}">
-    <td th:text="${topos}"></td>
+<tr th:each="ligne : ${topos}">
+    <td th:text="${ligne.getNom()}">Nom</td>
+    <td th:text="${ligne.getDescription()}">Description</td>
+    <td th:text="${ligne.getDifficulte()}">Difficulte</td>
+    <td th:text="Vide">Situation</td>
+    <td th:text="${ligne.isDisponible()}">Disponibilite</td>
+    <td th:text="${ligne.getMembreId()}">Propriétaire</td>
+    <td th:text="Fichier">Fichier</td>
 
 
 </tr>
