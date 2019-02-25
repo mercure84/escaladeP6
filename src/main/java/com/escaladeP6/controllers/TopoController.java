@@ -21,12 +21,6 @@ public class TopoController {
         return "topoHome";
 
     }
-    @GetMapping("/topoPublier")
-    public String topoPublier (Model model){
-          return "topoPublier";
-
-
-    }
 
 
 

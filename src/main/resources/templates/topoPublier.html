@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-
-
 <head>
     <div th:include="bootstrapcdn.html"/>
     <meta charset="utf-8">
@@ -26,24 +24,24 @@
                 <div class="card">
                     <div class="card-header">Décrivez votre Topo</div>
                     <div class="card-body">
-                        <form name="my-form" onsubmit="return validform()" action="" method="">
+                        <form name="my-form" action="#" th:action="@{/topoPublier}" th:object="${topo}" method="post">
 
 
                             <div class="form-group row">
                                 <label for="nom" class="col-md-4 col-form-label text-md-right">Nom du Topo</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="nom" class="form-control" name="nom">
+                                    <input type="text" id="nom" class="form-control" name="nom" th:field="*{nom}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
                                 <div class="col-md-6">
-                                    <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                                    <textarea class="form-control" id="description" name="description" rows="3" th:field="*{description}" required></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right" for="departement">Département</label>
+                                <label class="col-md-4 col-form-label text-md-right" for="departement" >Département</label>
                                 <select class="form-control col-md-6" id="departement">
                                     <option selected>Choisir</option>
                                     <option value="01">01</option>
@@ -55,7 +53,7 @@
                             <div class="form-group row">
                                 <label for="difficute" class="col-md-4 col-form-label text-md-right">Difficulté</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="difficute" class="form-control" name="difficute">
+                                    <input type="text" id="difficute" class="form-control" name="difficute" th:field="*{difficulte}" required>
                                 </div>
                             </div>
                             <div class="input-group mb-3">
@@ -72,7 +70,7 @@
                                     Soumettre
                                 </button>
                             </div>
-                    </div>
+
                     </form>
                 </div>
             </div>
