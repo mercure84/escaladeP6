@@ -14,6 +14,8 @@ public class PublierTopoController {
     @Autowired
     TopoRepository repository;
 
+
+
     @RequestMapping("/topoPublier")
     public String publicationForm(Model model){
         model.addAttribute("topo", new Topo());
@@ -22,6 +24,9 @@ public class PublierTopoController {
 
     @PostMapping("/topoPublier")
     public String publicationSubmit (@ModelAttribute Topo topo){
+
+
+
         System.out.println("les données du formulaires ont été sauvées");
         repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDifficulte(), topo.isDisponible(), topo.isValide(), 1));
 

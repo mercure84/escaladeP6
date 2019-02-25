@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:include="bootstrapcdn.html"/>
+    <meta charset="utf-8">
+
+    <title>Moteur de recherche des Topos</title>
+</head>
+<body>
+<!-- nav bar -->
+<div th:include="navbar.html"/>
+<div class=="row">
+    <div class="col-lg-12" id="bandeau0">
+        <h2> Consulter les topos disponibles</h2>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+    <tr><th>Nom</th>
+        <th>Description</th>
+        <th>Difficulté</th>
+        <th>Situation</th>
+        <th>Disponibilité</th>
+        <th>Propriétaire</th>
+        <th>Fichier</th>
+
+    </tr></thead>
+
+<tr th:each="topos : ${topos}">
+    <td th:text="${topos}"></td>
+
+
+</tr>
+
+</table>
+
+
+
+<div th:include="jscdn.html"/>
+</body>
+</html>

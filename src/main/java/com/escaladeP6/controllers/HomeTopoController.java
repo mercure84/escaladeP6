@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class TopoController {
+public class HomeTopoController {
 
     @GetMapping("/topoHome")
     public String topoHome(Model model){

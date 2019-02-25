@@ -1,16 +1,22 @@
 package com.escaladeP6.beans;
 
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="topo")
 public class Topo {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
+
+    @Column(name="fichier")
+    private MultipartFile[] fichier;
 
     @Column(name="nom")
     private String nom;
@@ -33,12 +39,22 @@ public class Topo {
     @Column(name="membre_id")
     private int membreId;
 
+    //accesseurs
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public MultipartFile[] getFichier() {
+        return fichier;
+    }
+
+    public void setFichier(MultipartFile[] fichier) {
+        this.fichier = fichier;
     }
 
     public String getNom() {
@@ -104,4 +120,6 @@ public class Topo {
         this.membreId = membreId;
 
     }
+
+
 }
