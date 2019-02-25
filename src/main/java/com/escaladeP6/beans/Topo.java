@@ -21,7 +21,7 @@ public class Topo {
     @Column(name="disponible")
     private boolean disponible;
 
-    @Column(name="valide")
+    @Column(name="a_valider")
     private boolean valide;
 
     @Column(name="difficulte")
