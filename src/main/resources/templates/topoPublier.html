@@ -44,9 +44,9 @@
                                 <label class="col-md-4 col-form-label text-md-right" for="departement" >Département</label>
                                 <select class="form-control col-md-6" id="departement">
                                     <option selected>Choisir</option>
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
+                                    <tr th:each="dept : ${listeDept}">
+                                        <option th:value="${dept}" th:text="${dept}">Dpt</option></tr>
+
                                 </select>
                             </div>
 
