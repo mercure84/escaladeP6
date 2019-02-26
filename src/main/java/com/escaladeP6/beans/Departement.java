@@ -131,6 +131,7 @@ Departement (int numDept, String nomDpt, String region, String prefecture) {
     this.region = region;
     this.prefecture = prefecture;
 }
+
 // liste des départements (numéro)
 public ArrayList<Integer> listeNumDpt (){
 

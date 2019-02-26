@@ -36,6 +36,11 @@ public class Topo {
     @Column(name="difficulte")
     private String difficulte;
 
+
+    @Column(name="nb_voies")
+    private int nbVoies;
+
+
 //    @OneToMany()
 //    private Membre membre;
 
@@ -109,16 +114,29 @@ public class Topo {
     public void setDepartement(int departement) {this.departement = departement;
     }
 
+    public int getNbVoies() {
+        return nbVoies;
+    }
+
+    public void setNbVoies(int nbVoies) {
+        this.nbVoies = nbVoies;
+    }
+
+    public void setMembreId(int membreId) {
+        this.membreId = membreId;
+    }
+
 
     //Constructeurs
 
     public Topo() {
     }
 
-    public Topo(String nom, String description, int departement, String difficulte, boolean disponible, boolean valide, int membreId) {
+    public Topo(String nom, String description, int departement, String difficulte, int nbVoies, boolean disponible, boolean valide, int membreId) {
         this.nom = nom;
         this.description = description;
         this.difficulte = difficulte;
+        this.nbVoies = nbVoies;
         this.disponible = disponible;
         this.valide = valide;
         this.membreId = membreId;

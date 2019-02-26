@@ -18,7 +18,64 @@
 
 <!--FORMULAIRE DE RECHERCHE-->
 
-<div th:include="searchBox.html"/>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">Affiner la recherche des topos</div>
+                <div class="card-body">
+                    <form name="my-form" action="#" th:action="@{/topoConsulter}" th:object="${filtre}" method="post">
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label text-md-right" for="departement" >Département</label>
+                            <label class="col-md-3 col-form-label text-md-right" for="difficulte" >Difficulté</label>
+                            <label class="col-md-3 col-form-label text-md-right" for="nbVoies" >Nb de voies</label>
+                            <label class="col-md-2 col-form-label text-md-right" for="disponible" >Topo dispo.</label>
+                        </div>
+                        <div class="form-group row">
+                            <select class="form-control col-md-3" id="departement"th:field="*{departement}">
+                                <option value="0" selected>Tous</option>
+                                <tr th:each="dept : ${listeDept}">
+                                    <option th:value="${dept}" th:text="${dept}">Dpt</option>
+                                </tr>
+                            </select>
+                            <select class="form-control col-md-3" id="difficulte" th:field="*{difficulte}">
+                                <option selected value="all">Tous</option>
+                                <option th:value="debutant">Débutant</option>
+                                <option th:value="intermediaire">Intermédiaire</option>
+                                <option th:value="confirme">Confirmé</option>
+                                <option th:value="expert">Expert</option>
+
+                            </select>
+                            <select class="form-control col-md-3" id="nbVoies" th:field="*{nbVoies}">
+                                <option value="0" selected>Tous</option>
+                                <option value="1">1-5</option>
+                                <option value="2">6-10</option>
+                                <option value="3">11-15</option>
+                                <option value="4">16-20</option>
+                                <option value="5">+20</option>
+                            </select>
+
+                            <input class="class=form-control col-md-2" id="disponible" type="checkbox" value="true" th:field="*{disponible}">
+
+                            <div class="col-md-1">
+                                <button type="submit" class="btn btn-secondary">
+                                    Trier
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--FIN DU FOORMULAIRE DE RERCHERCHE-->
+
 
 <div class="row">
     <div class="col-md-12">
@@ -40,7 +97,7 @@
     <td th:text="${ligne.getDescription()}">Description</td>
     <td th:text="${ligne.getDifficulte()}">Difficulte</td>
     <td th:text="${ligne.getDepartement()}">Departement</td>
-    <td>15</td>
+    <td th:text="${ligne.getNbVoies()}">Nb voies</td>
     <td th:text="${ligne.isDisponible()}">Disponibilite</td>
     <td th:text="${ligne.getMembreId()}">Propriétaire</td>
     <td th:text="Fichier">Fichier</td>
