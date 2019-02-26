@@ -42,23 +42,26 @@
 
                             <div class="form-group row">
                                 <label class="col-md-4 col-form-label text-md-right" for="departement" >Département</label>
-                                <select class="form-control col-md-6" id="departement">
-                                    <option selected>Choisir</option>
+                                <select class="form-control col-md-6" id="departement" th:field="*{departement}">
+                                    <option th:value="0" selected>Choisir</option>
                                     <tr th:each="dept : ${listeDept}">
-                                        <option th:value="${dept}" th:text="${dept}" th:field="*{departement}" required>Dpt</option></tr>
+                                        <option th:value="${dept}" th:text="${dept}" required>Dpt</option></tr>
 
                                 </select>
                             </div>
 
                             <div class="form-group row">
-                                <label for="difficute" class="col-md-4 col-form-label text-md-right">Difficulté</label>
-                                <div class="col-md-6">
-                                    <input type="text" id="difficute" class="form-control" name="difficute" th:field="*{difficulte}" required>
-                                </div>
+                                <label class="col-md-4 col-form-label text-md-right">Difficulté</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="facile" checked>Facile</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="intermediaire" >Intermédiaire</label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="expert" >Expert</label>
                             </div>
 
                             <div class="form-group row">
-                                <label for="difficute" class="col-md-4 col-form-label text-md-right">Nombres de voies</label>
+                                <label for="nbVoies" class="col-md-4 col-form-label text-md-right">Nombres de voies</label>
                                 <div class="col-md-6">
                                     <input type="number" id="nbVoies" class="form-control" name="nbVoies" th:field="*{nbVoies}" required>
                                 </div>

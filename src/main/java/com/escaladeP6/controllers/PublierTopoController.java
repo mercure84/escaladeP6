@@ -34,8 +34,9 @@ public class PublierTopoController {
     public String publicationSubmit (@ModelAttribute Topo topo){
 
 
-        System.out.println("les données du formulaires ont été sauvées");
+        System.out.println("les données du formulaires ont été sauvées avec le dept : " + topo.getDepartement());
         repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), 1));
+
 
         return "index";
     }

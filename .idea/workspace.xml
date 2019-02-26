@@ -5,19 +5,10 @@
       <artifact name="escaladeP6:war" />
     </artifacts-to-build>
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/resources/templates/topoSearchBox.html" line="3" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Filtre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Departement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Departement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Topo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Topo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/searchBox.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoSearchBox.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" afterDir="false" />
     </list>
@@ -102,131 +93,151 @@
     <favorites_list name="escaladeP6" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#684#693#0" expanded="true" />
-                <element signature="e#1200#1209#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://1d023fc4-dc62-4e72-b6b5-0686c20e2986/database/escap6/schema/public/table/topo">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoPublier.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/MembreRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Topo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1085">
-              <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#909#910#0" expanded="true" />
-                <element signature="e#942#943#0" expanded="true" />
-                <element signature="e#970#971#0" expanded="true" />
-                <element signature="e#2177#2178#0" expanded="true" />
-                <element signature="e#2207#2208#0" expanded="true" />
-                <element signature="e#2250#2251#0" expanded="true" />
-                <element signature="e#2288#2289#0" expanded="true" />
-                <element signature="e#2333#2334#0" expanded="true" />
-                <element signature="e#2373#2374#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Departement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="133" selection-start-line="133" selection-end-line="133" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.51412946">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
+                  <folding>
+                    <element signature="n#style#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="439">
+                  <caret line="31" selection-start-line="31" selection-end-line="31" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#684#693#0" expanded="true" />
+                    <element signature="e#1200#1209#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://1d023fc4-dc62-4e72-b6b5-0686c20e2986/database/escap6/schema/public/table/topo">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoPublier.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="799">
+                  <caret line="47" column="85" lean-forward="true" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="714">
+                  <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/MembreRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Topo.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1085">
+                  <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#884#885#0" expanded="true" />
+                    <element signature="e#909#910#0" expanded="true" />
+                    <element signature="e#942#943#0" expanded="true" />
+                    <element signature="e#970#971#0" expanded="true" />
+                    <element signature="e#2177#2178#0" expanded="true" />
+                    <element signature="e#2207#2208#0" expanded="true" />
+                    <element signature="e#2250#2251#0" expanded="true" />
+                    <element signature="e#2288#2289#0" expanded="true" />
+                    <element signature="e#2333#2334#0" expanded="true" />
+                    <element signature="e#2373#2374#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Departement.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="575">
+                  <caret line="133" selection-start-line="133" selection-end-line="133" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="680">
+                  <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+                  <folding>
+                    <element signature="n#style#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -296,11 +307,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Departement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/beans/Topo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" />
       </list>
     </option>
   </component>
@@ -459,7 +470,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551221808731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551223346408" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -621,7 +632,7 @@
       <workItem from="1551004901418" duration="3148000" />
       <workItem from="1551014331839" duration="41978000" />
       <workItem from="1551207605994" duration="3682000" />
-      <workItem from="1551213533047" duration="8084000" />
+      <workItem from="1551213533047" duration="9617000" />
     </task>
     <task id="LOCAL-00001" summary="construction de la page d'accueil mais à simplifier d'urgence">
       <created>1549812384426</created>
@@ -812,11 +823,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551136670639</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="formulaire du filtre implémenté avec controller, reste à éditer les requetes sur la BDD + suppression provisoire de l'include qui ne permet pas de passer l'objet du model à la vue&#10;+ quelques modifications sur la table topo, + divers mini refactoring">
+      <created>1551221941066</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1551221941066</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154037000" />
+    <option name="totallyTimeSpent" value="155570000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -831,7 +849,7 @@
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7672833" side_tool="true" visible="true" weight="0.12798092" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7672833" side_tool="true" visible="true" weight="0.12798092" />
       <window_info id="Structure" order="1" sideWeight="0.23255815" side_tool="true" weight="0.29888713" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -844,7 +862,7 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49960256" weight="0.33125487" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.77503973" visible="true" weight="0.23616524" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.77503973" visible="true" weight="0.23616524" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49756888" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -864,7 +882,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.25755167" />
+      <window_info anchor="right" id="Database" order="6" weight="0.25755167" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -963,7 +981,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="formulaire d'enregistrement déployé" />
     <MESSAGE value="formulaire de connexion déployé" />
     <MESSAGE value="modification des images de fond" />
     <MESSAGE value="deuxième page home" />
@@ -988,7 +1005,8 @@
     <MESSAGE value="liste des départements en ENUM pour la création des topos" />
     <MESSAGE value="mise à jour du formulaire publier topo" />
     <MESSAGE value="implémentation de la searchbox des topos" />
-    <option name="LAST_COMMIT_MESSAGE" value="implémentation de la searchbox des topos" />
+    <MESSAGE value="formulaire du filtre implémenté avec controller, reste à éditer les requetes sur la BDD + suppression provisoire de l'include qui ne permet pas de passer l'objet du model à la vue&#10;+ quelques modifications sur la table topo, + divers mini refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="formulaire du filtre implémenté avec controller, reste à éditer les requetes sur la BDD + suppression provisoire de l'include qui ne permet pas de passer l'objet du model à la vue&#10;+ quelques modifications sur la table topo, + divers mini refactoring" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1314,23 +1332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoPublier.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1354,7 +1355,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1380,13 +1381,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="493">
+          <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoPublier.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="85" lean-forward="true" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
         </state>
       </provider>
     </entry>
