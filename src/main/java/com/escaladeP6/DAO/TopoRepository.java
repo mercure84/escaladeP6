@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public interface TopoRepository extends JpaRepository<Topo, Integer> {
 
-//List<Topo> findToposByDepartementAndDifficulteAnd (int numDept, String difficulte, boolean disponible);
+List<Topo> findToposByDepartementAndDifficulteAndNbVoiesIsBetweenAndDisponible (int Departement, String Difficulte, int nbVoiesmin, int nbVoiesmax, boolean disponible);
 
-
+List<Topo> findToposByDepartement(int numDpt);
 }

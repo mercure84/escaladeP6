@@ -1,21 +1,34 @@
 package com.escaladeP6.tutoTest;
 
-import com.escaladeP6.beans.Departement;
 
-import java.util.ArrayList;
-
-
+/**
+ * test de script fizz buzzz :)
+ */
 public class testConsole {
 
     public static void main(String[] args) {
-        ArrayList<Integer> listeDpt = new ArrayList<Integer>();
 
-        for (Departement dept : Departement.values()){
+        for (int i=0 ; i<100 ; i++){
 
-            listeDpt.add(dept.getNumDpt());
+
+            System.out.println(i + " " + testNombre(i));
+
+
         }
-
-        System.out.println(listeDpt);
     }
+
+    public static String testNombre(int nombre){
+        String retour ="";
+
+        if(nombre%3 == 0){
+retour += "Fizz";
+        }
+        if (nombre %5 ==0){
+
+            retour +="Buzz";
+        }
+return retour;
+    }
+
 
 }
