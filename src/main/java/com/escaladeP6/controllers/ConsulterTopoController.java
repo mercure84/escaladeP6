@@ -25,6 +25,7 @@ public class ConsulterTopoController {
 
 @RequestMapping("/topoConsulter")
 public String topos (Model model){
+    // liste des département générée depuis l'enum
     ArrayList<Integer> listeNumDpt = new ArrayList<Integer>();
     for (Departement dept : Departement.values()){
         listeNumDpt.add(dept.getNumDpt());
@@ -37,6 +38,7 @@ public String topos (Model model){
 
 @PostMapping("/topoConsulter")
     public String topoSearch(@ModelAttribute Filtre filtre, Model model){
+    // liste des département générée depuis l'enum
     ArrayList<Integer> listeNumDpt = new ArrayList<Integer>();
     for (Departement dept : Departement.values()){
         listeNumDpt.add(dept.getNumDpt());
