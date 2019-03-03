@@ -45,9 +45,8 @@ public String topos (Model model){
     }
     model.addAttribute("listeDept", listeNumDpt);
     System.out.println("les valeurs demandées par le filtre sont les suivantes :");
-    System.out.println(filtre.getDepartement() + " " + filtre.getDifficulte() + " " + filtre.getNbVoies() + " " + filtre.isDisponible());
-    //model.addAttribute("topos", repository.findToposByDepartementAndDifficulteAndNbVoiesIsBetweenAndDisponible(filtre.getDepartement(), filtre.getDifficulte(), 7,15, filtre.isDisponible()));
-    model.addAttribute("topos", repository.findToposByDepartement((filtre.getDepartement())));
+    System.out.println("dpt = " + filtre.getDepartement() + " difficulte = " + filtre.getDifficulte() + " nb voie = " + filtre.getNbVoies() + " dispo : " + filtre.isDisponible());
+    model.addAttribute("topos", repository.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), disponible));
     return "topoConsulter";
 
 
