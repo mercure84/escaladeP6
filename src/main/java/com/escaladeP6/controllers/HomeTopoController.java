@@ -24,8 +24,8 @@ public class HomeTopoController {
     public String topoHome(Model model){
         int nbTopoTotal = (int) topoRepository.count();
         int nbMembres = (int) membreRepository.count();
-        int nbTopoEmpruntés = 20;
-        String nomDernierTopoPublie = "Acropora des chatons";
+        int nbTopoEmpruntés = (topoRepository.nbToposDispo().size());
+        String nomDernierTopoPublie = String.valueOf(topoRepository.listeToposParId().get(0).getNom());
         String pseudoMembre = "Mjuju92130";
         model.addAttribute("nbTopoTotal", nbTopoTotal );
         model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntés);

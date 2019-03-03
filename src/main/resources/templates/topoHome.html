@@ -51,8 +51,8 @@
                 <br>
                 <h2 th:text="'Bienvenu ' + ${pseudoMembre} + ' !'">Bienvenue</h2>
                 <br>
-                <p th:text="'Il y a ' + ${nbTopoTotal} + ' Topos en ligne. ' + ${nbTopoEmpruntes} + ' sont en cours d\'utilisation par les membres.' "/>
-                <p th:text="'Le dernier Topo publié est ' + ${nomDernierTopoPublie}"/>
+                <p th:text="'Il y a ' + ${nbTopoTotal} + ' Topos en ligne. ' + ${nbTopoEmpruntes} + ' sont disponibles !' "/>
+                <p th:text="'Le dernier Topo publié est ' + ${nomDernierTopoPublie} + '.'"/>
                 <p th:text="'Il y a actuellement ' + ${nbMembre} + ' grimpeurs enregistrés sur le site !'"/>
             </div></div>
 <div class="row">
@@ -63,10 +63,6 @@
                 <img src="./img/chat.jpg">
         </div>
     </div>
-
-
-
-
 
 <div th:include="jscdn.html"/>
 </body>
