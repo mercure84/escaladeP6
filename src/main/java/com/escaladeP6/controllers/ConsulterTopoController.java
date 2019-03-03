@@ -46,7 +46,8 @@ public String topos (Model model){
     model.addAttribute("listeDept", listeNumDpt);
     System.out.println("les valeurs demandées par le filtre sont les suivantes :");
     System.out.println("dpt = " + filtre.getDepartement() + " difficulte = " + filtre.getDifficulte() + " nb voie = " + filtre.getNbVoies() + " dispo : " + filtre.isDisponible());
-    model.addAttribute("topos", repository.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), disponible));
+
+    model.addAttribute("topos", repository.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), filtre.isDisponible()));
     return "topoConsulter";
 
 
