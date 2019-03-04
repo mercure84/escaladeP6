@@ -1,7 +1,9 @@
 package com.escaladeP6.controllers;
 
+import com.escaladeP6.DAO.MembreRepository;
 import com.escaladeP6.DAO.TopoRepository;
 import com.escaladeP6.beans.Departement;
+import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,9 @@ public class PublierTopoController {
 
      @Autowired
     TopoRepository repository;
+
+     @Autowired
+    MembreRepository repositoryMembre;
 
     @RequestMapping("/topoPublier")
     public String publicationForm(Model model){
@@ -33,9 +38,11 @@ public class PublierTopoController {
     @PostMapping("/topoPublier")
     public String publicationSubmit (@ModelAttribute Topo topo){
 
+        Membre membreEditeur = repositoryMembre.findMembreById(2).get(0);
+
 
         System.out.println("les données du formulaires ont été sauvées avec le dept : " + topo.getDepartement());
-        repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), 1, topo.getFichier()));
+        repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur, topo.getFichier()));
         return "index";
     }
 

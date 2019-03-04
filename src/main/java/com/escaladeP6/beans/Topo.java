@@ -41,13 +41,22 @@ public class Topo {
     private int nbVoies;
 
 
-//    @OneToMany()
-//    private Membre membre;
+    @ManyToOne()
+    @JoinColumn(name="membre_id")
+    private Membre membre;
 
-    @Column(name="membre_id")
-    private int membreId;
+//@Column(name="membre_id")
+//private int membreId;
 
     //accesseurs
+
+    public Membre getMembre() {
+        return membre;
+    }
+
+    public void setMembre(Membre membre) {
+        this.membre = membre;
+    }
 
     public int getId() {
         return id;
@@ -105,9 +114,6 @@ public class Topo {
         this.difficulte = difficulte;
     }
 
-    public int getMembreId() {
-        return membreId;
-    }
 
     public int getDepartement() {return departement;}
 
@@ -122,24 +128,19 @@ public class Topo {
         this.nbVoies = nbVoies;
     }
 
-    public void setMembreId(int membreId) {
-        this.membreId = membreId;
-    }
-
-
     //Constructeurs
 
     public Topo() {
     }
 
-    public Topo(String nom, String description, int departement, String difficulte, int nbVoies, boolean disponible, boolean valide, int membreId, byte[] fichier) {
+    public Topo(String nom, String description, int departement, String difficulte, int nbVoies, boolean disponible, boolean valide, Membre membre, byte[] fichier) {
         this.nom = nom;
         this.description = description;
         this.difficulte = difficulte;
         this.nbVoies = nbVoies;
         this.disponible = disponible;
         this.valide = valide;
-        this.membreId = membreId;
+        this.membre = membre;
         this.departement = departement;
         this.fichier = fichier;
 

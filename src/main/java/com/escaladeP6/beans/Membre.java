@@ -2,8 +2,7 @@ package com.escaladeP6.beans;
 
 import javax.persistence.*;
 import java.util.Date;
-
-
+import java.util.Set;
 
 
 @Entity
@@ -51,7 +50,24 @@ public class Membre {
     @Column(name="a_valider")
     private boolean valide;
 
+    @OneToMany
+    private Set<Topo> topos;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Set<Topo> getTopos() {
+        return topos;
+    }
+
+    public void setTopos(Set<Topo> topos) {
+        this.topos = topos;
+    }
 
     public String getNom() {
         return nom;
