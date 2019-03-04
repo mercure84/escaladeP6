@@ -16,7 +16,7 @@ public class Topo {
     private int id;
 
     @Column(name="fichier")
-    private MultipartFile[] fichier;
+    private byte[] fichier;
 
     @Column(name="nom")
     private String nom;
@@ -57,11 +57,11 @@ public class Topo {
         this.id = id;
     }
 
-    public MultipartFile[] getFichier() {
+    public byte[] getFichier() {
         return fichier;
     }
 
-    public void setFichier(MultipartFile[] fichier) {
+    public void setFichier(byte[] fichier) {
         this.fichier = fichier;
     }
 
@@ -132,7 +132,7 @@ public class Topo {
     public Topo() {
     }
 
-    public Topo(String nom, String description, int departement, String difficulte, int nbVoies, boolean disponible, boolean valide, int membreId) {
+    public Topo(String nom, String description, int departement, String difficulte, int nbVoies, boolean disponible, boolean valide, int membreId, byte[] fichier) {
         this.nom = nom;
         this.description = description;
         this.difficulte = difficulte;
@@ -141,6 +141,7 @@ public class Topo {
         this.valide = valide;
         this.membreId = membreId;
         this.departement = departement;
+        this.fichier = fichier;
 
     }
 

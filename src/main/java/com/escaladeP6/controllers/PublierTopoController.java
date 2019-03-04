@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @Controller
 public class PublierTopoController {
 
-    @Autowired
+     @Autowired
     TopoRepository repository;
 
     @RequestMapping("/topoPublier")
@@ -35,9 +35,7 @@ public class PublierTopoController {
 
 
         System.out.println("les données du formulaires ont été sauvées avec le dept : " + topo.getDepartement());
-        repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), 1));
-
-
+        repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), 1, topo.getFichier()));
         return "index";
     }
 

@@ -19,7 +19,7 @@ h1{
     background-image: url("../img/img2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 200vh !important;
     position: center;
 
 }

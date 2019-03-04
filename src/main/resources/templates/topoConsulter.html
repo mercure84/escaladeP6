@@ -99,7 +99,7 @@
     <td th:text="${ligne.getNbVoies()}">Nb voies</td>
     <td th:text="${ligne.isDisponible()}">Disponibilite</td>
     <td th:text="${ligne.getMembreId()}">Propriétaire</td>
-    <td th:text="Fichier">Fichier</td>
+    <td> <a th:href="@{'/file/'+${ligne.getFichier()}}"><span th:text="${ligne.getNom()}"/></a>>Fichier</td>
 
 
 </tr>
