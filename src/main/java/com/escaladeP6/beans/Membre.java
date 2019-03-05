@@ -1,5 +1,8 @@
 package com.escaladeP6.beans;
 
+import com.escaladeP6.DAO.MembreRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
@@ -212,6 +215,10 @@ public class Membre {
                 ", valide=" + valide +
                 '}';
     }
+
+
+
+
 }
 
 

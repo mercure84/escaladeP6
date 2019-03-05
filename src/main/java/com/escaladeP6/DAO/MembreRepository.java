@@ -10,4 +10,7 @@ public interface MembreRepository extends JpaRepository<Membre, Integer> {
 
 
 List<Membre> findMembreById(int id);
+
+String findMembreByPseudo(String pseudo);
+
 }

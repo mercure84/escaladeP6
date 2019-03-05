@@ -21,12 +21,12 @@ public class HomeTopoController {
     public String topoHome(Model model){
         int nbTopoTotal = (int) topoRepository.count();
         int nbMembres = (int) membreRepository.count();
-        //nt nbTopoEmpruntes = (topoRepository.nbToposDispo().size());
-        //String nomDernierTopoPublie = String.valueOf(topoRepository.listeToposParId().get(0).getNom());
+        int nbTopoEmpruntes = (topoRepository.nbToposDispo().size());
+        String nomDernierTopoPublie = String.valueOf(topoRepository.listeToposParId().get(0).getNom());
         String pseudoMembre = "Mjuju92130";
         model.addAttribute("nbTopoTotal", nbTopoTotal );
-        //model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntes);
-        //model.addAttribute("nomDernierTopoPublie", nomDernierTopoPublie);
+        model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntes);
+        model.addAttribute("nomDernierTopoPublie", nomDernierTopoPublie);
         model.addAttribute("pseudoMembre", pseudoMembre);
         model.addAttribute("nbMembre", nbMembres);
         return "topoHome";

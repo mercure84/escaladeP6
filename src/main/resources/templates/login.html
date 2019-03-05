@@ -1,16 +1,16 @@
-<main class="my-form">
+<main class="my-form" xmlns:th="http://www.w3.org/1999/xhtml">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Connexion (membres seulement)</div>
                     <div class="card-body">
-                        <form name="my-form" onsubmit="return validform()" action="" method="">
+                        <form name="my-form" th:action="@{/login}" method="post">
 
                             <div class="form-group row">
-                                <label for="pseudo" class="col-md-4 col-form-label text-md-right">Pseudo</label>
+                                <label for="user" class="col-md-4 col-form-label text-md-right">Pseudo</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="pseudo" class="form-control" name="pseudo">
+                                    <input type="text" id="user" class="form-control" name="username">
                                 </div>
                             </div>
 
@@ -18,7 +18,7 @@
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Mot de Passe</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="password" class="form-control" name="password">
+                                    <input type="password" id="password" class="form-control" name="password">
                                 </div>
                             </div>
 

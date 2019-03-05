@@ -24,7 +24,7 @@
                 <div class="card">
                     <div class="card-header">Décrivez votre Topo</div>
                     <div class="card-body">
-                        <form name="my-form" action="#" th:action="@{/topoPublier}" th:object="${topo}" method="post">
+                        <form name="my-form" action="#" th:action="@{/topoPublier}" th:object="${topo}" enctype="multipart/form-data" method="post">
 
 
                             <div class="form-group row">
@@ -69,7 +69,7 @@
 
                             <div class="input-group mb-3">
                                 <div class="custom-file">
-                                    <input type="file"  name="file" th:field="*{fichier}">
+                                    <input type="file"  name="file">
 
                                 </div>
 

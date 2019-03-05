@@ -18,6 +18,11 @@ public class Topo {
     @Column(name="fichier")
     private byte[] fichier;
 
+
+
+    @Column(name="nom_fichier")
+    private String nomFichier;
+
     @Column(name="nom")
     private String nom;
 
@@ -45,11 +50,15 @@ public class Topo {
     @JoinColumn(name="membre_id")
     private Membre membre;
 
-//@Column(name="membre_id")
-//private int membreId;
 
     //accesseurs
+    public String getNomFichier() {
+        return nomFichier;
+    }
 
+    public void setNomFichier(String nomFichier) {
+        this.nomFichier = nomFichier;
+    }
     public Membre getMembre() {
         return membre;
     }
@@ -133,7 +142,7 @@ public class Topo {
     public Topo() {
     }
 
-    public Topo(String nom, String description, int departement, String difficulte, int nbVoies, boolean disponible, boolean valide, Membre membre, byte[] fichier) {
+    public Topo(String nom, String description, int departement, String difficulte, int nbVoies, boolean disponible, boolean valide, Membre membre) {
         this.nom = nom;
         this.description = description;
         this.difficulte = difficulte;
@@ -142,7 +151,6 @@ public class Topo {
         this.valide = valide;
         this.membre = membre;
         this.departement = departement;
-        this.fichier = fichier;
 
     }
 

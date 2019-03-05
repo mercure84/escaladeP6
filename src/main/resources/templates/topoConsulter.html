@@ -30,6 +30,11 @@
                             <label class="col-md-3 col-form-label text-md-right" for="difficulte" >Difficulté</label>
                             <label class="col-md-3 col-form-label text-md-right" for="nbVoies" >Nb de voies</label>
                             <label class="col-md-2 col-form-label text-md-right" for="disponible" >Topo dispo.</label>
+                            <div class="col-md-1">
+                                <button class="btn btn-secondary" onclick="rechargerPage()">Reset</button>
+                            </div>
+
+
                         </div>
                         <div class="form-group row">
                             <select class="form-control col-md-3" id="departement" th:field="*{departement}">
@@ -98,7 +103,7 @@
     <td th:text="${ligne.getDepartement()}">Departement</td>
     <td th:text="${ligne.getNbVoies()}">Nb voies</td>
     <td th:text="${ligne.isDisponible()}">Disponibilite</td>
-    <td th:text="${ligne.getMembre().getNom()}">Propriétaire</td>
+    <td th:text="${ligne.getMembre().getPseudo()}">Propriétaire</td>
     <td>Fichier</td>
 
 
@@ -109,5 +114,11 @@
 
 
 <div th:include="jscdn.html"/>
+
+<script>
+    function rechargerPage() {
+        location.reload(true);
+    }
+</script>
 </body>
 </html>
