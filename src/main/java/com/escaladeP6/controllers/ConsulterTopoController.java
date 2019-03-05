@@ -65,8 +65,7 @@ public String topos (Model model){
 }
 
 @RequestMapping("/topoConsulter/fichiers")
-public @ResponseBody byte[] dlFichier(String topoId) throws SQLException, IOException {
-    //byte[] fichier = new byte[2048];
+public @ResponseBody String dlFichier(String topoId) throws SQLException, IOException {
 
     System.out.println("topoid vaut " + topoId + " c'est un "+ topoId.getClass().getName());
 
@@ -74,7 +73,7 @@ public @ResponseBody byte[] dlFichier(String topoId) throws SQLException, IOExce
     PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
     ps.setInt(1, Integer.parseInt(topoId));
     ResultSet rs = ps.executeQuery();
-
+    String localPath = System.getProperty("user.dir");
     String path = "fichiers/topo"+topoId+".pdf";
 
     if (rs != null) {
@@ -92,7 +91,7 @@ public @ResponseBody byte[] dlFichier(String topoId) throws SQLException, IOExce
     ps.close();
 
 
-    return path.getBytes();
+    return "<a href='"+localPath+"/"+path+"'>TELECHARGER</a>";
 }
 }
 
