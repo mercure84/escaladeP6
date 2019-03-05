@@ -13,8 +13,9 @@ import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.*;
@@ -65,7 +66,7 @@ public String topos (Model model){
 }
 
 @RequestMapping("/topoConsulter/fichiers")
-public @ResponseBody String dlFichier(String topoId) throws SQLException, IOException {
+public @ResponseBody void dlFichier(String topoId, HttpServletResponse response ) throws SQLException, IOException {
 
     System.out.println("topoid vaut " + topoId + " c'est un "+ topoId.getClass().getName());
 
@@ -78,20 +79,24 @@ public @ResponseBody String dlFichier(String topoId) throws SQLException, IOExce
 
     if (rs != null) {
         while (rs.next()) {
+            //sortie du fichier de la BDD
             byte[] fichier = rs.getBytes("fichier");
-
             File file=new File(path);
             FileOutputStream fos=new FileOutputStream(file);
             fos.write(fichier);
-            fos.close();
+
+            //renvoie du fichier dans la réponse via un FIS
+
+            File fileIS = new File(path);
+            FileInputStream fis = new FileInputStream(fileIS);
+            org.apache.commons.io.IOUtils.copy(fis, response.getOutputStream());
+            response.flushBuffer();
 
         }
         rs.close();
     }
     ps.close();
 
-
-    return "<a href='"+localPath+"/"+path+"'>TELECHARGER</a>";
 }
 }
 
