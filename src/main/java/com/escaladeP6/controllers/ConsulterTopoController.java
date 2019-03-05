@@ -11,13 +11,13 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
 
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,12 +39,6 @@ public String topos (Model model){
     }
 
     List<Topo> testTopos = repository.findAll();
-    byte[] fichier = testTopos.get(0).getFichier();
-    System.out.println("Le fichier est : " + testTopos.get(0).getFichier());
-
-
-
-
         model.addAttribute("topos", repository.findAll());
         model.addAttribute("listeDept", listeNumDpt);
         model.addAttribute("filtre", new Filtre());
@@ -68,9 +62,37 @@ public String topos (Model model){
     model.addAttribute("topos", repository.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), filtre.isDisponible()));
     return "topoConsulter";
 
-
-
 }
 
+@RequestMapping("/topoConsulter/fichiers")
+public @ResponseBody byte[] dlFichier(String topoId) throws SQLException, IOException {
+    //byte[] fichier = new byte[2048];
 
+    System.out.println("topoid vaut " + topoId + " c'est un "+ topoId.getClass().getName());
+
+    Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "chatons2019");
+    PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
+    ps.setInt(1, Integer.parseInt(topoId));
+    ResultSet rs = ps.executeQuery();
+
+    String path = "fichiers/topo"+topoId+".pdf";
+
+    if (rs != null) {
+        while (rs.next()) {
+            byte[] fichier = rs.getBytes("fichier");
+
+            File file=new File(path);
+            FileOutputStream fos=new FileOutputStream(file);
+            fos.write(fichier);
+            fos.close();
+
+        }
+        rs.close();
+    }
+    ps.close();
+
+
+    return path.getBytes();
 }
+}
+

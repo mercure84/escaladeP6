@@ -104,7 +104,8 @@
     <td th:text="${ligne.getNbVoies()}">Nb voies</td>
     <td th:text="${ligne.isDisponible()}">Disponibilite</td>
     <td th:text="${ligne.getMembre().getPseudo()}">Propriétaire</td>
-    <td>Fichier</td>
+    <td><a th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher"></a>
+    </td>
 
 
 </tr>
