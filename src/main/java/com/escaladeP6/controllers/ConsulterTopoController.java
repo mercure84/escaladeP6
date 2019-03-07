@@ -70,7 +70,7 @@ public @ResponseBody void dlFichier(String topoId, HttpServletResponse response 
 
     System.out.println("topoid vaut " + topoId + " c'est un "+ topoId.getClass().getName());
 
-    Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "chatons2019");
+    Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
     PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
     ps.setInt(1, Integer.parseInt(topoId));
     ResultSet rs = ps.executeQuery();

@@ -22,7 +22,12 @@ public class HomeTopoController {
         int nbTopoTotal = (int) topoRepository.count();
         int nbMembres = (int) membreRepository.count();
         int nbTopoEmpruntes = (topoRepository.nbToposDispo().size());
-        String nomDernierTopoPublie = String.valueOf(topoRepository.listeToposParId().get(0).getNom());
+        String nomDernierTopoPublie = null;
+        try {nomDernierTopoPublie = String.valueOf(topoRepository.listeToposParId().get(0).getNom());}
+        catch (Exception e){
+            nomDernierTopoPublie = null;
+        }
+
         String pseudoMembre = "Mjuju92130";
         model.addAttribute("nbTopoTotal", nbTopoTotal );
         model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntes);
