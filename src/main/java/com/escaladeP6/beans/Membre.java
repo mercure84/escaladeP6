@@ -27,7 +27,7 @@ public class Membre {
     private String pseudo;
 
     @Column(name="password")
-    private String password;
+    private String encryptedPassword;
 
     @Column(name="date_naissance")
     private Date dateNaissance;
@@ -97,11 +97,11 @@ public class Membre {
     }
 
     public String getPassword() {
-        return password;
+        return encryptedPassword;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.encryptedPassword = password;
     }
 
     public Date getDateNaissance() {
@@ -178,7 +178,7 @@ public class Membre {
         this.nom = nom;
         this.prenom = prenom;
         this.pseudo = pseudo;
-        this.password = password;
+        this.encryptedPassword = password;
         this.dateNaissance = dateNaissance;
         this.email = email;
         this.telMobile = telMobile;
@@ -193,7 +193,7 @@ public class Membre {
         this.nom = nom;
         this.prenom = prenom;
         this.pseudo = pseudo;
-        this.password = password;
+        this.encryptedPassword = password;
         this.email = email;
     }
 
@@ -204,7 +204,7 @@ public class Membre {
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", pseudo='" + pseudo + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + encryptedPassword + '\'' +
                 ", dateNaissance=" + dateNaissance +
                 ", email='" + email + '\'' +
                 ", telMobile=" + telMobile +
