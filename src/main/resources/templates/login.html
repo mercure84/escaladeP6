@@ -1,11 +1,45 @@
-<main class="my-form" xmlns:th="http://www.w3.org/1999/xhtml">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Connexion (membres seulement)</div>
-                    <div class="card-body">
-                        <form name="my-form" th:action="@{/login}" method="post">
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<head>
+    <div th:include="bootstrapcdn.html"/>
+    <meta charset="utf-8">
+
+    <title>Escalade P6 - OpenClassRooms - Parcours DA Java - Projet 6</title>
+
+
+
+</head>
+<!-- nav bar -->
+<div th:include="navbar.html"/>
+
+
+<body>
+<!-- /login?error=true -->
+<div th:if="${#request.getParameter('error') == 'true'}"
+     style="color:red;margin:10px 0px;">
+    Login Failed!!!<br />
+    Reason :
+    <span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"
+          th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION')}">
+                Static summary
+         </span>
+
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+                    <div class="my-form">
+                        <div class="card">
+                            <div class="card-header">Login</div>
+                            <div class="card-body">
+
+                        <form name='f' th:action="@{/j_spring_security_check}" method='POST'>
 
                             <div class="form-group row">
                                 <label for="user" class="col-md-4 col-form-label text-md-right">Pseudo</label>
@@ -30,11 +64,6 @@
                             <a href="#"> Mot de passe oublié ?</a>
                             <p class="centrer"> <a href="#signUp"> Pas encore inscrit ?</a></p></div>
 
-                    </form></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+                        </form></div></div></div></div></div></div>
 
-</main>
+</body></html>

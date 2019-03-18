@@ -3,6 +3,7 @@ package com.escaladeP6.controllers;
 import com.escaladeP6.DAO.MembreRepository;
 import com.escaladeP6.beans.Membre;
 
+import com.escaladeP6.security.EncryptedPasswordUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +25,8 @@ public class SignUpController {
     public String senregistrerSubmit(@ModelAttribute Membre membre){
         System.out.println("les données du formulaires ont été sauvegardées");
         System.out.println(membre.getNom() + " " + membre.getPrenom() + " " + membre.getPseudo() + " " + membre.getPseudo() + membre.getPassword());
-        repository.save(new Membre(membre.getNom(), membre.getPrenom(), membre.getPseudo(), membre.getPassword(), membre.getEmail()));
+        String encodedPassword = EncryptedPasswordUtils.encryptePassword(membre.getPassword());
+        repository.save(new Membre(membre.getNom(), membre.getPrenom(), membre.getPseudo(), encodedPassword, membre.getEmail()));
         return "index";
 
 

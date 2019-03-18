@@ -42,10 +42,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         //pages qui n'ont pas besoin d'authentification
-        http.authorizeRequests().antMatchers("/", "/login", "/signUp" ).permitAll();
+        http.authorizeRequests().antMatchers("/", "/login", "/signUp").permitAll();
 
         //si pas de login, redirection de ces pages :
-        http.authorizeRequests().antMatchers("/topoHome", "/topoPublier", "topoConsulter").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/topoPublier", "topoConsulter", "/topoHome" ).access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         // page réservée à l'admin
         //http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
@@ -55,15 +55,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         //configuration du login de form
         http.authorizeRequests().and().formLogin()
+                .loginProcessingUrl("/j_spring_security_check")
                 .loginPage("/login")
-                .loginPage("/topoHome")
-                .failureForwardUrl("/login?error=true")
+                .defaultSuccessUrl("/topoHome")
+                .failureUrl("/login?error=true")
                 .usernameParameter("username")
                 .passwordParameter("passwword")
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");
-
-
-
 
     }
 
