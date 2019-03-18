@@ -39,6 +39,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         // [ROLE_USER, ROLE_ADMIN,..]
         List<String> roleNames = this.appRoleDAO.getRoleNames(membre.getId());
+        System.out.println(roleNames);
+
+
 
         List<GrantedAuthority> grantList = new ArrayList<GrantedAuthority>();
 
@@ -50,10 +53,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             }
         }
 
-        UserDetails userDetails = (UserDetails) new User(membre.getPseudo(), //
-                membre.getPassword(), grantList);
-
+        UserDetails userDetails = (UserDetails) new User(membre.getPseudo(), membre.getEncryptedPassword(), grantList);
+        System.out.println(userDetails);
         return userDetails;
+
     }
 
 

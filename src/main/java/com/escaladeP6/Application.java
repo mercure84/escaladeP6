@@ -19,7 +19,7 @@ public class Application {
     }
 
 
-    //vidate du dossier de stockage des fichiers téléchargés
+    //vidange du dossier de stockage des fichiers téléchargés
     @Bean
     CommandLineRunner init(StorageService storageService) {
         return (args) -> {

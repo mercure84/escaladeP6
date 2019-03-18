@@ -11,13 +11,4 @@ public class EncryptedPasswordUtils {
 
     }
 
-    //un test de l'encodage
-    public static void main(String[] args) {
-
-        String mot = "expression à crypter !";
-        System.out.println("Cela nous donne : " + encryptePassword(mot));
-
-    }
-
-
 }

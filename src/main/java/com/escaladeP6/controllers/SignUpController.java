@@ -29,8 +29,8 @@ public class SignUpController {
     @PostMapping("/signUp")
     public String senregistrerSubmit(@ModelAttribute Membre membre){
         System.out.println("les données du formulaires ont été sauvegardées");
-        System.out.println(membre.getNom() + " " + membre.getPrenom() + " " + membre.getPseudo() + " " + membre.getPseudo() + membre.getPassword());
-        String encodedPassword = EncryptedPasswordUtils.encryptePassword(membre.getPassword());
+        System.out.println(membre.getNom() + " " + membre.getPrenom() + " " + membre.getPseudo() + " " + membre.getPseudo() + " " + membre.getEncryptedPassword());
+        String encodedPassword = EncryptedPasswordUtils.encryptePassword(membre.getEncryptedPassword());
         //création du membre :
         Membre nouveauMembre = new Membre(membre.getNom(), membre.getPrenom(), membre.getPseudo(), encodedPassword, membre.getEmail());
 
@@ -38,7 +38,7 @@ public class SignUpController {
         repository.save(nouveauMembre);
 
         //attribution d'un rôle au membre nouvellement créé
-        roleMembreRepository.save(new RoleMembre(nouveauMembre, 1));
+        roleMembreRepository.save(new RoleMembre(nouveauMembre, 2));
 
 
         return "index";

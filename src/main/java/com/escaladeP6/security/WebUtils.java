@@ -26,6 +26,7 @@ public class WebUtils {
             }
             sb.append(")");
         }
+
         return sb.toString();
     }
 }

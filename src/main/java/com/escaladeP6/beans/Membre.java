@@ -24,7 +24,7 @@ public class Membre {
     @Column(name="pseudo")
     private String pseudo;
 
-    @Column(name="password")
+    @Column(name="encryptedPassword")
     private String encryptedPassword;
 
     @Column(name="date_naissance")
@@ -39,17 +39,14 @@ public class Membre {
     @Column(name="date_inscription")
     private Date dateInscription;
 
-    @Column(name="role")
-    private String role;
-
     @Column(name="code_postal")
     private int codePostal;
 
     @Column(name="ville")
     private String ville;
 
-    @Column(name="a_valider")
-    private boolean valide;
+    @Column(name="enabled")
+    private boolean valide = true;
 
     @OneToMany
     private Set<Topo> topos;
@@ -94,12 +91,12 @@ public class Membre {
         this.pseudo = pseudo;
     }
 
-    public String getPassword() {
+    public String getEncryptedPassword() {
         return encryptedPassword;
     }
 
-    public void setPassword(String password) {
-        this.encryptedPassword = password;
+    public void setEncryptedPassword(String encryptedPassword) {
+        this.encryptedPassword = encryptedPassword;
     }
 
     public Date getDateNaissance() {
@@ -134,14 +131,6 @@ public class Membre {
         this.dateInscription = dateInscription;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
     public int getCodePostal() {
         return codePostal;
     }
@@ -172,26 +161,26 @@ public class Membre {
 
     }
 
-    public Membre(String nom, String prenom, String pseudo, String password, Date dateNaissance, String email, int telMobile, Date dateInscription, String role, int codePostal, String ville, boolean valide) {
+    public Membre(String nom, String prenom, String pseudo, String encryptedPassword, Date dateNaissance, String email, int telMobile, Date dateInscription, int codePostal, String ville, boolean valide) {
         this.nom = nom;
         this.prenom = prenom;
         this.pseudo = pseudo;
-        this.encryptedPassword = password;
+        this.encryptedPassword = encryptedPassword;
         this.dateNaissance = dateNaissance;
         this.email = email;
         this.telMobile = telMobile;
         this.dateInscription = dateInscription;
-        this.role = role;
+
         this.codePostal = codePostal;
         this.ville = ville;
         this.valide = valide;
     }
 
-    public Membre(String nom, String prenom, String pseudo, String password, String email) {
+    public Membre(String nom, String prenom, String pseudo, String encryptedPassword, String email) {
         this.nom = nom;
         this.prenom = prenom;
         this.pseudo = pseudo;
-        this.encryptedPassword = password;
+        this.encryptedPassword = encryptedPassword;
         this.email = email;
     }
 
@@ -202,12 +191,11 @@ public class Membre {
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", pseudo='" + pseudo + '\'' +
-                ", password='" + encryptedPassword + '\'' +
+                ", encryptedPassword='" + encryptedPassword + '\'' +
                 ", dateNaissance=" + dateNaissance +
                 ", email='" + email + '\'' +
                 ", telMobile=" + telMobile +
                 ", dateInscription=" + dateInscription +
-                ", role='" + role + '\'' +
                 ", codePostal=" + codePostal +
                 ", ville='" + ville + '\'' +
                 ", valide=" + valide +

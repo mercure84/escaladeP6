@@ -48,7 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/topoPublier", "topoConsulter", "/topoHome" ).access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         // page réservée à l'admin
-        //http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
 
         //accès refusé pour problème de rôle ==> erreur 403
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");

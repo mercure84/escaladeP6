@@ -6,8 +6,11 @@ import com.escaladeP6.beans.Departement;
 import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
 
+import com.escaladeP6.security.WebUtils;
 import com.escaladeP6.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +21,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.security.Principal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -40,8 +44,13 @@ public class PublierTopoController {
      @Autowired
     MembreRepository repositoryMembre;
 
-    @RequestMapping("/topoPublier")
-    public String publicationForm(Model model){
+    @RequestMapping(value="/topoPublier", method = RequestMethod.GET)
+    public String publicationForm(Model model, Principal principal){
+
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+        String userInfo = WebUtils.toString(loginedUser);
+        model.addAttribute(userInfo, userInfo);
+
 
         ArrayList<Integer> listeNumDpt = new ArrayList<Integer>();
         for (Departement dept : Departement.values()){
@@ -56,7 +65,7 @@ public class PublierTopoController {
     @PostMapping("/topoPublier")
     public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo) throws SQLException {
         // SELECTION DU MEMBRE QUI POSTE LE TOPO
-        Membre membreEditeur = repositoryMembre.findMembreById(2).get(0);
+        Membre membreEditeur = repositoryMembre.findMembreById(2);
 
 
 
