@@ -19,8 +19,9 @@
 
 <body>
 <!-- /login?error=true -->
-<div th:if="${#request.getParameter('error') == 'true'}"
-     style="color:red;margin:10px 0px;">
+
+<div class="container" style="margin-top: auto">
+<div style="margin-top:10vh" th:if="${#request.getParameter('error')=='true'}">
     Login Failed!!!<br />
     Reason :
     <span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"
@@ -28,7 +29,7 @@
                 Static summary
          </span>
 
-</div>
+</div></div>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -42,9 +43,9 @@
                         <form name='f' th:action="@{/j_spring_security_check}" method='POST'>
 
                             <div class="form-group row">
-                                <label for="user" class="col-md-4 col-form-label text-md-right">Pseudo</label>
+                                <label for="username" class="col-md-4 col-form-label text-md-right">Pseudo</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="user" class="form-control" name="username">
+                                    <input type="text" id="username" class="form-control" name="username">
                                 </div>
                             </div>
 
@@ -64,6 +65,7 @@
                             <a href="#"> Mot de passe oublié ?</a>
                             <p class="centrer"> <a href="/signUp"> Pas encore inscrit ?</a></p></div>
 
-                        </form></div></div></div></div></div></div>
+                        </form>
+                            </div></div></div></div></div></div>
 
 </body></html>

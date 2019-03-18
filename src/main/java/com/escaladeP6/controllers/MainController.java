@@ -19,8 +19,8 @@ public class MainController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login (Model model) {
-        return "login";
+    public String loginPage (Model model) {
+        return "loginPage";
     }
 
 

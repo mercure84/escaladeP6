@@ -8,7 +8,7 @@
       <ObjectId>16599</ObjectId>
       <StateNumber>653</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>779</IntrospectionStateNumber>
+      <IntrospectionStateNumber>796</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16601|16603|1
@@ -115,7 +115,7 @@ sequence|table|16833|16715|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>780</IntrospectionStateNumber>
+      <IntrospectionStateNumber>797</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -244,7 +244,7 @@ sequence|table|16833|16715|1
     <table id="36" parent="19" name="membre">
       <ObjectId>16603</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>730</StateNumber>
+      <StateNumber>795</StateNumber>
     </table>
     <table id="37" parent="19" name="persistent_logins">
       <ObjectId>16732</ObjectId>
@@ -413,9 +413,9 @@ sequence|table|16833|16715|1
     </column>
     <column id="62" parent="36" name="encrypted_password">
       <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>765</StateNumber>
+      <StateNumber>795</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="63" parent="36" name="date_naissance">
@@ -471,19 +471,19 @@ sequence|table|16833|16715|1
     </column>
     <index id="71" parent="36" name="membre_pkey">
       <ObjectId>16611</ObjectId>
-      <StateNumber>730</StateNumber>
+      <StateNumber>795</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="72" parent="36" name="membre_pseudo_uindex">
       <ObjectId>16823</ObjectId>
-      <StateNumber>730</StateNumber>
+      <StateNumber>795</StateNumber>
       <ColNames>pseudo</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="73" parent="36" name="membre_email_uindex">
       <ObjectId>16613</ObjectId>
-      <StateNumber>730</StateNumber>
+      <StateNumber>795</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>

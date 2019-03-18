@@ -45,7 +45,7 @@ public class HomeTopoController {
             nomDernierTopoPublie = null;
         }
 
-        String pseudoMembre = "Mjuju92130";
+        String pseudoMembre = loginedUser.getUsername();
         model.addAttribute("nbTopoTotal", nbTopoTotal );
         model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntes);
         model.addAttribute("nomDernierTopoPublie", nomDernierTopoPublie);
