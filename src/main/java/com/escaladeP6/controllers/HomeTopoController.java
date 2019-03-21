@@ -30,11 +30,8 @@ public class HomeTopoController {
 
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
 
-        String userInfo = WebUtils.toString(loginedUser);
-        model.addAttribute("userInfo", userInfo);
-
-
-
+        //String userInfo = WebUtils.toString(loginedUser);
+        //model.addAttribute("userInfo", userInfo);
 
         int nbTopoTotal = (int) topoRepository.count();
         int nbMembres = (int) membreRepository.count();
@@ -44,12 +41,13 @@ public class HomeTopoController {
         catch (Exception e){
             nomDernierTopoPublie = null;
         }
+        String pseudo = loginedUser.getUsername();
+        String titreMembre = membreRepository.findMembreByPseudo(pseudo).getPrenom() + " " + membreRepository.findMembreByPseudo(pseudo).getNom();
 
-        String pseudoMembre = loginedUser.getUsername();
         model.addAttribute("nbTopoTotal", nbTopoTotal );
         model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntes);
         model.addAttribute("nomDernierTopoPublie", nomDernierTopoPublie);
-        model.addAttribute("pseudoMembre", pseudoMembre);
+        model.addAttribute("titreMembre", titreMembre);
         model.addAttribute("nbMembre", nbMembres);
         return "topoHome";
 

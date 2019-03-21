@@ -45,11 +45,7 @@ public class PublierTopoController {
     MembreRepository repositoryMembre;
 
     @RequestMapping(value="/topoPublier", method = RequestMethod.GET)
-    public String publicationForm(Model model, Principal principal){
-
-        User loginedUser = (User) ((Authentication) principal).getPrincipal();
-        String userInfo = WebUtils.toString(loginedUser);
-        model.addAttribute(userInfo, userInfo);
+    public String publicationForm(Model model){
 
 
         ArrayList<Integer> listeNumDpt = new ArrayList<Integer>();
@@ -63,11 +59,13 @@ public class PublierTopoController {
     }
 
     @PostMapping("/topoPublier")
-    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo) throws SQLException {
+    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal) throws SQLException {
         // SELECTION DU MEMBRE QUI POSTE LE TOPO
-        Membre membreEditeur = repositoryMembre.findMembreById(2);
-
-
+        //chargement des paramètres du membres
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+        String pseudo = loginedUser.getUsername();
+        int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
+        Membre membreEditeur = repositoryMembre.findMembreById(idMembre);
 
         System.out.println("les données du formulaires ont été sauvées avec le dept : " + topo.getDepartement());
         repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
@@ -99,7 +97,7 @@ public class PublierTopoController {
             }
         }
 
-        return "index";
+        return "/topoPublier";
     }
 
 

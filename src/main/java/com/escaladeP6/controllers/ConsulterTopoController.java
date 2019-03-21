@@ -65,38 +65,39 @@ public String topos (Model model){
 
 }
 
-@RequestMapping("/topoConsulter/fichiers")
-public @ResponseBody void dlFichier(String topoId, HttpServletResponse response ) throws SQLException, IOException {
+    @RequestMapping("/topoConsulter/fichiers")
+    public @ResponseBody void dlFichier(String topoId, HttpServletResponse response ) throws SQLException, IOException {
 
-    System.out.println("topoid vaut " + topoId + " c'est un "+ topoId.getClass().getName());
+        System.out.println("topoid vaut " + topoId + " c'est un "+ topoId.getClass().getName());
 
-    Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
-    PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
-    ps.setInt(1, Integer.parseInt(topoId));
-    ResultSet rs = ps.executeQuery();
-    String localPath = System.getProperty("user.dir");
-    String path = "fichiers/topo"+topoId+".pdf";
+        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
+        PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
+        ps.setInt(1, Integer.parseInt(topoId));
+        ResultSet rs = ps.executeQuery();
+        String localPath = System.getProperty("user.dir");
+        String path = "fichiers/topo"+topoId+".pdf";
 
-    if (rs != null) {
-        while (rs.next()) {
-            //sortie du fichier de la BDD
-            byte[] fichier = rs.getBytes("fichier");
-            File file=new File(path);
-            FileOutputStream fos=new FileOutputStream(file);
-            fos.write(fichier);
+        if (rs != null) {
+            while (rs.next()) {
+                //sortie du fichier de la BDD
+                byte[] fichier = rs.getBytes("fichier");
+                File file=new File(path);
+                FileOutputStream fos=new FileOutputStream(file);
+                fos.write(fichier);
 
-            //renvoie du fichier dans la réponse via un FIS
+                //renvoie du fichier dans la réponse via un FIS
 
-            File fileIS = new File(path);
-            FileInputStream fis = new FileInputStream(fileIS);
-            org.apache.commons.io.IOUtils.copy(fis, response.getOutputStream());
-            response.flushBuffer();
+                File fileIS = new File(path);
+                FileInputStream fis = new FileInputStream(fileIS);
+                org.apache.commons.io.IOUtils.copy(fis, response.getOutputStream());
+                response.setContentType("application/pdf");
+                response.flushBuffer();
 
+            }
+            rs.close();
         }
-        rs.close();
-    }
-    ps.close();
+        ps.close();
 
-}
+    }
 }
 
