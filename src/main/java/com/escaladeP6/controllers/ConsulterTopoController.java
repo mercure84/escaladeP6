@@ -6,6 +6,7 @@ import com.escaladeP6.beans.Departement;
 import com.escaladeP6.beans.Filtre;
 import com.escaladeP6.beans.Topo;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -75,27 +76,37 @@ public String topos (Model model){
         ps.setInt(1, Integer.parseInt(topoId));
         ResultSet rs = ps.executeQuery();
         String localPath = System.getProperty("user.dir");
-        String path = "fichiers/topo"+topoId+".pdf";
+        String nomPDF = topoId+".pdf";
+        String path = localPath + "/fichiers/topo"+ nomPDF;
 
-        if (rs != null) {
+        File file = new File(path);
+        FileOutputStream fos = new FileOutputStream(file);
+
+            if (rs != null) {
             while (rs.next()) {
                 //sortie du fichier de la BDD
                 byte[] fichier = rs.getBytes("fichier");
-                File file=new File(path);
-                FileOutputStream fos=new FileOutputStream(file);
-                fos.write(fichier);
 
+
+                fos.write(fichier);
+            }}
                 //renvoie du fichier dans la réponse via un FIS
+                response.setContentType("application/pdf");
 
                 File fileIS = new File(path);
                 FileInputStream fis = new FileInputStream(fileIS);
-                org.apache.commons.io.IOUtils.copy(fis, response.getOutputStream());
-                response.setContentType("application/pdf");
-                response.flushBuffer();
+                IOUtils.copy(fis, response.getOutputStream());
 
-            }
+                response.setHeader("Content-Disposition", "inline; filename=" + path+";" );
+                fos.close();
+                fis.close();
+
+
+               // response.flushBuffer();
+
+
             rs.close();
-        }
+
         ps.close();
 
     }

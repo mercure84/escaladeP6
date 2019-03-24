@@ -14,7 +14,7 @@ h1{
     position: center;
 }
 
-#signUp{
+#signUp, #login{
 
     background-image: url("../img/img2.jpg");
     background-repeat: no-repeat;

@@ -19,8 +19,9 @@
 
 <body>
 <!-- /login?error=true -->
-
-<div class="container" style="margin-top: auto">
+<div class="d-flex p-2 bd-highlight" id="login">
+    <div class="row">
+<div class="container" style="margin-top: auto" >
 <div style="margin-top:10vh" th:if="${#request.getParameter('error')=='true'}">
     Login Failed!!!<br />
     Reason :
@@ -29,7 +30,7 @@
                 Static summary
          </span>
 
-</div></div>
+</div></div></div>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -66,6 +67,6 @@
                             <p class="centrer"> <a href="/signUp"> Pas encore inscrit ?</a></p></div>
 
                         </form>
-                            </div></div></div></div></div></div>
+                            </div></div></div></div></div></div></div>
 
 </body></html>
