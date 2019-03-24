@@ -9,7 +9,6 @@
     <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -89,11 +88,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="95" column="45" lean-forward="true" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+            <state relative-caret-position="723">
+              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,11 +109,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="621">
+              <caret line="63" column="105" lean-forward="true" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +179,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
+            <state relative-caret-position="1649">
               <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -256,12 +259,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/security/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoPublier.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" />
       </list>
     </option>
   </component>
@@ -303,11 +306,6 @@
             <path>
               <item name="escaladeP6" type="b2602c69:ProjectViewProjectNode" />
               <item name="escaladeP6" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="escaladeP6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="escaladeP6" type="462c0819:PsiDirectoryNode" />
-              <item name="fichiers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="escaladeP6" type="b2602c69:ProjectViewProjectNode" />
@@ -428,7 +426,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553467227202" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553468256090" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gs-uploading-files-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -638,7 +636,7 @@
       <workItem from="1552941951840" duration="11422000" />
       <workItem from="1553022440752" duration="3212000" />
       <workItem from="1553119571373" duration="8406000" />
-      <workItem from="1553461746936" duration="3917000" />
+      <workItem from="1553461746936" duration="4950000" />
     </task>
     <task id="LOCAL-00001" summary="construction de la page d'accueil mais à simplifier d'urgence">
       <created>1549812384426</created>
@@ -962,11 +960,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553127630312</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="correction du bug de téléchargement des PDF">
+      <created>1553467300583</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1553467300583</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289767000" />
+    <option name="totallyTimeSpent" value="290800000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -981,7 +986,7 @@
     <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7672833" side_tool="true" visible="true" weight="0.2795786" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7672833" side_tool="true" visible="true" weight="0.2795786" />
       <window_info id="Structure" order="1" sideWeight="0.23255815" side_tool="true" weight="0.29888713" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -993,7 +998,7 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49960256" weight="0.33125487" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32424006" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7745203" visible="true" weight="0.29042387" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.7745203" visible="true" weight="0.29042387" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49756888" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -1115,7 +1120,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="formulaire de publication topo toujours pas opérationel, rien ne se passe à la soumission" />
     <MESSAGE value="formulaire publication topo implémenté et fonctionnel, à parfaire ..." />
     <MESSAGE value="consultation des topos en cours ; on affiche les beans mais pas les données dans le tableau..." />
     <MESSAGE value="consultation des topos OK" />
@@ -1140,7 +1144,8 @@
     <MESSAGE value="security ne fonctionne toujours pas" />
     <MESSAGE value="security fonctionne ! c'était un pb dans le mot password du WebSecurityConfig" />
     <MESSAGE value="divers : modif pages homeTopo, petit bug à corriger sur download des fichiers sous chrome" />
-    <option name="LAST_COMMIT_MESSAGE" value="divers : modif pages homeTopo, petit bug à corriger sur download des fichiers sous chrome" />
+    <MESSAGE value="correction du bug de téléchargement des PDF" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction du bug de téléchargement des PDF" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1485,27 +1490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signUp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -1518,10 +1506,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="95" column="45" lean-forward="true" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+        <state relative-caret-position="723">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/PublierTopoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="99" column="28" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="63" column="105" lean-forward="true" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

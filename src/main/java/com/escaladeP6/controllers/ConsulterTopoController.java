@@ -101,10 +101,6 @@ public String topos (Model model){
                 fos.close();
                 fis.close();
 
-
-               // response.flushBuffer();
-
-
             rs.close();
 
         ps.close();

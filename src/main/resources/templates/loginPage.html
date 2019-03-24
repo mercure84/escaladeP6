@@ -18,19 +18,11 @@
 
 
 <body>
-<!-- /login?error=true -->
+
 <div class="d-flex p-2 bd-highlight" id="login">
     <div class="row">
 <div class="container" style="margin-top: auto" >
-<div style="margin-top:10vh" th:if="${#request.getParameter('error')=='true'}">
-    Login Failed!!!<br />
-    Reason :
-    <span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"
-          th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION')}">
-                Static summary
-         </span>
-
-</div></div></div>
+</div></div>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -67,6 +59,12 @@
                             <p class="centrer"> <a href="/signUp"> Pas encore inscrit ?</a></p></div>
 
                         </form>
+
+                                <!-- /login?error=true -->
+                                <div style="color:red" th:if="${#request.getParameter('error')=='true'}">
+                                    <span th:text="${#request.getParameter('error')=='true'} ? 'MOT DE PASSE / PSEUDO INCORRECT' : ''"</span>
+                                 </div>
+
                             </div></div></div></div></div></div></div>
 
 </body></html>
