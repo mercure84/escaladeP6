@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -65,6 +66,7 @@ public class EditerTopoController {
         if (!topoId.equals(creer)){
         Topo editedTopo = repositoryTopo.findTopoById(Integer.parseInt(topoId));
         model.addAttribute("topo", editedTopo);
+        model.addAttribute("idEdited", editedTopo.getId());
         System.out.println(editedTopo);
         }else
             {
@@ -78,7 +80,10 @@ public class EditerTopoController {
     }
 
     @PostMapping("/topoEditer")
-    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal, Model model) throws SQLException {
+    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal) throws SQLException {
+
+        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
+
         // SELECTION DU MEMBRE QUI POSTE LE TOPO
         //chargement des paramètres du membres
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
@@ -87,16 +92,39 @@ public class EditerTopoController {
         Membre membreEditeur = repositoryMembre.findMembreById(idMembre);
 
         //enregistrer du topo dans la base
+        System.out.println("l'id du topo est : + " + topo.getId());
 
-        repositoryTopo.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
 
+        //si on a un id différent de 0, on update sinon on insert
+        if (topo.getId() != 0){
+            try (PreparedStatement us = conn.prepareStatement("UPDATE topo SET nom=?, description=?, departement=?, nb_voies=? WHERE id=?")) {
+                us.setString(1, topo.getNom());
+                us.setString(2, topo.getDescription());
+                us.setInt(3, topo.getDepartement());
+                us.setInt(4, topo.getNbVoies());
+                us.setInt(5, topo.getId());
+                us.executeUpdate();
+
+
+            }   catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+        }
+
+        else {
+
+            repositoryTopo.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
+        }
 
         // TRAITEMENT DU STOCKAGE DU FICHIER SI L'UTILISATEUR PROPOSE UN UPLOAD
         if(!file.isEmpty()){
 
         String nomInitialFichier = file.getOriginalFilename();
         storageService.store((file));
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
+
 
         try (PreparedStatement ps = conn.prepareStatement("UPDATE topo SET nom_fichier=?, fichier=? WHERE nom=?")) {
 

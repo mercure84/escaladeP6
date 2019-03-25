@@ -19,6 +19,7 @@
             <div class="card">
                 <form name="my-form" action="#" th:action="@{/topoEditer}" th:object="${topo}" enctype="multipart/form-data" method="post">
                 <div class="card-header">Décrivez votre Topo</div>
+                    <input type="text" th:value="${topo.getId()}" th:field="*{id}" hidden>
                 <div class="card-body">
 
 
