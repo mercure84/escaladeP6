@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class SignUpController {
 
     @Autowired
-    MembreRepository repository;
+    MembreRepository membreRepository;
 
     @Autowired
     RoleMembreRepository roleMembreRepository;
@@ -35,7 +35,7 @@ public class SignUpController {
         Membre nouveauMembre = new Membre(membre.getNom(), membre.getPrenom(), membre.getPseudo(), encodedPassword, membre.getEmail());
 
         //sauvegarde du membre dans la table des membres
-        repository.save(nouveauMembre);
+        membreRepository.save(nouveauMembre);
 
         //attribution d'un rôle au membre nouvellement créé
         roleMembreRepository.save(new RoleMembre(nouveauMembre, 2));

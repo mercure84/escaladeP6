@@ -37,10 +37,10 @@ public class EditerTopoController {
     }
 
     @Autowired
-    TopoRepository repositoryTopo;
+    TopoRepository topoRepository;
 
     @Autowired
-    MembreRepository repositoryMembre;
+    MembreRepository membreRepository;
 
     @RequestMapping(value="/topoEditer", method = RequestMethod.GET)
     public String editerTopo(String topoId, Model model, Principal principal){
@@ -48,7 +48,7 @@ public class EditerTopoController {
         //identification du membre : recherche de son membreId
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         String pseudo = loginedUser.getUsername();
-        int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
+        int idMembre = membreRepository.findMembreByPseudo(pseudo).getId();
 
         //départements
         ArrayList<Integer> listeNumDpt = new ArrayList<Integer>();
@@ -63,7 +63,7 @@ public class EditerTopoController {
 
 
         if (!topoId.equals(creer)){
-        Topo editedTopo = repositoryTopo.findTopoById(Integer.parseInt(topoId));
+        Topo editedTopo = topoRepository.findTopoById(Integer.parseInt(topoId));
         model.addAttribute("topo", editedTopo);
         model.addAttribute("idEdited", editedTopo.getId());
         System.out.println(editedTopo);
@@ -87,8 +87,8 @@ public class EditerTopoController {
         //chargement des paramètres du membres
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         String pseudo = loginedUser.getUsername();
-        int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
-        Membre membreEditeur = repositoryMembre.findMembreById(idMembre);
+        int idMembre = membreRepository.findMembreByPseudo(pseudo).getId();
+        Membre membreEditeur = membreRepository.findMembreById(idMembre);
 
      //enregistrer du topo dans la base
 //        System.out.println("l'id du topo est : + " + topo.getId());
@@ -115,7 +115,7 @@ public class EditerTopoController {
 
         else {
 
-            repositoryTopo.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
+            topoRepository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
         }
 
         // TRAITEMENT DU STOCKAGE DU FICHIER SI L'UTILISATEUR PROPOSE UN UPLOAD

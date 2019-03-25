@@ -20,10 +20,10 @@ import java.security.Principal;
 public class GererTopoController {
 
      @Autowired
-    TopoRepository repositoryTopo;
+    TopoRepository topoRepository;
 
      @Autowired
-    MembreRepository repositoryMembre;
+    MembreRepository repository;
 
     @RequestMapping(value="/topoGerer", method = RequestMethod.GET)
     public String publicationForm(Model model, Principal principal){
@@ -33,11 +33,11 @@ public class GererTopoController {
         //identification du membre : recherche de son membreId
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         String pseudo = loginedUser.getUsername();
-        int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
+        int idMembre = repository.findMembreByPseudo(pseudo).getId();
 
 
 //        requete des topos de l'utilisateur
-        model.addAttribute("mesTopos", repositoryTopo.findToposByMembreId(idMembre));
+        model.addAttribute("mesTopos", topoRepository.findToposByMembreId(idMembre));
 
                return "topoGerer";
 

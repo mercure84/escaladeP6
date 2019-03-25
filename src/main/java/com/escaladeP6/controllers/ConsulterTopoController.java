@@ -1,6 +1,7 @@
 package com.escaladeP6.controllers;
 
 
+import com.escaladeP6.DAO.CommentaireRepository;
 import com.escaladeP6.DAO.TopoRepository;
 import com.escaladeP6.beans.Commentaire;
 import com.escaladeP6.beans.Departement;
@@ -29,7 +30,10 @@ import java.util.List;
 public class ConsulterTopoController {
 
     @Autowired
-    TopoRepository repositoryTopo;
+    TopoRepository topoRepository;
+
+    @Autowired
+    CommentaireRepository commentaireRepository;
 
 
 @RequestMapping("/topoConsulter")
@@ -41,8 +45,8 @@ public String topos (Model model){
 
     }
 
-    List<Topo> testTopos = repositoryTopo.findAll();
-        model.addAttribute("topos", repositoryTopo.findAll());
+    List<Topo> testTopos = topoRepository.findAll();
+        model.addAttribute("topos", topoRepository.findAll());
         model.addAttribute("listeDept", listeNumDpt);
         model.addAttribute("filtre", new Filtre());
 
@@ -63,7 +67,7 @@ public String topos (Model model){
     System.out.println("les valeurs demandées par le filtre sont les suivantes :");
     System.out.println("dpt = " + filtre.getDepartement() + " difficulte = " + filtre.getDifficulte() + " nb voie = " + filtre.getNbVoies() + " dispo : " + filtre.isDisponible());
 
-    model.addAttribute("topos", repositoryTopo.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), filtre.isDisponible()));
+    model.addAttribute("topos", topoRepository.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), filtre.isDisponible()));
     return "topoConsulter";
 
 }
@@ -111,8 +115,15 @@ public String topos (Model model){
 public String pageDetails(String topoId, Model model){
 
     //recherche du topo concerné :
-    Topo topoCible = repositoryTopo.findTopoById(Integer.parseInt(topoId));
+    Topo topoCible = topoRepository.findTopoById(Integer.parseInt(topoId));
+
+    //instanciation d'un nouveau commentaire
     Commentaire commentaire = new Commentaire();
+
+    //recherche des commentaires du topo
+    List<Commentaire> commentaireList = commentaireRepository.findCommentairesByTopoOrderByDateAsc(topoCible);
+
+    model.addAttribute("commentaireList", commentaireList);
     model.addAttribute("topo", topoCible);
     model.addAttribute("commentaire", commentaire);
    return  "topoDetails";

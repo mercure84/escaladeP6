@@ -37,7 +37,7 @@
                     <td th:text="${topo.getDifficulte()}">Difficulte</td>
                     <td th:text="${topo.getDepartement()}">Departement</td>
                     <td th:text="${topo.getNbVoies()}">Nb voies</td>
-                    <td th:text="${topo.isDisponible()}">Disponibilite</td>
+                    <td><a th:text="${topo.isDisponible()?'Emprunter':'Indispo'}" th:href="'topoEmprunter?topoId='+ ${topo.getId()}"></a></td>
                     <td th:text="${topo.getMembre().getPseudo()}">Propriétaire</td>
                     <td><a th:if="${topo.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${topo.getId()}"><i class="fas fa-file-download"></i>
                     </a>
@@ -56,23 +56,15 @@
                         <div class="card">
                             <form name="my-form" action="#" th:action="@{'/posterMessage?topoId=' + ${topo.getId()}}" th:object="${commentaire}"method="post">
                                 <div class="card-header">Ecrire un commentaire sur le Topo</div>
-
-
                                 <div class="card-body">
                                     <div class="form-group row">
-
-                                            <textarea class="form-control" id="memo" name="memo" rows="3" th:field="*{memo}" required></textarea>
-
+                                            <textarea class="form-control" id="memo" name="memo" rows="2" th:field="*{memo}" required></textarea>
                                     </div>
-
-
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-secondary">
                                             Poster
                                         </button>
                                     </div>
-
-
                                 </div>
                             </form>
                         </div>
@@ -80,7 +72,26 @@
                 </div>
             </div>
 
+<!--AFFICHAGE DE TOUS LES COMMENNTAIRES-->
 
+            <div class="row">
+                <div class="col-md-12">
+                    <table style="margin-top: 10px" class="table">
+                        <thead>
+                        <tr><th>Membre</th>
+
+                            <th>Commentaire</th>
+                            <th>Date</th>
+                        </tr></thead>
+
+                        <tr th:each="ligne : ${commentaireList}">
+                            <td th:text="${ligne.getMembre().getPseudo()}">Pseudo</td>
+                            <td th:text="${ligne.getMemo()}">Mémo</td>
+                            <td th:text="${ligne.getDate()}">Date</td>
+                        </tr>
+
+                    </table>
+                </div></div>
 
 
         </div>

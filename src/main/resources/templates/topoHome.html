@@ -24,18 +24,18 @@
     <!-- sections boutons  -->
     <div class="row centrer">
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <!-- section recherche d'un topo -->
             <a class="btn btn-secondary" href="/topoConsulter" role="button">CONSULTER LES TOPOS</a>
 
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <!-- section publication d'un topo -->
             <a class="btn btn-secondary" href="/topoGerer" role="button">MES TOPOS</a>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <!--  -->
             <a class="btn btn-secondary" href="#" role="button">Mon Profil</a>
 
@@ -46,22 +46,52 @@
 
 <!-- autre partie de la page  -->
         <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-6">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
                 <br>
                 <h2 th:text="'Bienvenu ' + ${titreMembre} + ' !'">Bienvenue</h2>
                 <br>
-                <p th:text="'Il y a ' + ${nbTopoTotal} + ' Topos en ligne. ' + ${nbTopoEmpruntes} + ' sont disponibles !' "/>
-                <p th:text="'Le dernier Topo publié est ' + ${nomDernierTopoPublie} + '.'"/>
-                <p th:text="'Il y a actuellement ' + ${nbMembre} + ' grimpeurs enregistrés sur le site !'"/>
-            </div></div>
+                <p th:text="'Il y a ' + ${nbTopoTotal} + ' Topos en ligne. ' + ${nbTopoEmpruntes} + ' sont disponibles !' "></p>
+                <p th:text="'Le dernier Topo publié est ' + ${nomDernierTopoPublie} + '.'"></p>
+                <p th:text="'Il y a actuellement ' + ${nbMembre} + ' grimpeurs enregistrés sur le site !'"></p>
+            </div>
+        </div>
 <div class="row">
-    <div class="col-lg-2"></div>
-            <div class="col-lg-6">
+
+            <div class="col-md-6">
                 <br>
                 <h2>Le grimpeur du mois :</h2>
                 <img src="./img/chat.jpg">
         </div>
+
+    <div class="col-md-6">
+        <br>
+        <h2>Mes derniers commentaires</h2>
+
+        <table style="margin-top: 10px" class="table">
+            <thead>
+            <tr><th>Commentaire</th>
+                <th>Date</th>
+                <th>Topo</th>
+
+            </tr></thead>
+
+            <tr th:each="ligne : ${commentaireList}">
+                <td th:text="${ligne.getDate()}">Date</td>
+                <td th:text="${ligne.getMemo()}">Mémo</td>
+                <td th:text="${ligne.getTopo().getNom()}">Topo</td>
+            </tr>
+
+        </table>
+
+
+
+
+    </div>
+
+
+
+
     </div>
 
 <div th:include="jscdn.html"/>

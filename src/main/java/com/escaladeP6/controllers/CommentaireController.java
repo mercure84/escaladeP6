@@ -15,19 +15,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 import java.security.Principal;
-import java.sql.SQLException;
+import java.util.Date;
+
 
 @Controller
 public class CommentaireController {
 
     @Autowired
-    TopoRepository repositoryTopo;
+    TopoRepository topoRepository;
 
     @Autowired
-    MembreRepository repositoryMembre;
+    MembreRepository membreRepository;
 
     @Autowired
-    CommentaireRepository repositoryCommentaire;
+    CommentaireRepository commentaireRepository;
 
 
     @PostMapping("/posterMessage")
@@ -41,12 +42,13 @@ public class CommentaireController {
 
         System.out.println("Topo commenté = " + Integer.parseInt(topoId));
 
-        Topo topo = repositoryTopo.findTopoById(Integer.parseInt(topoId));
+        Topo topo = topoRepository.findTopoById(Integer.parseInt(topoId));
 
-        Membre membre = repositoryMembre.findMembreByPseudo(pseudo);
+        Membre membre = membreRepository.findMembreByPseudo(pseudo);
         commentaire.setMembre(membre);
         commentaire.setTopo(topo);
-        repositoryCommentaire.save(commentaire);
+        commentaire.setDate(new Date());
+        commentaireRepository.save(commentaire);
 
         return "redirect:topoDetails?topoId="+topoId;
 
