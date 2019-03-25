@@ -5,7 +5,7 @@
     <div th:include="bootstrapcdn.html"/>
     <meta charset="utf-8">
 
-    <title>Publier un Topo</title>
+    <title>Mes Toposo</title>
 
 </head>
 <body>
@@ -14,78 +14,14 @@
 <div class=="row">
     <div class="col-lg-12" id="bandeau0">
         <h2> Publier un Topo </h2>
+        <br>
+
+        <a th:href="'topoEditer?topoId=creer'"><button class="btn btn-secondary">Créer un nouveau Topo</button></a>
+        </div>
+
     </div>
 </div>
 
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Décrivez votre Topo</div>
-                    <div class="card-body">
-                        <form name="my-form" action="#" th:action="@{/topoGerer}" th:object="${topo}" enctype="multipart/form-data" method="post">
-
-
-                            <div class="form-group row">
-                                <label for="nom" class="col-md-4 col-form-label text-md-right">Nom du Topo</label>
-                                <div class="col-md-6">
-                                    <input type="text" id="nom" class="form-control" name="nom" th:field="*{nom}" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
-                                <div class="col-md-6">
-                                    <textarea class="form-control" id="description" name="description" rows="3" th:field="*{description}" required></textarea>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right" for="departement" >Département</label>
-                                <select class="form-control col-md-6" id="departement" th:field="*{departement}">
-                                    <option th:value="0" selected>Choisir</option>
-                                    <tr th:each="dept : ${listeDept}">
-                                        <option th:value="${dept}" th:text="${dept}" required>Dpt</option></tr>
-
-                                </select>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right">Difficulté</label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="facile">Facile</label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="intermediaire">Intermédiaire</label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="expert" >Expert</label>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="nbVoies" class="col-md-4 col-form-label text-md-right">Nombres de voies</label>
-                                <div class="col-md-6">
-                                    <input type="number" id="nbVoies" class="form-control" name="nbVoies" th:field="*{nbVoies}" required>
-                                </div>
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <div class="custom-file">
-                                    <input type="file"  name="file">
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-secondary">
-                                    Soumettre
-                                </button>
-                            </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
 
 <div class="row">
     <br>
