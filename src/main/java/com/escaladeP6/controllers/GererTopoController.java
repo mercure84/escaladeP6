@@ -6,7 +6,6 @@ import com.escaladeP6.beans.Departement;
 import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
 
-import com.escaladeP6.security.WebUtils;
 import com.escaladeP6.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -29,46 +28,62 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 @Controller
-public class PublierTopoController {
+public class GererTopoController {
 
     private final StorageService storageService;
 
     @Autowired
-    public PublierTopoController(StorageService storageService) {
+    public GererTopoController(StorageService storageService) {
         this.storageService = storageService;
     }
 
      @Autowired
-    TopoRepository repository;
+    TopoRepository repositoryTopo;
 
      @Autowired
     MembreRepository repositoryMembre;
 
-    @RequestMapping(value="/topoPublier", method = RequestMethod.GET)
-    public String publicationForm(Model model){
+    @RequestMapping(value="/topoGerer", method = RequestMethod.GET)
+    public String publicationForm(Model model, Principal principal){
 
+
+
+        //identification du membre : recherche de son membreId
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+        String pseudo = loginedUser.getUsername();
+        int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
 
         ArrayList<Integer> listeNumDpt = new ArrayList<Integer>();
         for (Departement dept : Departement.values()){
             listeNumDpt.add(dept.getNumDpt());
         }
-
         model.addAttribute("topo", new Topo());
         model.addAttribute("listeDept",listeNumDpt);
-        return "topoPublier";
+
+//        requete des topos de l'utilisateur
+        model.addAttribute("mesTopos", repositoryTopo.findToposByMembreId(idMembre));
+
+               return "topoGerer";
+
     }
 
-    @PostMapping("/topoPublier")
-    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal) throws SQLException {
+    @PostMapping("/topoGerer")
+    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal, Model model) throws SQLException {
         // SELECTION DU MEMBRE QUI POSTE LE TOPO
+
+
+
         //chargement des paramètres du membres
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         String pseudo = loginedUser.getUsername();
         int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
         Membre membreEditeur = repositoryMembre.findMembreById(idMembre);
 
-        System.out.println("les données du formulaires ont été sauvées avec le dept : " + topo.getDepartement());
-        repository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
+        //        requete des topos de l'utilisateur
+        model.addAttribute("mesTopos", repositoryTopo.findToposByMembreId(idMembre));
+
+
+        repositoryTopo.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
 
 
     // TRAITEMENT DU STOCKAGE DU FICHIER
@@ -97,8 +112,13 @@ public class PublierTopoController {
             }
         }
 
-        return "/topoPublier";
+        return "/topoGerer";
     }
+
+
+
+
+
 
 
 

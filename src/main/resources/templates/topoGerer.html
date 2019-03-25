@@ -24,7 +24,7 @@
                 <div class="card">
                     <div class="card-header">Décrivez votre Topo</div>
                     <div class="card-body">
-                        <form name="my-form" action="#" th:action="@{/topoPublier}" th:object="${topo}" enctype="multipart/form-data" method="post">
+                        <form name="my-form" action="#" th:action="@{/topoGerer}" th:object="${topo}" enctype="multipart/form-data" method="post">
 
 
                             <div class="form-group row">
@@ -87,8 +87,48 @@
     </div>
     </div>
 
+<div class="row">
+    <br>
+</div>
+
+<!--TABLEAU AFFICHANT MES TOPOS SI JEN AI DEJA PUBLIE-->
+<div class="row">
+
+    <div th:if="${mesTopos.isEmpty()}" class="col-md-12">
+    <h3 >Vous n'avez encore publié aucun Topo !</h3>
+    </div>
+
+    <div th:if="${!mesTopos.isEmpty()}" class="col-md-12">
+        <h2 style="text-align: center">Liste des topos dont je suis propriétaire :</h2>
+
+        <table style="margin-top: 10px" class="table">
+            <thead>
+            <tr><th>Nom</th>
+                <th>Difficulté</th>
+                <th>Département</th>
+                <th>Nb de voies</th>
+                <th>Disponibilité</th>
+                <th>Fichier</th>
+                <th>Modifier</th>
+
+            </tr></thead>
+
+            <tr th:each="ligne : ${mesTopos}">
+                <td th:text="${ligne.getNom()}">Nom</td>
+                 <td th:text="${ligne.getDifficulte()}">Difficulte</td>
+                <td th:text="${ligne.getDepartement()}">Departement</td>
+                <td th:text="${ligne.getNbVoies()}">Nb voies</td>
+                <td th:text="${ligne.isDisponible()}">Disponibilite</td>
+                <td><a th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher"></a></td>
+                <td><a th:href="'topoEditer?topoId='+${ligne.getId()}"><button class="btn btn-secondary">Editer</button></a></td>
+
+            </tr>
+
+        </table>
+    </div></div>
+
+
 
 <div th:include="jscdn.html"/>
 
-</body>
-</html>
+</body></html>

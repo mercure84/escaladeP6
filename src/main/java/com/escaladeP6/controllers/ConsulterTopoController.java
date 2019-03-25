@@ -45,6 +45,7 @@ public String topos (Model model){
         model.addAttribute("listeDept", listeNumDpt);
         model.addAttribute("filtre", new Filtre());
 
+
         return "topoConsulter";
 }
 
@@ -68,8 +69,6 @@ public String topos (Model model){
 
     @RequestMapping("/topoConsulter/fichiers")
     public @ResponseBody void dlFichier(String topoId, HttpServletResponse response ) throws SQLException, IOException {
-
-        System.out.println("topoid vaut " + topoId + " c'est un "+ topoId.getClass().getName());
 
         Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
         PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
