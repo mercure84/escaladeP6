@@ -30,8 +30,6 @@ public class HomeTopoController {
 
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
 
-        //String userInfo = WebUtils.toString(loginedUser);
-        //model.addAttribute("userInfo", userInfo);
 
         int nbTopoTotal = (int) topoRepository.count();
         int nbMembres = (int) membreRepository.count();

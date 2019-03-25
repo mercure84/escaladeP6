@@ -8,7 +8,7 @@
       <ObjectId>16599</ObjectId>
       <StateNumber>653</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>918</IntrospectionStateNumber>
+      <IntrospectionStateNumber>941</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16601|16603|1
@@ -116,7 +116,7 @@ sequence|table|16884|16886|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>919</IntrospectionStateNumber>
+      <IntrospectionStateNumber>942</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -248,7 +248,7 @@ sequence|table|16884|16886|1
     <table id="36" parent="19" name="commentaire">
       <ObjectId>16886</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>914</StateNumber>
+      <StateNumber>928</StateNumber>
     </table>
     <table id="37" parent="19" name="emprunts">
       <ObjectId>16678</ObjectId>

@@ -2,6 +2,7 @@ package com.escaladeP6.controllers;
 
 
 import com.escaladeP6.DAO.TopoRepository;
+import com.escaladeP6.beans.Commentaire;
 import com.escaladeP6.beans.Departement;
 import com.escaladeP6.beans.Filtre;
 import com.escaladeP6.beans.Topo;
@@ -111,10 +112,11 @@ public String pageDetails(String topoId, Model model){
 
     //recherche du topo concerné :
     Topo topoCible = repositoryTopo.findTopoById(Integer.parseInt(topoId));
+    Commentaire commentaire = new Commentaire();
     model.addAttribute("topo", topoCible);
-
-
+    model.addAttribute("commentaire", commentaire);
    return  "topoDetails";
+
 }
 
 }

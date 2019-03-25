@@ -90,8 +90,8 @@ public class EditerTopoController {
         int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
         Membre membreEditeur = repositoryMembre.findMembreById(idMembre);
 
-        //enregistrer du topo dans la base
-        System.out.println("l'id du topo est : + " + topo.getId());
+     //enregistrer du topo dans la base
+//        System.out.println("l'id du topo est : + " + topo.getId());
 
 
         //si on a un id différent de 0, on update sinon on insert

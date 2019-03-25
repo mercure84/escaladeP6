@@ -15,9 +15,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <h2>Topo n°</h2>
+            <h2>Topo n° <span th:text="${topo.getId()}"></span></h2>
 
-
+<!--DESCRIPTION DU TOPO -->
             <table style="margin-top: 10px" class="table">
                 <thead>
                 <tr><th>Nom</th>
@@ -31,26 +31,61 @@
 
                 </tr></thead>
 
-                <tr th:each="ligne : ${topos}">
-                    <td th:text="${ligne.getNom()}">Nom</td>
-                    <td th:text="${ligne.getDescription()}">Description</td>
-                    <td th:text="${ligne.getDifficulte()}">Difficulte</td>
-                    <td th:text="${ligne.getDepartement()}">Departement</td>
-                    <td th:text="${ligne.getNbVoies()}">Nb voies</td>
-                    <td th:text="${ligne.isDisponible()}">Disponibilite</td>
-                    <td th:text="${ligne.getMembre().getPseudo()}">Propriétaire</td>
-                    <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher">Pas de fichier</a>
+                <tr>
+                    <td th:text="${topo.getNom()}">Nom</td>
+                    <td th:text="${topo.getDescription()}">Description</td>
+                    <td th:text="${topo.getDifficulte()}">Difficulte</td>
+                    <td th:text="${topo.getDepartement()}">Departement</td>
+                    <td th:text="${topo.getNbVoies()}">Nb voies</td>
+                    <td th:text="${topo.isDisponible()}">Disponibilite</td>
+                    <td th:text="${topo.getMembre().getPseudo()}">Propriétaire</td>
+                    <td><a th:if="${topo.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${topo.getId()}"><i class="fas fa-file-download"></i>
+                    </a>
                     </td>
-
 
                 </tr>
 
             </table>
 
 
+            <!--- FORMULAIRE POUR ECRIRE UN COMMENTAIRE --->
+<br>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <form name="my-form" action="#" th:action="@{'/posterMessage?topoId=' + ${topo.getId()}}" th:object="${commentaire}"method="post">
+                                <div class="card-header">Ecrire un commentaire sur le Topo</div>
+
+
+                                <div class="card-body">
+                                    <div class="form-group row">
+
+                                            <textarea class="form-control" id="memo" name="memo" rows="3" th:field="*{memo}" required></textarea>
+
+                                    </div>
+
+
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-secondary">
+                                            Poster
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
     </div>
-
+</div>
 
 </body>
 </html>

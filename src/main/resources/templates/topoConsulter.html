@@ -86,6 +86,7 @@
 <table style="margin-top: 10px" class="table">
     <thead>
     <tr><th>Nom</th>
+        <th> </th>
         <th>Description</th>
         <th>Difficulté</th>
         <th>Département</th>
@@ -98,13 +99,18 @@
 
 <tr th:each="ligne : ${topos}">
     <td th:text="${ligne.getNom()}">Nom</td>
+    <td><a th:href="'topoDetails?topoId=' + ${ligne.getId()}" >
+        <i class="fas fa-search"></i>
+        </span>
+   </a></td>
     <td th:text="${ligne.getDescription()}">Description</td>
     <td th:text="${ligne.getDifficulte()}">Difficulte</td>
     <td th:text="${ligne.getDepartement()}">Departement</td>
     <td th:text="${ligne.getNbVoies()}">Nb voies</td>
     <td th:text="${ligne.isDisponible()}">Disponibilite</td>
     <td th:text="${ligne.getMembre().getPseudo()}">Propriétaire</td>
-    <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher">Pas de fichier</a>
+    <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}"><i class="fas fa-file-download"></i>
+        </a>
     </td>
 
 

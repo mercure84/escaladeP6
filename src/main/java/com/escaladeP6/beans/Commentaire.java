@@ -18,16 +18,19 @@ public class Commentaire {
     @Temporal(TemporalType.TIME)
     private Date date;
 
-    @ManyToOne()
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="membre_id")
     private Membre membre;
 
-    @ManyToOne()
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="topo_id")
     private Topo topo;
 
 
+
 //    GETTERS AND SETTERS
+
+
 
     public int getId() {
         return id;
@@ -67,5 +70,12 @@ public class Commentaire {
 
     public void setTopo(Topo topo) {
         this.topo = topo;
+    }
+
+//    Constructeur
+
+
+    public Commentaire() {
+
     }
 }
