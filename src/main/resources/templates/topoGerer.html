@@ -55,7 +55,7 @@
                 <td th:text="${ligne.getDepartement()}">Departement</td>
                 <td th:text="${ligne.getNbVoies()}">Nb voies</td>
                 <td th:text="${ligne.isDisponible()}">Disponibilite</td>
-                <td><a th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher"></a></td>
+                <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher">Pas de fichier</a>
                 <td><a th:href="'topoEditer?topoId='+${ligne.getId()}"><button class="btn btn-secondary">Editer</button></a></td>
 
             </tr>

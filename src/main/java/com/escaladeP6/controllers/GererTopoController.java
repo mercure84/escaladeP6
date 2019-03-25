@@ -2,8 +2,6 @@ package com.escaladeP6.controllers;
 
 import com.escaladeP6.DAO.MembreRepository;
 import com.escaladeP6.DAO.TopoRepository;
-import com.escaladeP6.beans.Departement;
-import com.escaladeP6.beans.Topo;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

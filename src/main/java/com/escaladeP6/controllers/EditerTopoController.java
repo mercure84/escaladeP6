@@ -42,8 +42,6 @@ public class EditerTopoController {
     @Autowired
     MembreRepository repositoryMembre;
 
-
-
     @RequestMapping(value="/topoEditer", method = RequestMethod.GET)
     public String editerTopo(String topoId, Model model, Principal principal){
 
@@ -82,23 +80,18 @@ public class EditerTopoController {
     @PostMapping("/topoEditer")
     public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal, Model model) throws SQLException {
         // SELECTION DU MEMBRE QUI POSTE LE TOPO
-
-
-
         //chargement des paramètres du membres
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         String pseudo = loginedUser.getUsername();
         int idMembre = repositoryMembre.findMembreByPseudo(pseudo).getId();
         Membre membreEditeur = repositoryMembre.findMembreById(idMembre);
 
-        //        requete des topos de l'utilisateur
-        model.addAttribute("mesTopos", repositoryTopo.findToposByMembreId(idMembre));
-
+        //enregistrer du topo dans la base
 
         repositoryTopo.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
 
 
-        // TRAITEMENT DU STOCKAGE DU FICHIER SI L'UTILISATEUR PROPOSER UN UPLOAD
+        // TRAITEMENT DU STOCKAGE DU FICHIER SI L'UTILISATEUR PROPOSE UN UPLOAD
         if(!file.isEmpty()){
 
         String nomInitialFichier = file.getOriginalFilename();
@@ -126,6 +119,6 @@ public class EditerTopoController {
             }
         }}
 
-        return "/topoGerer";
+        return "redirect:topoGerer";
     }
 }

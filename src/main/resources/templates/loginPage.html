@@ -62,7 +62,7 @@
 
                                 <!-- /login?error=true -->
                                 <div style="color:red" th:if="${#request.getParameter('error')=='true'}">
-                                    <span th:text="${#request.getParameter('error')=='true'} ? 'MOT DE PASSE / PSEUDO INCORRECT' : ''"</span>
+                                    <span th:text="${#request.getParameter('error')=='true'} ? 'MOT DE PASSE / PSEUDO INCORRECT' : ' '"></span>
                                  </div>
 
                             </div></div></div></div></div></div></div>
