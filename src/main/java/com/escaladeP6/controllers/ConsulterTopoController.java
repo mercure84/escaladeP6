@@ -28,7 +28,7 @@ import java.util.List;
 public class ConsulterTopoController {
 
     @Autowired
-    TopoRepository repository;
+    TopoRepository repositoryTopo;
 
 
 @RequestMapping("/topoConsulter")
@@ -40,8 +40,8 @@ public String topos (Model model){
 
     }
 
-    List<Topo> testTopos = repository.findAll();
-        model.addAttribute("topos", repository.findAll());
+    List<Topo> testTopos = repositoryTopo.findAll();
+        model.addAttribute("topos", repositoryTopo.findAll());
         model.addAttribute("listeDept", listeNumDpt);
         model.addAttribute("filtre", new Filtre());
 
@@ -62,7 +62,7 @@ public String topos (Model model){
     System.out.println("les valeurs demandées par le filtre sont les suivantes :");
     System.out.println("dpt = " + filtre.getDepartement() + " difficulte = " + filtre.getDifficulte() + " nb voie = " + filtre.getNbVoies() + " dispo : " + filtre.isDisponible());
 
-    model.addAttribute("topos", repository.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), filtre.isDisponible()));
+    model.addAttribute("topos", repositoryTopo.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), filtre.isDisponible()));
     return "topoConsulter";
 
 }
@@ -105,5 +105,17 @@ public String topos (Model model){
         ps.close();
 
     }
+
+@RequestMapping(value="/topoDetails", method = RequestMethod.GET)
+public String pageDetails(String topoId, Model model){
+
+    //recherche du topo concerné :
+    Topo topoCible = repositoryTopo.findTopoById(Integer.parseInt(topoId));
+    model.addAttribute("topo", topoCible);
+
+
+   return  "topoDetails";
+}
+
 }
 

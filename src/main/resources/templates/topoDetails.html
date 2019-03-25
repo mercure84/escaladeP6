@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:include="bootstrapcdn.html"/>
+    <meta charset="utf-8">
+
+    <title>Detail d'un Topo</title>
+
+</head>
+<body>
+<!-- nav bar -->
+<div th:include="navbar.html"/>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h2>Topo n°</h2>
+
+
+            <table style="margin-top: 10px" class="table">
+                <thead>
+                <tr><th>Nom</th>
+                    <th>Description</th>
+                    <th>Difficulté</th>
+                    <th>Département</th>
+                    <th>Nb de voies</th>
+                    <th>Disponibilité</th>
+                    <th>Propriétaire</th>
+                    <th>Fichier</th>
+
+                </tr></thead>
+
+                <tr th:each="ligne : ${topos}">
+                    <td th:text="${ligne.getNom()}">Nom</td>
+                    <td th:text="${ligne.getDescription()}">Description</td>
+                    <td th:text="${ligne.getDifficulte()}">Difficulte</td>
+                    <td th:text="${ligne.getDepartement()}">Departement</td>
+                    <td th:text="${ligne.getNbVoies()}">Nb voies</td>
+                    <td th:text="${ligne.isDisponible()}">Disponibilite</td>
+                    <td th:text="${ligne.getMembre().getPseudo()}">Propriétaire</td>
+                    <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher">Pas de fichier</a>
+                    </td>
+
+
+                </tr>
+
+            </table>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
