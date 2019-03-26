@@ -1,5 +1,7 @@
 package com.escaladeP6.beans;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -14,9 +16,11 @@ public class EmpruntTopo {
     private int id;
 
     @Column(name="date_emprunt")
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     private Date dateEmprunt;
 
     @Column(name="date_fin_emprunt")
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     private Date dateFinEmprunt;
 
     @ManyToOne(cascade=CascadeType.ALL)

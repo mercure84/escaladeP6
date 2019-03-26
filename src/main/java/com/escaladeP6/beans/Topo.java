@@ -44,7 +44,7 @@ public class Topo {
     private int nbVoies;
 
 
-    @ManyToOne()
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="membre_id")
     private Membre membre;
 

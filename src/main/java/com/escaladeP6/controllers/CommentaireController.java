@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 import java.security.Principal;
+import java.sql.Timestamp;
 import java.util.Date;
 
 
@@ -37,17 +38,16 @@ public class CommentaireController {
 
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         String pseudo = loginedUser.getUsername();
-
-
-
-        System.out.println("Topo commenté = " + Integer.parseInt(topoId));
+  //System.out.println("Topo commenté = " + Integer.parseInt(topoId));
 
         Topo topo = topoRepository.findTopoById(Integer.parseInt(topoId));
 
         Membre membre = membreRepository.findMembreByPseudo(pseudo);
         commentaire.setMembre(membre);
         commentaire.setTopo(topo);
-        commentaire.setDate(new Date());
+
+        Date date = new Date();
+        commentaire.setDate(new Timestamp(date.getTime()));
         commentaireRepository.save(commentaire);
 
         return "redirect:topoDetails?topoId="+topoId;

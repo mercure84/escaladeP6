@@ -15,68 +15,32 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
 
-            <h1>Emprunt d'un Topo</h1>
-            <h3 style="color:orange">Nous vous rappelons qu'il est strictement interdit de vendre un Topo que vous empruntez</h3>
+            <h2>Emprunt d'un Topo</h2>
+            <br>
+            <p style="color:orange">Nous vous rappelons qu'il est strictement interdit de vendre un Topo que vous empruntez</p>
+            <p style="color:orange">Les emprunts dont la durée est manifestement abusive (> 15 jours) pourront être annulés par l'administrateur</p>
+            <p style="color:orange">N'empruntez que les topos dont la difficulté correspond à votre niveau de grimpeur</p>
+            <br>
 
 
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
-                            <form name="my-form" action="#" th:action="@{/topoEmprunter}" th:object="${empruntTopo}" enctype="multipart/form-data" method="post">
-                                <div class="card-header">Décrivez votre Topo</div>
+                            <form name="my-form" action="#" th:action="@{'/topoEmprunter?topoId=' + ${topo.getId()}}" th:object="${empruntTopo}" enctype="multipart/form-data" method="post">
+                                <div class="card-header">Vous allez réserver le Topo n° <span th:text="${topo.getId()}"></span>, intitulé : <span style="color:red; font-weight: bold" th:text="${topo.getNom()}"></span></div>
                                 <input type="text" th:value="${topo.getId()}" th:field="*{id}" hidden>
                                 <div class="card-body">
+                                     <div class="row">
+                                         <div class="col-offset-md- 2 col-md-10"><label for="dateFin">Jusqu'à quelle date souhaitez vous emprunter le topo ? </label></div>
+                                     </div>
+                                    <div class="row">
 
-
-
-                                    <div class="form-group row">
-                                        <label for="nom" class="col-md-4 col-form-label text-md-right">Nom du Topo</label>
-                                        <div class="col-md-6">
-                                            <input type="text" id="nom" class="form-control" name="nom" th:field="*{nom}" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="description" class="col-md-4 col-form-label text-md-right">Description</label>
-                                        <div class="col-md-6">
-                                            <textarea class="form-control" id="description" name="description" rows="3" th:field="*{description}" required></textarea>
+                                    <div class="col-offset-md-4 col-md-6">
+                                            <input th:type="date" id="dateFin" name="dateFin" th:field="*{dateFinEmprunt}" required>
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-right" for="departement" >Département</label>
-                                        <select class="form-control col-md-6" id="departement" th:field="*{departement}">
-                                            <option th:value="0" selected>Choisir</option>
-                                            <tr th:each="dept : ${listeDept}">
-                                                <option th:value="${dept}" th:text="${dept}" required>Dpt</option></tr>
-
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-md-4 col-form-label text-md-right">Difficulté</label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="facile">Facile</label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="intermediaire">Intermédiaire</label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="expert" >Expert</label>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="nbVoies" class="col-md-4 col-form-label text-md-right">Nombres de voies</label>
-                                        <div class="col-md-6">
-                                            <input type="number" id="nbVoies" class="form-control" name="nbVoies" th:field="*{nbVoies}" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                        <div class="custom-file">
-                                            <input type="file"  name="file">
-
-                                        </div>
-
-                                    </div>
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-secondary">
                                             Soumettre
@@ -99,7 +63,7 @@
     </div>
 
 
-
+</div>
 
 
 

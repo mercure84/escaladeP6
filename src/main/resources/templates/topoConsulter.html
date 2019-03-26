@@ -91,7 +91,7 @@
         <th>Difficulté</th>
         <th>Département</th>
         <th>Nb de voies</th>
-        <th>Disponibilité</th>
+        <th>Disponible</th>
         <th>Propriétaire</th>
         <th>Fichier</th>
 
@@ -100,16 +100,16 @@
 <tr th:each="ligne : ${topos}">
     <td th:text="${ligne.getNom()}">Nom</td>
     <td><a th:href="'topoDetails?topoId=' + ${ligne.getId()}" >
-        <i class="fas fa-search"></i>
+        <i class="fas fa-search fa-2x"></i>
         </span>
    </a></td>
     <td th:text="${ligne.getDescription()}">Description</td>
     <td th:text="${ligne.getDifficulte()}">Difficulte</td>
     <td th:text="${ligne.getDepartement()}">Departement</td>
     <td th:text="${ligne.getNbVoies()}">Nb voies</td>
-    <td th:text="${ligne.isDisponible()}">Disponibilite</td>
+    <td><i th:if="!${ligne.isDisponible()}" class="fas fa-times fa-2x"></i><a th:if="${ligne.isDisponible()}" th:href="'topoEmprunter?topoId='+${ligne.getId()}"><i class="fas fa-check fa-2x"></i></a></td>
     <td th:text="${ligne.getMembre().getPseudo()}">Propriétaire</td>
-    <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}"><i class="fas fa-file-download"></i>
+    <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}"><i class="fas fa-file-download fa-2x"></i>
         </a>
     </td>
 

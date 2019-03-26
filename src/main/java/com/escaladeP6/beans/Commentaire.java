@@ -1,6 +1,7 @@
 package com.escaladeP6.beans;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
@@ -15,8 +16,8 @@ public class Commentaire {
     @Column(name="memo")
     private String memo;
 
-    @Temporal(TemporalType.TIME)
-    private Date date;
+    @Column(name="date")
+    private Timestamp date;
 
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name="membre_id")
@@ -52,7 +53,7 @@ public class Commentaire {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 

@@ -8,7 +8,7 @@
       <ObjectId>16599</ObjectId>
       <StateNumber>653</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>964</IntrospectionStateNumber>
+      <IntrospectionStateNumber>988</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16601|16603|1
@@ -116,7 +116,7 @@ sequence|table|16884|16886|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>965</IntrospectionStateNumber>
+      <IntrospectionStateNumber>989</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -248,7 +248,7 @@ sequence|table|16884|16886|1
     <table id="36" parent="19" name="commentaire">
       <ObjectId>16886</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>928</StateNumber>
+      <StateNumber>987</StateNumber>
     </table>
     <table id="37" parent="19" name="emprunt">
       <ObjectId>16678</ObjectId>
@@ -358,20 +358,20 @@ sequence|table|16884|16886|1
       <TypeId>23</TypeId>
     </column>
     <column id="55" parent="36" name="date">
-      <Position>5</Position>
-      <DataType>time|0s</DataType>
-      <StateNumber>917</StateNumber>
-      <TypeId>1083</TypeId>
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>987</StateNumber>
+      <TypeId>1114</TypeId>
     </column>
     <index id="56" parent="36" name="comentaire_id_uindex">
       <ObjectId>16893</ObjectId>
-      <StateNumber>892</StateNumber>
+      <StateNumber>987</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="57" parent="36" name="comentaire_pk">
       <ObjectId>16894</ObjectId>
-      <StateNumber>893</StateNumber>
+      <StateNumber>987</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
