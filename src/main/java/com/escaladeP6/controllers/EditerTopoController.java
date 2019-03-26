@@ -103,14 +103,9 @@ public class EditerTopoController {
                 us.setInt(4, topo.getNbVoies());
                 us.setInt(5, topo.getId());
                 us.executeUpdate();
-
-
             }   catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
         }
 
         else {

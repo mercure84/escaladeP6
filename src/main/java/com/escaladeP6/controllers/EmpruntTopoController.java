@@ -57,7 +57,13 @@ public class EmpruntTopoController {
      empruntTopo.setTopo(topo);
      empruntTopo.setDateEmprunt(new Date());
 
+
+     //enregistrement de l'emprunt
      empruntTopoRepository.save(empruntTopo);
+
+     //le topo concerné devient indispo
+     topo.setDisponible(false);
+     topoRepository.save(topo);
 
      return "redirect:topoHome";
 
