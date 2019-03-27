@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:include="bootstrapcdn.html"/>
+    <meta charset="utf-8">
+
+    <title>Moteur de recherche des Topos</title>
+</head>
+<body>
+<!-- nav bar -->
+<div th:include="navbar.html"/>
+<div class=="row">
+    <div class="col-lg-12" id="bandeau0">
+        <h2> Consulter les emprunts en cours</h2>
+    </div>
+</div>
+
+
+<!--TABLEAU DES EMPRUNTS-->
+
+<div class="row">
+    <div class="col-md-12">
+        <table style="margin-top: 10px" class="table">
+            <thead>
+            <tr><th>Nom du topo</th>
+                <th></th>
+                <th>Membre</th>
+                <th>Date début </th>
+                <th>Date de fin</th>
+                <th>Jours restants</th>
+            </tr></thead>
+
+            <tr th:each="ligne : ${listeEmprunts}">
+                <td th:text="${ligne.getTopo().getNom()}">Nom</td>
+                <td><a th:href="'topoDetails?topoId=' + ${ligne.getTopo().getId()}" >
+                    <i class="fas fa-search fa-2x"></i>
+                    </span>
+                </a></td>
+                <td th:text="${ligne.getMembre().getPseudo()}">Membre</td>
+                <td th:text="${ligne.getDateEmprunt()}">Date debut</td>
+                <td th:text="${ligne.getDateFinEmprunt()}">Date fin</td>
+                <td th:text="'à calculer'">Jours restants</td>
+             </tr>
+
+        </table>
+    </div></div>
+
+
+</body>
+</html>

@@ -28,8 +28,20 @@ public class Commentaire {
     private Topo topo;
 
 
+    @Column(name="visible")
+    private boolean visible;
+
+
 
 //    GETTERS AND SETTERS
+
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
 
 
 

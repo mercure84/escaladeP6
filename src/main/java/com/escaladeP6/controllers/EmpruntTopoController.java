@@ -68,8 +68,19 @@ public class EmpruntTopoController {
      return "redirect:topoHome";
 
 
-
  }
+
+ @RequestMapping(value="/empruntConsulter", method = RequestMethod.GET)
+    public String listeEmprunts(Model model){
+
+// liste des emprunts
+
+     model.addAttribute("listeEmprunts", empruntTopoRepository.findAll());
+
+        return "empruntConsulter";
+ }
+
+
 
 
 }

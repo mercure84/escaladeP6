@@ -31,8 +31,20 @@ public class EmpruntTopo {
     @JoinColumn(name="topo_id")
     private Topo topo;
 
+    @Column(name="en_cours")
+    private boolean enCours;
+
 
     //ACCESSEURS
+
+
+    public boolean isEnCours() {
+        return enCours;
+    }
+
+    public void setEnCours(boolean enCours) {
+        this.enCours = enCours;
+    }
 
     public int getId() {
         return id;
