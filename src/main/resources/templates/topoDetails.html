@@ -85,7 +85,7 @@
                         <tr th:each="ligne : ${commentaireList}">
                             <td th:text="${ligne.getMembre().getPseudo()}">Pseudo</td>
                             <td th:text="${ligne.getMemo()}">Mémo</td>
-                            <td th:text="${ligne.getDate()}">Date</td>
+                            <td th:text="${#dates.format(ligne.getDate(), 'dd-MM-yyyy' + ' à ' + 'HH:mm')}">Date</td>
                         </tr>
 
                     </table>

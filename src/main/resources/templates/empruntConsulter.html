@@ -38,8 +38,9 @@
                     </span>
                 </a></td>
                 <td th:text="${ligne.getMembre().getPseudo()}">Membre</td>
-                <td th:text="${ligne.getDateEmprunt()}">Date debut</td>
-                <td th:text="${ligne.getDateFinEmprunt()}">Date fin</td>
+                <td th:text="${#dates.format(ligne.getDateEmprunt(), 'dd-MM-yyyy')}">Date début</td>
+                <td th:text="${#dates.format(ligne.getDateFinEmprunt(), 'dd-MM-yyyy')}">Date fin</td>
+
                 <td th:text="'à calculer'">Jours restants</td>
              </tr>
 
