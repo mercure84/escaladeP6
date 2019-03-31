@@ -31,12 +31,12 @@ body{
 
 .my-form{
     padding-top: 100px;
-    opacity: 0.9;
+    opacity: 0.95;
     color : #161616 !important;
 }
 
 #julien{
-    margin-top: 30%;
+    margin-top: 15%;
     color: #5c5c5c !important;
     background-color: whitesmoke;
     opacity: 0.8;

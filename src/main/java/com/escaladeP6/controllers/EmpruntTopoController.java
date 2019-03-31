@@ -71,7 +71,7 @@ public class EmpruntTopoController {
  }
 
  @RequestMapping(value="/empruntConsulter", method = RequestMethod.GET)
-    public String listeEmprunts(Model model){
+    public String listeEmprunts(Model model, Principal principal){
 
 // liste des emprunts
 

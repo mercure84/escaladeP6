@@ -22,18 +22,16 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Affiner la recherche des topos</div>
-                <div class="card-body">
+
                     <form name="my-form" action="#" th:action="@{/topoConsulter}" th:object="${filtre}" method="post">
+                        <div class="card-header">Affiner la recherche des topos</div>
+                        <div class="card-body">
                         <div class="form-group row">
                             <label class="col-md-3 col-form-label text-md-right" for="departement" >Département</label>
                             <label class="col-md-3 col-form-label text-md-right" for="difficulte" >Difficulté</label>
                             <label class="col-md-3 col-form-label text-md-right" for="nbVoies" >Nb de voies</label>
-                            <label class="col-md-2 col-form-label text-md-right" for="disponible" >Topo dispo.</label>
-                            <div class="col-md-1">
-                                <button class="btn btn-secondary" onclick="rechargerPage()">Reset</button>
-                            </div>
-
+                            <label class="col-md-2 col-form-label text-md-right" for="disponible" >Statut</label>
+                            <div class="col-md-1"></div>
 
                         </div>
                         <div class="form-group row">
@@ -59,7 +57,11 @@
                                 <option value="5">+20</option>
                             </select>
 
-                            <input class="class=form-control col-md-2" id="disponible" type="checkbox" value="true" th:field="*{disponible}">
+                            <select class="form-control col-md-2" id="disponible" th:field="*{disponible}">
+                                <option th:value="true" select>Disponible</option>
+                                <option th:value="false" >Indisponible</option>
+
+                            </select>
 
                             <div class="col-md-1">
                                 <button type="submit" class="btn btn-secondary">
@@ -68,10 +70,10 @@
                             </div>
 
                         </div>
+                        </div>
 
                     </form>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>

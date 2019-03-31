@@ -6,7 +6,6 @@ import com.escaladeP6.DAO.MembreRepository;
 import com.escaladeP6.DAO.TopoRepository;
 import com.escaladeP6.beans.Commentaire;
 import com.escaladeP6.beans.Membre;
-import com.escaladeP6.security.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
