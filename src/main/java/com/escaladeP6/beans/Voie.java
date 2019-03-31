@@ -19,7 +19,7 @@ public class Voie {
     private String nom;
 
     @Column(name="nom_site")
-    private String nom_site;
+    private String nomSite;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="topo_id")
@@ -53,12 +53,12 @@ public class Voie {
         this.nom = nom;
     }
 
-    public String getNom_site() {
-        return nom_site;
+    public String getNomSite() {
+        return nomSite;
     }
 
-    public void setNom_site(String nom_site) {
-        this.nom_site = nom_site;
+    public void setNomSite(String nomSite) {
+        this.nomSite = nomSite;
     }
 
     public Topo getTopo() {
@@ -74,6 +74,17 @@ public class Voie {
     }
 
     public void setLongueur(int longueur) {
+        this.longueur = longueur;
+    }
+
+    public Voie() {
+    }
+
+    public Voie(int difficulte, String nom, String nomSite, Topo topo, int longueur) {
+        this.difficulte = difficulte;
+        this.nom = nom;
+        this.nomSite = nomSite;
+        this.topo = topo;
         this.longueur = longueur;
     }
 }

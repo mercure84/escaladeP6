@@ -3,9 +3,11 @@ package com.escaladeP6.controllers;
 
 import com.escaladeP6.DAO.MembreRepository;
 import com.escaladeP6.DAO.TopoRepository;
+import com.escaladeP6.DAO.VoieRepository;
 import com.escaladeP6.beans.Departement;
 import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
+import com.escaladeP6.beans.Voie;
 import com.escaladeP6.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -42,6 +44,9 @@ public class EditerTopoController {
     @Autowired
     MembreRepository membreRepository;
 
+    @Autowired
+    VoieRepository voieRepository;
+
     @RequestMapping(value="/topoEditer", method = RequestMethod.GET)
     public String editerTopo(String topoId, Model model, Principal principal){
 
@@ -66,7 +71,9 @@ public class EditerTopoController {
         Topo editedTopo = topoRepository.findTopoById(Integer.parseInt(topoId));
         model.addAttribute("topo", editedTopo);
         model.addAttribute("idEdited", editedTopo.getId());
-        System.out.println(editedTopo);
+        model.addAttribute("voie", new Voie());
+        model.addAttribute("listeVoies", voieRepository.findVoiesByTopo(editedTopo));
+
         }else
             {
             //sinon on envoie un objet nouveau topo :)
@@ -96,12 +103,13 @@ public class EditerTopoController {
 
         //si on a un id différent de 0, on update sinon on insert
         if (topo.getId() != 0){
-            try (PreparedStatement us = conn.prepareStatement("UPDATE topo SET nom=?, description=?, departement=?, nb_voies=? WHERE id=?")) {
+            try (PreparedStatement us = conn.prepareStatement("UPDATE topo SET nom=?, description=?, departement=?, nb_voies=?, difficulte=? WHERE id=?")) {
                 us.setString(1, topo.getNom());
                 us.setString(2, topo.getDescription());
                 us.setInt(3, topo.getDepartement());
                 us.setInt(4, topo.getNbVoies());
-                us.setInt(5, topo.getId());
+                us.setString(5, topo.getDifficulte());
+                us.setInt(6, topo.getId());
                 us.executeUpdate();
             }   catch (Exception e) {
             e.printStackTrace();
@@ -143,4 +151,25 @@ public class EditerTopoController {
 
         return "redirect:topoGerer";
     }
+
+    @PostMapping("/voieAjouter")
+    public String ajouterVoie(@ModelAttribute Voie voie, Principal principal, String topoId){
+
+        System.out.println(topoId + " est le topo a etre enrichi");
+
+
+        Topo topo = topoRepository.findTopoById(Integer.parseInt(topoId));
+        voie.setTopo(topo);
+        voieRepository.save(voie);
+
+        return "redirect:topoEditer?topoId="+voie.getTopo().getId();
+
+    }
+
+
+
+
+
+
+
 }

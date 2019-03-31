@@ -36,9 +36,10 @@ body{
 }
 
 #julien{
-    margin-top: 50%;
+    margin-top: 30%;
     color: #5c5c5c !important;
     background-color: whitesmoke;
+    opacity: 0.8;
 
 }
 

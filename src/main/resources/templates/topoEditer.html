@@ -18,11 +18,15 @@
         <div class="col-md-8">
             <div class="card">
                 <form name="my-form" action="#" th:action="@{/topoEditer}" th:object="${topo}" enctype="multipart/form-data" method="post">
-                <div class="card-header">Décrivez votre Topo</div>
+
+                    <!--FORMULAIRE DES TOPOS-->
+
+
+                <div class="card-header">Décrivez votre Topo <button style="margin-left: 20%" type="submit" class="btn btn-secondary">
+                    Soumettre
+                </button></div>
                     <input type="text" th:value="${topo.getId()}" th:field="*{id}" hidden>
                 <div class="card-body">
-
-
 
                         <div class="form-group row">
                             <label for="nom" class="col-md-4 col-form-label text-md-right">Nom du Topo</label>
@@ -52,7 +56,7 @@
                             <label class="radio-inline">
                                 <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="facile">Facile</label>
                             <label class="radio-inline">
-                                <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="intermediaire">Intermédiaire</label>
+                                <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="intermediaire" selected>Intermédiaire</label>
                             <label class="radio-inline">
                                 <input type="radio" name="difficulte" th:field="*{difficulte}" th:value="expert" >Expert</label>
                         </div>
@@ -71,15 +75,84 @@
                             </div>
 
                         </div>
-                        <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-secondary">
-                                Soumettre
-                            </button>
-                        </div>
+                </div>
+                </form>
+
+            </div>
+
+                    <!--FORMULAIRE D AJOUT DES VOIES -->
+                <!-- ne s'affiche pas si c'est la création d'un nouveau Topo ==> s'affiche si on a chargé la page avec un topo -->
+
+            <div th:if="${topo.getId()}" class="card">
+                <form name="my-form" action="#" th:action="@{'/voieAjouter?topoId=' + ${topo.getId()}}" th:object="${voie}" method="post">
+                <div class="card-header">Ajouter des voies <button style="margin-left: 20%" type="submit" class="btn btn-secondary">
+                    Ajouter
+                </button></div>
+
+                <div class="card-body">
+
+                    <table class="table">
+                        <thead>
+                        <tr><th>Nom de la Voie</th><th>Difficulte</th><th>Longueur</th><th>Nom du site</th></tr></thead>
+                        <tr>
+                            <td><input type="text" class="form-control" name="nomV" th:field="*{nom}">
+                        </td>
+
+                        <td>
+                            <input type="number" class="form-control" name="difficulteV" th:field="*{difficulte}">
+                        </td>
+
+
+                        <td>
+                            <input type="number" class="form-control" name="longueur" th:field="*{longueur}">
+                        </td>
+
+
+                        <td>
+                            <input type="text" class="form-control" name="nomSite" th:field="*{nomSite}">
+                        </td>
+
+
+
+                        </tr>
+
+                    </table>
+
 
 
                 </div>
+
                 </form>
+            </div>
+
+
+
+            <!-- chargement des voies du topo s'il y en a -->
+            <div th:if="${topo.getId()}" class="card">
+
+
+                <div class="card-body">
+
+                    <table class="table">
+                        <thead><tr>
+                        <th>Nom de la Voie</th><th>Difficulte</th><th>Longueur</th><th>Nom du site</th></tr></thead>
+<tbody>
+                        <tr th:each="ligne : ${listeVoies}">
+                            <td th:text="${ligne.getNom()}">Nom Voie</td>
+                            <td th:text="${ligne.getDifficulte()}">Difficulté</td>
+                            <td th:text="${ligne.getLongueur()}">Longueur</td>
+                            <td th:text="${ligne.getNomSite()}">Nom Site</td>
+                        </tr>
+</tbody>
+                    </table>
+
+
+
+                </div>
+
+
+
+
             </div>
         </div>
     </div>
