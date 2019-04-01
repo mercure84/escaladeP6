@@ -37,7 +37,7 @@
                     <td th:text="${topo.getDifficulte()}">Difficulte</td>
                     <td th:text="${topo.getDepartement()}">Departement</td>
                     <td><a th:text="${topo.getNbVoies()}" th:href="'topoVoiesDetails?topoId='+ ${topo.getId()}"></a></td>
-                    <td><a th:text="${topo.isDisponible()?'Emprunter':'Indispo'}" th:href="'topoEmprunter?topoId='+ ${topo.getId()}"></a></td>
+                    <td><i th:if="!${topo.isDisponible()}" class="fas fa-times fa-2x"></i><a th:if="${topo.isDisponible()}" th:href="'topoEmprunter?topoId='+${topo.getId()}"><i class="fas fa-check fa-2x"></i></a></td>
                     <td th:text="${topo.getMembre().getPseudo()}">Propriétaire</td>
                     <td><a th:if="${topo.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${topo.getId()}"><i class="fas fa-file-download"></i>
                     </a>

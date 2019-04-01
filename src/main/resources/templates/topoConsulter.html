@@ -49,11 +49,10 @@
                             </select>
                             <select class="form-control col-md-3" id="nbVoies" th:field="*{nbVoies}">
                                 <option value="0" selected>Tous</option>
-                                <option value="1">1-5</option>
-                                <option value="2">6-10</option>
-                                <option value="3">11-15</option>
-                                <option value="4">16-20</option>
-                                <option value="5">+20</option>
+                                <option value="1">< 11</option>
+                                <option value="2">11-20</option>
+                                <option value="3">> 20</option>
+
                             </select>
 
                             <select class="form-control col-md-2" id="disponible" th:field="*{disponible}">
