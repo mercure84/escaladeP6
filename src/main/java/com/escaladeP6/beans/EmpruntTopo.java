@@ -3,6 +3,7 @@ package com.escaladeP6.beans;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -32,7 +33,7 @@ public class EmpruntTopo {
     private Topo topo;
 
     @Column(name="en_cours")
-    private boolean enCours;
+    private boolean enCours = true;
 
 
     //ACCESSEURS
@@ -92,4 +93,20 @@ public class EmpruntTopo {
 
     public EmpruntTopo() {
     }
+
+
+    //fonction utilitaire
+
+
+    public int joursRestants(Date finEmprunt){
+
+        Date now = new Date();
+
+int nbJours = (int) (finEmprunt.getTime() - now.getTime())/(24*60*60*1000);
+
+        return nbJours;
+    }
+
+
+
 }
