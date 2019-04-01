@@ -6,6 +6,9 @@ import com.escaladeP6.DAO.TopoRepository;
 import com.escaladeP6.beans.Commentaire;
 import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
+import com.escaladeP6.security.UserDetailsServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
@@ -31,6 +34,8 @@ public class CommentaireController {
     @Autowired
     CommentaireRepository commentaireRepository;
 
+    private static final Logger logger = LoggerFactory.getLogger(CommentaireController.class);
+
 
     @PostMapping("/posterMessage")
     public String posterCommentaire(@ModelAttribute Commentaire commentaire, Principal principal, String topoId){
@@ -49,6 +54,8 @@ public class CommentaireController {
         Date date = new Date();
         commentaire.setDate(new Timestamp(date.getTime()));
         commentaireRepository.save(commentaire);
+
+        logger.info("Un commentaire vient d'être publié par " + membre.getPseudo() + " pour le Topo : " + topo.getNom());
 
         return "redirect:topoDetails?topoId="+topoId;
 

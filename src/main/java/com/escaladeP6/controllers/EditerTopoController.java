@@ -8,7 +8,10 @@ import com.escaladeP6.beans.Departement;
 import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
 import com.escaladeP6.beans.Voie;
+import com.escaladeP6.security.UserDetailsServiceImpl;
 import com.escaladeP6.storage.StorageService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
@@ -32,6 +35,9 @@ import java.util.ArrayList;
 public class EditerTopoController {
 
     private final StorageService storageService;
+
+    private static final Logger logger = LoggerFactory.getLogger(EditerTopoController.class);
+
 
     @Autowired
     public EditerTopoController(StorageService storageService) {
@@ -111,6 +117,7 @@ public class EditerTopoController {
                 us.setString(5, topo.getDifficulte());
                 us.setInt(6, topo.getId());
                 us.executeUpdate();
+                logger.info("Mise à jour du Topo n° " + topo.getId() + " par le membre " + membreEditeur.getPseudo());
             }   catch (Exception e) {
             e.printStackTrace();
         }
@@ -119,6 +126,8 @@ public class EditerTopoController {
         else {
 
             topoRepository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
+            logger.info("Création d'un nouveau topo nommé " + topo.getNom() + " par le membre " + membreEditeur.getPseudo());
+
         }
 
         // TRAITEMENT DU STOCKAGE DU FICHIER SI L'UTILISATEUR PROPOSE UN UPLOAD
@@ -149,18 +158,18 @@ public class EditerTopoController {
             }
         }}
 
+
+
         return "redirect:topoGerer";
     }
 
     @PostMapping("/voieAjouter")
     public String ajouterVoie(@ModelAttribute Voie voie, Principal principal, String topoId){
 
-        System.out.println(topoId + " est le topo a etre enrichi");
-
-
         Topo topo = topoRepository.findTopoById(Integer.parseInt(topoId));
         voie.setTopo(topo);
         voieRepository.save(voie);
+        logger.info(" le topo " + topo.getNom() + " a été enrichie d'une voie");
 
         return "redirect:topoEditer?topoId="+voie.getTopo().getId();
 

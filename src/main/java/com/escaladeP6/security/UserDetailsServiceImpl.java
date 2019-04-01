@@ -3,6 +3,8 @@ package com.escaladeP6.security;
 import com.escaladeP6.DAO.AppRoleDAO;
 import com.escaladeP6.DAO.MembreRepository;
 import com.escaladeP6.beans.Membre;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -26,16 +28,19 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private AppRoleDAO appRoleDAO;
 
+    private static final Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
+
+
     @Override
     public UserDetails loadUserByUsername(String pseudo) throws UsernameNotFoundException {
         Membre membre = this.membreRepository.findMembreByPseudo(pseudo);
 
         if (membre == null) {
-            System.out.println("User not found! " + pseudo);
+            logger.warn("User not found! " + pseudo);
             throw new UsernameNotFoundException("User " + pseudo + " was not found in the database");
         }
 
-        System.out.println("Found User: " + membre);
+        logger.info("Found User: " + membre);
 
         // [ROLE_USER, ROLE_ADMIN,..]
         List<String> roleNames = this.appRoleDAO.getRoleNames(membre.getId());

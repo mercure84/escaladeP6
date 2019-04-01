@@ -6,6 +6,9 @@ import com.escaladeP6.DAO.TopoRepository;
 import com.escaladeP6.beans.EmpruntTopo;
 import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
+import com.escaladeP6.security.UserDetailsServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
@@ -22,6 +25,9 @@ import java.util.List;
 
 @Controller
 public class EmpruntTopoController {
+
+
+    private static final Logger logger = LoggerFactory.getLogger(EmpruntTopoController.class);
 
     @Autowired
     TopoRepository topoRepository;
@@ -65,6 +71,8 @@ public class EmpruntTopoController {
      //le topo concerné devient indispo
      topo.setDisponible(false);
      topoRepository.save(topo);
+
+     logger.warn ("Un nouvel emprunt a été créé par " + membre.getPseudo() + " pour le topo n° " + topo.getNom());
 
      return "redirect:topoHome";
 

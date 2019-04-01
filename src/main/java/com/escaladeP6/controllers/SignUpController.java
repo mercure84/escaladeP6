@@ -6,6 +6,9 @@ import com.escaladeP6.beans.Membre;
 
 import com.escaladeP6.beans.RoleMembre;
 import com.escaladeP6.security.EncryptedPasswordUtils;
+import com.escaladeP6.security.UserDetailsServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +23,9 @@ public class SignUpController {
     @Autowired
     RoleMembreRepository roleMembreRepository;
 
+    private static final Logger logger = LoggerFactory.getLogger(SignUpController.class);
+
+
     @RequestMapping("/signUp")
     public String senregistrerForm (Model model){
         model.addAttribute("membre", new Membre());
@@ -28,8 +34,7 @@ public class SignUpController {
 
     @PostMapping("/signUp")
     public String senregistrerSubmit(@ModelAttribute Membre membre){
-        System.out.println("les données du formulaires ont été sauvegardées");
-        System.out.println(membre.getNom() + " " + membre.getPrenom() + " " + membre.getPseudo() + " " + membre.getPseudo() + " " + membre.getEncryptedPassword());
+        logger.info(" UN nouveau membre : " + membre.getNom() + " " + membre.getPrenom() + " " + membre.getPseudo() + " " + membre.getPseudo() + " " + membre.getEncryptedPassword());
         String encodedPassword = EncryptedPasswordUtils.encryptePassword(membre.getEncryptedPassword());
         //création du membre :
         Membre nouveauMembre = new Membre(membre.getNom(), membre.getPrenom(), membre.getPseudo(), encodedPassword, membre.getEmail());

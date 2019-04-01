@@ -62,11 +62,7 @@ public String topos (Model model){
     for (Departement dept : Departement.values()){
         listeNumDpt.add(dept.getNumDpt());
     }
-
-
     model.addAttribute("listeDept", listeNumDpt);
-    System.out.println("les valeurs demandées par le filtre sont les suivantes :");
-    System.out.println("dpt = " + filtre.getDepartement() + " difficulte = " + filtre.getDifficulte() + " nb voie = " + filtre.getNbVoies() + " dispo : " + filtre.isDisponible());
 
     // traitement du nb de voies
     int nbVoiesMin = 0;
@@ -88,8 +84,6 @@ public String topos (Model model){
             System.out.println("on est cas 1, nbVoieMin =" + nbVoiesMin + " nbVoiesMax = " + nbVoiesMax);
 
     }
-
-
 
     model.addAttribute("topos", topoRepository.filtrerTopos(filtre.getDepartement(), filtre.getDifficulte(), filtre.isDisponible(), nbVoiesMin, nbVoiesMax));
     return "topoConsulter";

@@ -74,7 +74,15 @@
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
         </dependency>
 
-       <!--- FIN DES DEPENDENCES  -->
+        <!--DEPENDENCES LOG4J-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+
+
+        <!--- FIN DES DEPENDENCES  -->
 
     </dependencies>
 
