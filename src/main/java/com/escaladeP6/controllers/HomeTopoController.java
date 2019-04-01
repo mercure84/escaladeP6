@@ -52,12 +52,11 @@ public class HomeTopoController {
         catch (Exception e){
             nomDernierTopoPublie = null;
         }
-        String titreMembre = membreRepository.findMembreByPseudo(pseudo).getPrenom() + " " + membreRepository.findMembreByPseudo(pseudo).getNom();
 
         model.addAttribute("nbTopoTotal", nbTopoTotal );
         model.addAttribute("nbTopoEmpruntes", nbTopoEmpruntes);
         model.addAttribute("nomDernierTopoPublie", nomDernierTopoPublie);
-        model.addAttribute("titreMembre", titreMembre);
+        model.addAttribute("membre", membre);
         model.addAttribute("nbMembre", nbMembres);
         model.addAttribute("commentaireList", commentaireList);
         return "topoHome";

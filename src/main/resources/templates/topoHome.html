@@ -44,11 +44,8 @@
 
             <div class="col-md-12">
                 <br>
-                <h2 th:text="'Bienvenu ' + ${titreMembre} + ' !'">Bienvenue</h2>
+                <h2 th:text="'Bienvenu ' + ${membre.getPrenom()} + ' ' + ${membre.getNom()} + ' !'">Bienvenue</h2>
                 <br>
-                <p th:text="'Il y a ' + ${nbTopoTotal} + ' Topos en ligne. ' + ${nbTopoEmpruntes} + ' sont disponibles !' "></p>
-                <p th:text="'Le dernier Topo publié est ' + ${nomDernierTopoPublie} + '.'"></p>
-                <p th:text="'Il y a actuellement ' + ${nbMembre} + ' grimpeurs enregistrés sur le site !'"></p>
             </div>
         </div>
 <div class="row">
