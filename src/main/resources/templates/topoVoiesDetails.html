@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="bootstrapcdn.html"/>
+    <meta charset="utf-8">
+
+    <title>Détails des voies d'un topo</title>
+
+
+
+</head>
+<body>
+
+
+<!-- nav bar -->
+<div th:include="navbar.html"/>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h2>Détails des voies pour le Topo n° <span th:text="${topo.getId()}"></span></h2>
+
+            <table style="margin-top: 10px" class="table">
+                <thead>
+                <tr><th>Nom de la voie</th>
+                    <th>Difficulté</th>
+                    <th>Longueur</th>
+                    <th>Nom du Site</th>
+
+
+                </tr></thead>
+
+                <tr th:each="ligne : ${listeVoies}">
+                    <td th:text="${ligne.getNom()}">Nom</td>
+                    <td th:text="${ligne.getDifficulte()}">Difficulte</td>
+                    <td th:text="${ligne.getLongueur()}">Longueur</td>
+                    <td th:text="${ligne.getNomSite()}">Nom du Site </td>
+                 </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

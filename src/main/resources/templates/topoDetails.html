@@ -36,7 +36,7 @@
                     <td th:text="${topo.getDescription()}">Description</td>
                     <td th:text="${topo.getDifficulte()}">Difficulte</td>
                     <td th:text="${topo.getDepartement()}">Departement</td>
-                    <td th:text="${topo.getNbVoies()}">Nb voies</td>
+                    <td><a th:text="${topo.getNbVoies()}" th:href="'topoVoiesDetails?topoId='+ ${topo.getId()}"></a></td>
                     <td><a th:text="${topo.isDisponible()?'Emprunter':'Indispo'}" th:href="'topoEmprunter?topoId='+ ${topo.getId()}"></a></td>
                     <td th:text="${topo.getMembre().getPseudo()}">Propriétaire</td>
                     <td><a th:if="${topo.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${topo.getId()}"><i class="fas fa-file-download"></i>

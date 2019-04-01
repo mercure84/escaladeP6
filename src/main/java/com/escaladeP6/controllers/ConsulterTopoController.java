@@ -3,10 +3,8 @@ package com.escaladeP6.controllers;
 
 import com.escaladeP6.DAO.CommentaireRepository;
 import com.escaladeP6.DAO.TopoRepository;
-import com.escaladeP6.beans.Commentaire;
-import com.escaladeP6.beans.Departement;
-import com.escaladeP6.beans.Filtre;
-import com.escaladeP6.beans.Topo;
+import com.escaladeP6.DAO.VoieRepository;
+import com.escaladeP6.beans.*;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +32,9 @@ public class ConsulterTopoController {
 
     @Autowired
     CommentaireRepository commentaireRepository;
+
+    @Autowired
+    VoieRepository voieRepository;
 
 
 @RequestMapping("/topoConsulter")
@@ -129,6 +130,20 @@ public String pageDetails(String topoId, Model model){
    return  "topoDetails";
 
 }
+
+@RequestMapping(value="/topoVoiesDetails", method = RequestMethod.GET)
+public String detailsVoies(String topoId, Model model){
+
+    Topo topo = topoRepository.findTopoById(Integer.parseInt(topoId));
+    List<Voie> listeVoies = voieRepository.findVoiesByTopo(topo);
+
+    model.addAttribute("topo", topo);
+    model.addAttribute("listeVoies", listeVoies);
+
+    return "topoVoiesDetails";
+}
+
+
 
 }
 

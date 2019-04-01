@@ -45,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/", "/login", "/signUp").permitAll();
 
         //si pas de login, redirection de ces pages :
-        http.authorizeRequests().antMatchers("/topoGerer", "/topoConsulter", "/topoConsulter/fichiers", "/topoHome", "/topoEditer", "/topoDetails", "/topoEmprunter", "/empruntConsulter").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/topoGerer", "/topoConsulter", "/topoConsulter/fichiers", "/topoHome", "/topoEditer", "/topoDetails", "/topoEmprunter", "/empruntConsulter", "/topoVoiesDetails").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         // page réservée à l'admin
         http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
