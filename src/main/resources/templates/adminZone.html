@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
+    <div th:include="bootstrapcdn.html"/>
+    <meta charset="utf-8">
     <title>Administration du site</title>
 </head>
 <body>
+<!-- nav bar -->
+<div th:include="navbar.html"/>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h2> Bienvenu administrateur </h2>
+
+            <table class="table">
+
+                <thead><tr><th>
+                    Fonctionnalité
+                </th>
+                <th>Bouttons</th>
+                </tr></thead>
+
+                <tbody>
+                <tr>
+                    <td>Purger les emprunts échus</td>
+                    <td><a href="adminZone?cleanE=oui"><i class="fas fa-snowplow fa-2x"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Valider les topos en attente</td>
+                    <td>Clic</td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

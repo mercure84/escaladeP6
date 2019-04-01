@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.security.Principal;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class EmpruntTopoController {
@@ -75,7 +76,9 @@ public class EmpruntTopoController {
 
 // liste des emprunts
 
-     model.addAttribute("listeEmprunts", empruntTopoRepository.findAll());
+     List<EmpruntTopo> listeE = empruntTopoRepository.findEmpruntToposByEnCoursIsTrue();
+
+     model.addAttribute("listeEmprunts", listeE);
 
         return "empruntConsulter";
  }

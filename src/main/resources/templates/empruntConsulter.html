@@ -41,7 +41,7 @@
                 <td th:text="${#dates.format(ligne.getDateEmprunt(), 'dd-MM-yyyy')}">Date début</td>
                 <td th:text="${#dates.format(ligne.getDateFinEmprunt(), 'dd-MM-yyyy')}">Date fin</td>
 
-                <td th:text="'à calculer'">Jours restants</td>
+                <td th:text="${ligne.joursRestants(ligne.getDateFinEmprunt())}">Jours restants</td>
              </tr>
 
         </table>
