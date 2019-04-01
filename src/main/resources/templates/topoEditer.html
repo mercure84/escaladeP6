@@ -64,7 +64,7 @@
                         <div class="form-group row">
                             <label for="nbVoies" class="col-md-4 col-form-label text-md-right">Nombres de voies</label>
                             <div class="col-md-6">
-                                <input type="number" id="nbVoies" class="form-control" name="nbVoies" th:field="*{nbVoies}" required>
+                                <input type="number" id="nbVoies" class="form-control" name="nbVoies" min="0" max="100" th:field="*{nbVoies}" required>
                             </div>
                         </div>
 
@@ -95,16 +95,16 @@
                         <thead>
                         <tr><th>Nom de la Voie</th><th>Difficulte</th><th>Longueur</th><th>Nom du site</th></tr></thead>
                         <tr>
-                            <td><input type="text" class="form-control" name="nomV" th:field="*{nom}">
+                            <td><input type="text" class="form-control" name="nomV" th:field="*{nom}" required>
                         </td>
 
                         <td>
-                            <input type="number" class="form-control" name="difficulteV" th:field="*{difficulte}">
+                            <input type="number" class="form-control" name="difficulteV" min="1" max="5" th:field="*{difficulte}" required>
                         </td>
 
 
                         <td>
-                            <input type="number" class="form-control" name="longueur" th:field="*{longueur}">
+                            <input type="number" class="form-control" name="longueur" th:field="*{longueur}" required>
                         </td>
 
 

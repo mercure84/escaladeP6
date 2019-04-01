@@ -43,7 +43,6 @@ public class CommentaireController {
 
         User loginedUser = (User) ((Authentication) principal).getPrincipal();
         String pseudo = loginedUser.getUsername();
-  //System.out.println("Topo commenté = " + Integer.parseInt(topoId));
 
         Topo topo = topoRepository.findTopoById(Integer.parseInt(topoId));
 

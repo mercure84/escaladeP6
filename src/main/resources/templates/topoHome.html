@@ -10,7 +10,8 @@
 <body id="topoBody">
 <div class="container">
 <!-- nav bar -->
-<div th:include="navbar.html"/>
+<div th:insert="navbar"/>
+
 
 
 <!-- corps de la page Topos -->
@@ -18,28 +19,23 @@
     <!-- sections boutons  -->
     <div class="row centrer">
 
-        <div class="col-md-3">
+        <div class="col-md-4">
             <!-- section recherche d'un topo -->
             <a class="btn btn-secondary" href="/topoConsulter" role="button">CONSULTER LES TOPOS</a>
 
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <!-- consultation des emprunts -->
             <a class="btn btn-secondary" href="/empruntConsulter" role="button">CONSULTER LES EMPRUNTS</a>
 
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-4">
             <!-- section publication d'un topo -->
             <a class="btn btn-secondary" href="/topoGerer" role="button">MES TOPOS</a>
         </div>
 
-        <div class="col-md-3">
-            <!--  -->
-            <a class="btn btn-secondary" href="#" role="button">Mon Profil</a>
 
-
-        </div>
     </div>
 
 
