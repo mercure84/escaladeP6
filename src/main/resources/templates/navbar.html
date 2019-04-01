@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
@@ -23,15 +24,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/adminZone" style="color:darkred">AdminZone</a>
             </li>
-            <!--<li class="nav-item">-->
-                <!--<span th:text="${user}" class="nav-link" style="color:darkblue">PseudoMembre</span>-->
-                <!--<span th:if="${}" class="nav-link" style="color:darkblue">PseudoMembre</span>-->
-            <!--</li>-->
-
-
-
-
-        </ul>
+            <li>
+            <div sec:authorize="isAuthenticated()">
+                Welcome, <span sec:authentication="name">Username</span>
+            </div></li>
+       </ul>
 
     </div>
 </nav>
