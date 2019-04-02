@@ -3,53 +3,32 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 
-<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="/">Accueil</a>
 
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li sec:authorize="isAnonymous()" class="nav-item">
-                <a class="nav-link" href="/signUp">S'inscrire <span class="sr-only">(current)</span></a>
-            </li>
-            <li sec:authorize="isAnonymous()" class="nav-item">
-                <a class="nav-link" href="/login">Se connecter</a>
-            </li>
-            <li class="nav-item" sec:authorize="isAuthenticated()">
-                <a class="nav-link" href="/logout">Se déconnecter</a>
-            </li>
-            <li sec:authorize="isAuthenticated()" class="nav-item">
-                <a class="nav-link" href="/topoHome">Tableau de bord</a>
-            </li>
-            <li sec:authorize="isAuthenticated()" class="nav-item">
-                <a class="nav-link" href="/adminZone" style="color:darkred">AdminZone</a>
-            </li>
 
-            <li sec:authorize="isAuthenticated()" class="nav-link">
-                Connecté en tant que : <span sec:authentication="name">Username</span>
-            </li>
-
-        <!-- sections boutons  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Escalade P6</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" sec:authorize="isAuthenticated()">@<span sec:authentication="name">Username</span><span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" sec:authorize="isAnonymous()" href="/signUp">S'inscrire <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" sec:authorize="isAnonymous()" href="/login">Se connecter</a>
+            <a class="nav-item nav-link" sec:authorize="isAuthenticated()" href="/logout">Logout</a>
 
 
-            <li sec:authorize="isAuthenticated()" class="nav-link">
-                <!-- section recherche d'un topo -->
-                <a class="btn btn-secondary" href="/topoConsulter" role="button">CONSULTER LES TOPOS</a>
 
-            </li>
-            <li sec:authorize="isAuthenticated()" class="nav-link">
-                <!-- consultation des emprunts -->
-                <a class="btn btn-secondary" href="/empruntConsulter" role="button">CONSULTER LES EMPRUNTS</a>
-
-            </li>
-
-            <li sec:authorize="isAuthenticated()" class="nav-link">
-                <!-- section publication d'un topo -->
-                <a class="btn btn-secondary" href="/topoGerer" role="button">MES TOPOS</a>
-            </li>
+            <form sec:authorize="isAuthenticated()" class="form-inline">
+                <a href="/topoHome"><button class="btn btn-outline-success" type="button">Dashboard</button></a>
+                <a href="/topoConsulter"><button class="btn btn-outline-success" type="button">Spots</button></a>
+                <a href="/topoGerer"><button class="btn btn-outline-success" type="button">Mes Topos</button></a>
+                <a href="/empruntConsulter"><button class="btn btn-outline-success" type="button">Les Emprunts</button></a>
+                <a href="/adminZone"><button class="btn btn-outline-danger" type="button">Admin</button></a>
+            </form>
 
 
-        </ul>
-
+        </div>
     </div>
 </nav>

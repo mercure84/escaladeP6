@@ -98,11 +98,14 @@ public class EmpruntTopo {
     //fonction utilitaire
 
 
-    public int joursRestants(Date finEmprunt){
+    public long joursRestants(Date finEmprunt){
 
         Date now = new Date();
 
-int nbJours = (int) (finEmprunt.getTime() - now.getTime())/(24*60*60*1000);
+    long nbJours = (finEmprunt.getTime() - now.getTime())/(24*60*60*1000);
+//        System.out.println("fin " + finEmprunt.getTime() + " now = " + now.getTime());
+//        System.out.println("différence : " + nbJours);
+//
 
         return nbJours;
     }

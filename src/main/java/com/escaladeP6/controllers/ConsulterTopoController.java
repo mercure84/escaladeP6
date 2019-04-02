@@ -139,7 +139,7 @@ public String pageDetails(String topoId, Model model){
     Commentaire commentaire = new Commentaire();
 
     //recherche des commentaires du topo
-    List<Commentaire> commentaireList = commentaireRepository.findCommentairesByTopoOrderByDateAsc(topoCible);
+    List<Commentaire> commentaireList = commentaireRepository.findCommentairesByTopoOrderByDateDesc(topoCible);
 
     model.addAttribute("commentaireList", commentaireList);
     model.addAttribute("topo", topoCible);

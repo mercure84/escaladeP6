@@ -11,8 +11,8 @@ import java.util.List;
 @Repository
 public interface CommentaireRepository extends JpaRepository<Commentaire, Integer> {
 
-    List<Commentaire> findCommentairesByTopoOrderByDateAsc(Topo topo);
-    List<Commentaire> findCommentairesByMembre(Membre membre);
+    List<Commentaire> findCommentairesByTopoOrderByDateDesc(Topo topo);
+    List<Commentaire> findCommentairesByMembreOrderByDateDesc(Membre membre);
 
 
 }

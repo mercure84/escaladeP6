@@ -41,7 +41,7 @@ import java.util.List;
             int nbEmpruntsPurges = 0;
     for (int i = 0; i < listeE.size(); i++) {
 
-        if ((int) (listeE.get(i).getDateFinEmprunt().getTime() - today.getTime()) < 0) {
+        if ((listeE.get(i).getDateFinEmprunt().getTime() - today.getTime()) < 0) {
 
             EmpruntTopo monEmprunt = listeE.get(i);
             Topo monTopo = listeE.get(i).getTopo();

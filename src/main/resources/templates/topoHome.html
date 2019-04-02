@@ -7,57 +7,56 @@
     <title>Escalade P6 - OpenClassRooms - Parcours DA Java - Projet 6</title>
 </head>
 
-<body id="topoBody">
-<div class="container">
+<body>
+
 <!-- nav bar -->
-<div th:insert="navbar"/>
+<div th:include="navbar"/>
 
 
-
+<div class="container">
 <!-- corps de la page Topos -->
 
-    <!--&lt;!&ndash; sections boutons  &ndash;&gt;-->
-    <!--<div class="row">-->
-
-        <!--<div class="col-md-4">-->
-            <!--&lt;!&ndash; section recherche d'un topo &ndash;&gt;-->
-            <!--<a class="btn btn-secondary" href="/topoConsulter" role="button">CONSULTER LES TOPOS</a>-->
-
-        <!--</div>-->
-        <!--<div class="col-md-4">-->
-            <!--&lt;!&ndash; consultation des emprunts &ndash;&gt;-->
-            <!--<a class="btn btn-secondary" href="/empruntConsulter" role="button">CONSULTER LES EMPRUNTS</a>-->
-
-        <!--</div>-->
-
-        <!--<div class="col-md-4">-->
-            <!--&lt;!&ndash; section publication d'un topo &ndash;&gt;-->
-            <!--<a class="btn btn-secondary" href="/topoGerer" role="button">MES TOPOS</a>-->
-        <!--</div>-->
-
-
-    <!--</div>-->
-
-
-<!-- autre partie de la page  -->
-        <div class="row">
+        <div class="row" id="bandeau0">
 
             <div class="col-md-12">
                 <br>
-                <h2 th:text="'Bienvenu ' + ${membre.getPrenom()} + ' ' + ${membre.getNom()} + ' !'">Bienvenue</h2>
+                <h1 th:text="'Bienvenu ' + ${membre.getPrenom()} + ' ' + ${membre.getNom()} + ' !'">Bienvenue</h1>
                 <br>
             </div>
         </div>
 <div class="row">
 
-            <div class="col-md-6">
+   <div class="col-md-12">
 
-                <img src="./img/accueil.jpg">
-        </div>
+       <h2>Mes emprunts en cours</h2>
 
-    <div class="col-md-6">
-        <br>
-        <h2>Mes derniers commentaires</h2>
+       <table th:if="${empruntList.size()!=0}" style="margin-top: 10px" class="table">
+           <thead>
+           <tr><th>Topo</th>
+               <th>Durée restants</th>
+               <th>Lien</th>
+
+           </tr></thead>
+
+           <tr  th:each="ligneE : ${empruntList}">
+               <td th:text="${ligneE.getTopo().getNom()}">Nom Topo</td>
+
+               <td th:text="${ligneE.joursRestants(ligneE.getDateFinEmprunt())}">Jours</td>
+
+               <td><a th:href="'topoDetails?topoId=' + ${ligneE.getTopo().getId()}" >
+                   <i class="fas fa-search"></i>
+                   </span>
+               </a></td>
+           </tr>
+
+       </table>
+
+
+   </div>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Mes derniers commentaires</h2>
 
         <table style="margin-top: 10px" class="table">
             <thead>
@@ -75,7 +74,7 @@
 
         </table>
 
-
+        </div>
 
 
     </div>
