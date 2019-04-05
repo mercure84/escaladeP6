@@ -1,4 +1,5 @@
 package com.escaladeP6.DAO;
+import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -23,6 +24,9 @@ List<Topo> filtrerTopos(int numDpt, String difficulte, boolean disponible, int n
 List<Topo> findToposByMembreId(int membreId);
 
 Topo findTopoById(int id);
+
+List<Topo> findToposByMembre(Membre membre);
+
 
 }
 

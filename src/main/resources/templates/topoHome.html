@@ -19,8 +19,17 @@
         <div class="row" id="bandeau0">
 
             <div class="col-md-12">
-                <br>
+
                 <h1 th:text="'Bienvenu ' + ${membre.getPrenom()} + ' ' + ${membre.getNom()} + ' !'">Bienvenue</h1>
+            </div>
+        </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+             <p>Vous êtes propriétaire de <span th:text="${nbTopo}"></span> topo(s)</p>
+                <p>Vous avez  <span th:text="${nbTopoEmpruntes}"></span> emprunt(s) en cours !</p>
+                <p>Vous avez écrit <span th:text="${commentaireList.size()}"></span> commentaires :)</p>
                 <br>
             </div>
         </div>

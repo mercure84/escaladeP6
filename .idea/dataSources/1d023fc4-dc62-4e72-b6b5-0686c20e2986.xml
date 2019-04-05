@@ -8,15 +8,15 @@
       <ObjectId>16599</ObjectId>
       <StateNumber>653</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1045</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1150</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|16884|16886|1
-sequence|table|16833|16715|1
-sequence|table|16601|16603|1
+      <Relations>sequence|table|16601|16603|1
 sequence|table|16615|16617|1
 sequence|table|16663|16665|1
 sequence|table|16676|16678|1
+sequence|table|16833|16715|1
+sequence|table|16884|16886|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -114,7 +114,7 @@ sequence|table|16676|16678|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1046</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1151</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -823,5 +823,15 @@ role_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>voie_pkey</UnderlyingIndexName>
     </key>
+    <foreign-key id="122" parent="40" name="voie_topo_id_fk">
+      <ObjectId>16956</ObjectId>
+      <StateNumber>1149</StateNumber>
+      <ColNames>topo_id</ColNames>
+      <RefTableId>16617</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>topo</RefTableName>
+      <RefKeyName>topo_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
