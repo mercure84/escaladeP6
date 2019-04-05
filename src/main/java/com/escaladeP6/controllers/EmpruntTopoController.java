@@ -91,6 +91,31 @@ public class EmpruntTopoController {
         return "empruntConsulter";
  }
 
+@RequestMapping(value="/empruntRestituer", method = RequestMethod.GET)
+public String restituerEmprunt(Principal principal, String topoId){
+
+    User loginedUser = (User) ((Authentication) principal).getPrincipal();
+    String pseudo = loginedUser.getUsername();
+    Topo topo = topoRepository.findTopoById(Integer.parseInt(topoId));
+    Membre membre = membreRepository.findMembreByPseudo(pseudo);
+
+
+    EmpruntTopo emprunt = empruntTopoRepository.findEmpruntToposByMembreAndTopoAndEnCoursIsTrue(membre,topo);
+
+    emprunt.setDateFinEmprunt(new Date());
+    emprunt.setEnCours(false);
+    topo.setDisponible(true);
+
+    empruntTopoRepository.save(emprunt);
+    topoRepository.save(topo);
+
+    logger.warn("Le membre " + membre.getPseudo() + " a rendu son emprunt " + emprunt.getId() + " du topo " + topo.getNom());
+
+
+
+        return "redirect:topoHome";
+}
+
 
 
 

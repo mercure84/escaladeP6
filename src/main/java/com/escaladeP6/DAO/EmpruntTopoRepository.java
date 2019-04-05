@@ -2,6 +2,7 @@ package com.escaladeP6.DAO;
 
 import com.escaladeP6.beans.EmpruntTopo;
 import com.escaladeP6.beans.Membre;
+import com.escaladeP6.beans.Topo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,4 +15,10 @@ public interface EmpruntTopoRepository extends JpaRepository<EmpruntTopo, Intege
 
 
     List<EmpruntTopo> findEmpruntToposByMembreAndEnCoursIsTrue(Membre membre);
+
+
+    EmpruntTopo findEmpruntToposByMembreAndTopoAndEnCoursIsTrue(Membre membre, Topo topo);
+
+
+
 }

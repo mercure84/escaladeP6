@@ -33,27 +33,34 @@
        <table th:if="${empruntList.size()!=0}" style="margin-top: 10px" class="table">
            <thead>
            <tr><th>Topo</th>
-               <th>Durée restants</th>
+
                <th>Lien</th>
+               <th>Durée restante</th>
+               <th>Restituer le topo</th>
 
            </tr></thead>
-
+<tbody>
            <tr  th:each="ligneE : ${empruntList}">
                <td th:text="${ligneE.getTopo().getNom()}">Nom Topo</td>
 
-               <td th:text="${ligneE.joursRestants(ligneE.getDateFinEmprunt())}">Jours</td>
 
                <td><a th:href="'topoDetails?topoId=' + ${ligneE.getTopo().getId()}" >
                    <i class="fas fa-search"></i>
                    </span>
                </a></td>
-           </tr>
 
+               <td th:text="${ligneE.joursRestants(ligneE.getDateFinEmprunt())}">Jours</td>
+               <td><a th:href="'empruntRestituer?topoId=' + ${ligneE.getTopo().getId()}">
+                   <i class="fas fa-hand-paper"></i>
+               </a>
+           </tr>
+</tbody>
        </table>
 
 
    </div>
 </div>
+    <br>
     <div class="row">
         <div class="col-md-12">
             <h2>Mes derniers commentaires</h2>
