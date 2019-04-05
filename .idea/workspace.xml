@@ -11,10 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/EmpruntTopoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/EmpruntTopoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/EmpruntTopoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/EmpruntTopoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,7 +84,16 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="940">
+                  <caret line="61" column="3" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
               <provider selected="true" editor-type-id="text-editor">
@@ -100,38 +106,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoHome.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/EmpruntTopoController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="481">
-                  <caret line="99" column="64" lean-forward="true" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/AdminController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="833">
-                  <caret line="54" selection-start-line="54" selection-end-line="54" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/EmpruntTopoRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="19" column="63" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="63" />
+                <state relative-caret-position="510">
+                  <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
                 </state>
               </provider>
             </entry>
@@ -141,13 +117,10 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/AdminController.java">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="782">
-                  <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="52" selection-end-column="41" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="578">
+                  <caret line="34" selection-start-line="34" selection-end-line="34" />
                 </state>
               </provider>
             </entry>
@@ -198,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/batches/batchEmprunt.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoDetails.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoConsulter.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/Application.java" />
         <option value="$PROJECT_DIR$/logs.log" />
@@ -224,13 +196,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/CommentaireRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/navbar.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/EmpruntTopoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/EmpruntTopoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
       </list>
     </option>
   </component>
@@ -546,21 +519,7 @@
       <workItem from="1554030553664" duration="43290000" />
       <workItem from="1554225931123" duration="933000" />
       <workItem from="1554227735874" duration="12120000" />
-      <workItem from="1554493100783" duration="5008000" />
-    </task>
-    <task id="LOCAL-00025" summary="liste des départements en ENUM pour la création des topos">
-      <created>1551130154097</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1551130154097</updated>
-    </task>
-    <task id="LOCAL-00026" summary="mise à jour du formulaire publier topo">
-      <created>1551132159422</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1551132159422</updated>
+      <workItem from="1554493100783" duration="6412000" />
     </task>
     <task id="LOCAL-00027" summary="implémentation de la searchbox des topos">
       <created>1551136670639</created>
@@ -891,11 +850,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554246641762</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="implémentation de la fonction restituer Topo sur la page topoHome">
+      <created>1554501035297</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1554501035298</updated>
+    </task>
+    <task id="LOCAL-00075" summary="résumé données du membre page topoHome">
+      <created>1554501912619</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1554501912619</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420776000" />
+    <option name="totallyTimeSpent" value="422180000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -910,7 +883,7 @@
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7672833" side_tool="true" visible="true" weight="0.1263911" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7672833" side_tool="true" visible="true" weight="0.1263911" />
       <window_info id="Structure" order="1" sideWeight="0.23255815" side_tool="true" weight="0.29888713" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -922,7 +895,7 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49960256" weight="0.33125487" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32424006" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7126391" visible="true" weight="0.20342946" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.7126391" visible="true" weight="0.20342946" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49756888" weight="0.40374124" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -1044,8 +1017,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="début de l'implémentation de l'édition des topos" />
-    <MESSAGE value="implémentation d'une page d'erreur /error" />
     <MESSAGE value="continuation de l'édition des topos" />
     <MESSAGE value="conflit sur l'upload des fichiers : il n'y a plus d'erreur en cas d'absence d'upload" />
     <MESSAGE value="gestion du conflit sur l'upload des fichiers : il n'y a plus d'erreur en cas d'absence d'upload + refactoring creer / editer - reste à gérer l'update" />
@@ -1069,7 +1040,9 @@
     <MESSAGE value="correction de quelques détails" />
     <MESSAGE value="navbar dynamique OK" />
     <MESSAGE value="divers refacto sur la navbar + design + corrections quelques bugs + tri des commentaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="divers refacto sur la navbar + design + corrections quelques bugs + tri des commentaires" />
+    <MESSAGE value="implémentation de la fonction restituer Topo sur la page topoHome" />
+    <MESSAGE value="résumé données du membre page topoHome" />
+    <option name="LAST_COMMIT_MESSAGE" value="résumé données du membre page topoHome" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1195,27 +1168,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/jscdn.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoGerer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
@@ -1335,17 +1291,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoHome.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/EmpruntTopoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="481">
+          <caret line="99" column="64" lean-forward="true" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/HomeTopoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="736">
+          <caret line="62" column="63" lean-forward="true" selection-start-line="62" selection-start-column="63" selection-end-line="62" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/DAO/TopoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#48#1" expanded="true" />
+            <element signature="e#0#55#1" expanded="true" />
+            <element signature="e#0#200#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1366,10 +1337,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/EmpruntTopoController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="99" column="64" lean-forward="true" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
+        <state relative-caret-position="510">
+          <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="61" column="3" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
         </state>
       </provider>
     </entry>
