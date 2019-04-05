@@ -53,8 +53,10 @@
                  <td th:text="${ligne.getDifficulte()}">Difficulte</td>
                 <td th:text="${ligne.getDepartement()}">Departement</td>
                 <td th:text="${ligne.getNbVoies()}">Nb voies</td>
-                <td th:text="${ligne.isDisponible()}">Disponibilite</td>
-                <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}" th:text="Ficher">Pas de fichier</a>
+                <td><i th:if="!${ligne.isDisponible()}" class="fas fa-times fa-2x"></i><a th:if="${ligne.isDisponible()}" th:href="'topoEmprunter?topoId='+${ligne.getId()}"><i class="fas fa-check fa-2x"></i></a></td>
+                <td><a th:if="${ligne.getFichier()!= null}" th:href="'topoConsulter/fichiers?topoId='+${ligne.getId()}"><i class="fas fa-file-download fa-2x"></i>
+                </a>
+                </td>
                 <td><a th:href="'topoEditer?topoId='+${ligne.getId()}"><button class="btn btn-secondary">Editer</button></a></td>
 
             </tr>
