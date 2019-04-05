@@ -85,7 +85,7 @@
             <tr th:each="ligne : ${commentaireList}">
                 <td th:text="${#dates.format(ligne.getDate(), 'dd-MM-yyyy' + ' à ' + 'HH:mm')}">Date</td>
                 <td th:text="${ligne.getMemo()}">Mémo</td>
-                <td th:text="${ligne.getTopo().getNom()}">Topo</td>
+                <td> <a th:href="'topoDetails?topoId=' + ${ligne.getTopo().getId()}" th:text="${ligne.getTopo().getNom()}">Topo</a></td>
             </tr>
 
         </table>
