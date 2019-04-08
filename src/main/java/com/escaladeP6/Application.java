@@ -10,19 +10,18 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
 @EnableConfigurationProperties(StorageProperties.class)
-public class Application extends SpringBootServletInitializer {
+public class Application {
 
 private static final Logger logger = LoggerFactory.getLogger((Application.class));
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        logger.info("L'application Spring Boot Escalade P6 démarre...");
+        logger.info("#   #   #   L'application Spring Boot Escalade P6 démarre... #   #   #  ");
 
 
     }

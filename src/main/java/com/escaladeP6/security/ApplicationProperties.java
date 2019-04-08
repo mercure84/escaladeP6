@@ -6,8 +6,7 @@ import java.util.Properties;
 
 public class ApplicationProperties {
 
-    String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-    String appConfigPath = rootPath + "application.properties";
+
 
     String urlPG;
     String userPG;
@@ -15,6 +14,8 @@ public class ApplicationProperties {
 
 
     public Properties appProps() throws IOException {
+        String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+        String appConfigPath = rootPath + "application.properties";
         Properties appProps = new Properties();
         appProps.load(new FileInputStream(appConfigPath));
         return appProps;

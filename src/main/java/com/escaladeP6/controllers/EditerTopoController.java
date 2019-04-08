@@ -127,7 +127,7 @@ public class EditerTopoController {
 
         else {
 
-            topoRepository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), topo.isDisponible(), topo.isValide(), membreEditeur));
+            topoRepository.save(new Topo(topo.getNom(), topo.getDescription(), topo.getDepartement(), topo.getDifficulte(), topo.getNbVoies(), true, topo.isValide(), membreEditeur));
             logger.info("Création d'un nouveau topo nommé " + topo.getNom() + " par le membre " + membreEditeur.getPseudo());
 
         }
