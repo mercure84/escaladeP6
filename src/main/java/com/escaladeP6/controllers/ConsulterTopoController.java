@@ -95,9 +95,10 @@ public String topos (Model model){
     @RequestMapping("/topoConsulter/fichiers")
     public @ResponseBody void dlFichier(String topoId, HttpServletResponse response ) throws SQLException, IOException {
 
-        //recherche du fichier config.properties
-        ApplicationProperties dbProp = new ApplicationProperties();
-        Connection conn = DriverManager.getConnection(dbProp.getUrlPG(), dbProp.getUserPG(), dbProp.getPasswordPG());
+        String urlDB = "jdbc:postgresql://vps671888.ovh.net/escap6";
+        String userPG = "postgres";
+        String passwordPG = "chatons1984";
+        Connection conn = DriverManager.getConnection(urlDB, userPG, passwordPG);
         PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
         ps.setInt(1, Integer.parseInt(topoId));
         ResultSet rs = ps.executeQuery();
