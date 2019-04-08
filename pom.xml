@@ -15,7 +15,7 @@
     <groupId>com.escaladeProjet6</groupId>
     <artifactId>escaladeP6</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
 
     <dependencies>
@@ -78,11 +78,12 @@
             <artifactId>spring-security-web</artifactId>
         </dependency>
 
-        <!--DEPENDENCES LOG4J-->
+<!--        DEPENDENCES POUR DEPLOYEMENT TOMCAT-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
 
 
@@ -100,6 +101,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+
+                    <mainClass>com.escaladeP6.Application</mainClass>
+
+                </configuration>
+
             </plugin>
         </plugins>
     </build>
