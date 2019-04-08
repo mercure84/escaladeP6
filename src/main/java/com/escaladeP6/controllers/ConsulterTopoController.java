@@ -6,6 +6,7 @@ import com.escaladeP6.DAO.TopoRepository;
 import com.escaladeP6.DAO.VoieRepository;
 import com.escaladeP6.beans.*;
 
+import com.escaladeP6.security.ApplicationProperties;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 
 @Controller
@@ -93,7 +95,9 @@ public String topos (Model model){
     @RequestMapping("/topoConsulter/fichiers")
     public @ResponseBody void dlFichier(String topoId, HttpServletResponse response ) throws SQLException, IOException {
 
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
+        //recherche du fichier config.properties
+        ApplicationProperties dbProp = new ApplicationProperties();
+        Connection conn = DriverManager.getConnection(dbProp.getUrlPG(), dbProp.getUserPG(), dbProp.getPasswordPG());
         PreparedStatement ps = conn.prepareStatement("SELECT topo.fichier FROM topo WHERE id=?");
         ps.setInt(1, Integer.parseInt(topoId));
         ResultSet rs = ps.executeQuery();

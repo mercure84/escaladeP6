@@ -10,7 +10,7 @@ public class RoleMembre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name ="id", nullable = false, unique = true)
     private int id;
 
 

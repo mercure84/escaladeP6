@@ -8,7 +8,7 @@ import com.escaladeP6.beans.Departement;
 import com.escaladeP6.beans.Membre;
 import com.escaladeP6.beans.Topo;
 import com.escaladeP6.beans.Voie;
-import com.escaladeP6.security.UserDetailsServiceImpl;
+import com.escaladeP6.security.ApplicationProperties;
 import com.escaladeP6.storage.StorageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -92,9 +92,11 @@ public class EditerTopoController {
     }
 
     @PostMapping("/topoEditer")
-    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal) throws SQLException {
+    public String publicationSubmit (@RequestParam("file") MultipartFile file, @ModelAttribute Topo topo, Principal principal) throws SQLException, IOException {
 
-        Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/escap6", "postgres", "dionae1984");
+        //recherche du fichier config.properties
+        ApplicationProperties dbProp = new ApplicationProperties();
+        Connection conn = DriverManager.getConnection(dbProp.getUrlPG(), dbProp.getUserPG(), dbProp.getPasswordPG());
 
         // SELECTION DU MEMBRE QUI POSTE LE TOPO
         //chargement des paramètres du membres

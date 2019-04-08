@@ -12,7 +12,7 @@ public class Membre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name ="id", nullable = false, unique = true)
     private int id;
 
     @Column(name="nom")
