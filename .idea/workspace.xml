@@ -12,7 +12,6 @@
     <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d023fc4-dc62-4e72-b6b5-0686c20e2986/storage_v2/_src_/database/escap6.UoDcsg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d023fc4-dc62-4e72-b6b5-0686c20e2986/storage_v2/_src_/database/escap6.UoDcsg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -593,14 +592,7 @@
       <workItem from="1554227735874" duration="12120000" />
       <workItem from="1554493100783" duration="7511000" />
       <workItem from="1554725952453" duration="27110000" />
-      <workItem from="1554756809419" duration="3464000" />
-    </task>
-    <task id="LOCAL-00033" summary="l'upload fonctionne (ou pas ??) mais impossible de télécharger les fichiers de la BDD!">
-      <created>1551719380173</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1551719380173</updated>
+      <workItem from="1554756809419" duration="3640000" />
     </task>
     <task id="LOCAL-00034" summary="l'upload fonctionne (ou pas ??) mais impossible de télécharger les fichiers de la BDD!">
       <created>1551719613314</created>
@@ -938,11 +930,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554759843302</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="fichier readme et données sql OK">
+      <created>1554761327941</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1554761327942</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="453853000" />
+    <option name="totallyTimeSpent" value="454029000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1090,7 +1089,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="création et mapping du bean Commentaire + interface repository" />
     <MESSAGE value="enregistrement des commentaire implémenté" />
     <MESSAGE value="affichage des commentaires sur la page principale et sur chaque topo + refactoring léger sur les noms des repository" />
     <MESSAGE value="création d'un emprunt OK" />
@@ -1115,7 +1113,8 @@
     <MESSAGE value="je n'arrive pas à déployer l'application sur mon VPS Ovh ^^" />
     <MESSAGE value="ok déploiement à distance fonctionne / il faut corriger le path des fichiers topos car pb à lupload et au téléchargement" />
     <MESSAGE value="webapp achevée" />
-    <option name="LAST_COMMIT_MESSAGE" value="webapp achevée" />
+    <MESSAGE value="fichier readme et données sql OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="fichier readme et données sql OK" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
