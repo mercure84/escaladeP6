@@ -5,7 +5,7 @@ Pour installer la webapp JEE, nous conseillons les étapes suivantes :
 
 A) METHODE RAPIDE 
 
-sur une machine Windows ou Ubuntu, nous vous conseiller de télécharger le fichier .jar et d'exécuter la commande suivante :
+sur une machine Windows ou Ubuntu, nous vous conseillons de télécharger le fichier escaladeP6-1.0-SNAPSHOT.jar et d'exécuter la commande suivante :
 java -jar escaladeP6-1.0-SNAPSHOT.jar
 Cela déploiera automatiquement l'application sur le port 8080 de votre machine. Et vous utiliserez la BDD de démo hébergée sur le serveur VPS OVH.
 
@@ -17,8 +17,8 @@ B) METHODE PERSONNALISEE
 2bis) optionnel : un jeu de données démo est disponibles grâce au script dataGlobal.sql
 (Nous avons retirer les fichiers PDB stockés pour que l'import des données soient plus léger)
 
-3) Pour connecter la webapp à votre BDD il faudra importer le projet complet dans votre IDE et modifier les données de connexion dans le fichier application.properties.
-4) Générer un fichier .jar avec Maven et déployer !
+3) Pour connecter la webapp à votre BDD il faudra importer le projet complet dans votre IDE et modifier les données de connexion à la BDD dans le fichier application.properties.
+4) Générer un fichier .jar avec Maven et déployer sur le serveur tomcat8 ou 9 de votre choix.
 
 
 Bonne utilisation !

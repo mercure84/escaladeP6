@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82249bbd-b764-4fc3-a162-849ad7af0633" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/adminZone.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminZone.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/listeMembres.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/loginPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoEditer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoEditer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoEmprunter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoEmprunter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/topoVoiesDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/topoVoiesDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -122,15 +111,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/navbar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginPage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="819">
@@ -198,11 +178,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoVoiesDetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
+            <state relative-caret-position="816">
               <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="340">
+                <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -274,7 +266,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/ConsulterTopoController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/navbar.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/adminZone.html" />
@@ -286,6 +277,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoEmprunter.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoHome.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/topoVoiesDetails.html" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -723,14 +715,7 @@
       <workItem from="1554493100783" duration="7511000" />
       <workItem from="1554725952453" duration="27110000" />
       <workItem from="1554756809419" duration="3640000" />
-      <workItem from="1554927277267" duration="2277000" />
-    </task>
-    <task id="LOCAL-00035" summary="download fichier marche tjs pas, démarrage requete OneToMany sur la consultation des topos">
-      <created>1551723802965</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1551723802965</updated>
+      <workItem from="1554927277267" duration="3431000" />
     </task>
     <task id="LOCAL-00036" summary="implémentation de la jointure topos / membre qui permet d'afficher le nom du membre propriétaire dans la liste des topos">
       <created>1551729831217</created>
@@ -1068,11 +1053,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554927314405</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="refacto sur les pages web pour inclure les scripts JS et rendre opérationnel le menu">
+      <created>1554932516387</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1554932516387</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456306000" />
+    <option name="totallyTimeSpent" value="457460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1099,14 +1091,14 @@
       <window_info anchor="bottom" id="Database Console" order="1" sideWeight="0.49960256" weight="0.33125487" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32424006" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7062798" visible="true" weight="0.25274727" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.7062798" weight="0.25274727" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49756888" weight="0.40374124" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49756888" weight="0.17739403" />
       <window_info anchor="bottom" id="Application Servers" order="9" sideWeight="0.63047004" weight="0.20172684" />
       <window_info anchor="bottom" id="Spring" order="10" sideWeight="0.49675852" weight="0.32810047" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.67527825" weight="0.24803768" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.67527825" visible="true" weight="0.24803768" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.2937202" side_tool="true" weight="0.46141854" />
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49960256" weight="0.3219018" />
@@ -1221,7 +1213,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="affichage des commentaires sur la page principale et sur chaque topo + refactoring léger sur les noms des repository" />
     <MESSAGE value="création d'un emprunt OK" />
     <MESSAGE value="refactoring de l'affichage des dates sur le site / modif nav bar avec AdminZone à implémenter" />
     <MESSAGE value="modif accueil et début implémentation du bean des voies" />
@@ -1246,7 +1237,8 @@
     <MESSAGE value="webapp achevée" />
     <MESSAGE value="fichier readme et données sql OK" />
     <MESSAGE value="suppression &quot;provided&quot; pour la dépendence tomcat" />
-    <option name="LAST_COMMIT_MESSAGE" value="suppression &quot;provided&quot; pour la dépendence tomcat" />
+    <MESSAGE value="refacto sur les pages web pour inclure les scripts JS et rendre opérationnel le menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="refacto sur les pages web pour inclure les scripts JS et rendre opérationnel le menu" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1417,16 +1409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/escaladeP6/controllers/EditerTopoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-619">
@@ -1545,8 +1527,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/topoVoiesDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
+        <state relative-caret-position="816">
           <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
